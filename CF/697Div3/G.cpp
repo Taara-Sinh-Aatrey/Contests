@@ -1,6 +1,6 @@
 /**
  *    author:  Taara Sinh Aatrey
- *    created: 25.01.2021 21:32:53
+ *    created: 25.01.2021 23:32:53
 **/
 #include <bits/stdc++.h>
 using namespace std;
@@ -152,25 +152,16 @@ void solve() {
     cin >> n;
     vt<int> a(n);
     cin >> a;
-    sort(all(a));
-    int maxi = 0;
-    vt<pii> mp;
-    for(auto &x: a) {
-    	int c = 0;
-    	if(!mp.empty() && mp.back().first == x) {
-    		mp.back().second += 1;
-    		amax(maxi, mp.back().second);
-    		continue;
-    	}
-    	for(auto& p: mp) {
-    		if(x % p.first == 0) {
-    			amax(c, p.second);
-    		}
-    	}
-    	mp.pb({x, c + 1});
-    	amax(maxi, c + 1);
+    int mx = *max_element(all(a));
+    vt<int> dp(mx + 1, 0), cnt(mx + 1, 0);
+    for(auto& x: a) cnt[x]++;
+    for(int i = mx; i >= 1; i--) {
+        for(int j = 2 * i; j <= mx; j += i) {
+            amax(dp[i], dp[j]);
+        }
+        dp[i] += cnt[i];
     }
-    cout << n - maxi << '\n';
+    cout << n - *max_element(all(dp)) << '\n';
 }
 
 signed main()
