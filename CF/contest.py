@@ -1,10 +1,10 @@
 import json
 import urllib.request
 from bs4 import BeautifulSoup
-from pywinauto import Application
 import os
 
 url = input()
+url = "https://codeforces.com/contest/" + url
 if( url.find('https://codeforces.com/contest') == -1):
 	with open("solution.cpp__tests", "w") as outfile:
 		outfile.write('Please open a contest page')
