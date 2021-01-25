@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "utility": "cpp",
+        "ostream": "cpp",
+        "array": "cpp"
+    },
+    "C_Cpp.dimInactiveRegions": false
+}
