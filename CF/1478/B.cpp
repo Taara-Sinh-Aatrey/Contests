@@ -1,7 +1,8 @@
 /**
  *    author:  Taara Sinh Aatrey
- *    created: 27.01.2021 17:23:52
+ *    created: 28.01.2021 20:08:17
 **/
+// #undef _GLIBCXX_DEBUG
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -147,93 +148,34 @@ const int N = 2e5 + 5;
 // x | (x + 1) sets lowest unset bit of x
 // x & (x - 1) unsets lowest set bit of x
 
-struct P {
-	pii dx = {0, 1}, dy = {0, 1};
-	bool rev = 0;
-	void operator+= (const pii& x) {
-		dx.first += x.first;
-		dy.first += x.second;
-	}
-	void mulx (const int& x) {
-		dx.first *= x;
-		dx.second *= x;
-	}
-	void muly (const int& y) {
-		dy.first *= y;
-		dy.second *= y;
-	}
-	void mul (const int & x) {
-		mulx(x);
-		muly(x);
-	}
-	void muli (const int & x) {
-		mulx(x);
-		muly(x);
-		swap();
-	}
-	void swap() {
-		pii temp = dx;
-		dx = make_pair(-dy.first, -dy.second);
-		dy = temp;
-		rev = 1 - rev;
-	}
-};
-
-string to_string(P a) {
-	return to_string(make_pair(a.dx, a.dy));
-}
-
-/*
-
-1->   -i
-2->    i
-3->    *2p - x
-4->    *2p - y
-
-*/
-
 void solve() {
-    int n;
-    cin >> n;
-    vt<pii> a(n);
+    int n, d;
+    cin >> n >> d;
+    vt<int> a(n);
     cin >> a;
-    int m;
-    cin >> m;
-    vt<P> change(m + 1);
-    for(int i = 1; i <= m; i++) {
-    	change[i] = change[i - 1];
-    	int p;
-    	cin >> p;
-    	if(p == 1) {
-    		change[i].muli(-1);
-    	} else if(p == 2) {
-    		change[i].muli(1);
-    	} else if(p == 3) {
-    		cin >> p;
-    		change[i].mulx(-1);
-    		change[i] += make_pair(2 * p, 0);
-    	} else {
-    		cin >> p;
-    		change[i].muly(-1);
-    		change[i] += make_pair(0, 2 * p);
+    vt<int> sum(100, 0);
+    sum[0] = 1;
+    for(int i = 1; i < 100; i++) {
+    	int num = i;
+    	bool ok = false;
+    	while(num > 0) {
+    		if(num % 10 == d) {
+    			ok = true;
+    			break;
+    		}
+    		num /= 10;
+    	}
+    	if(ok) {
+    		for(int j = 0; j < 100; j++) {
+    			if(sum[j] && j + i < 100) {
+    				sum[j + i] = 1;
+    			}
+    		}
     	}
     }
-    int q;
-    cin >> q;
-    while(q--) {
-    	int op, idx;
-    	cin >> op >> idx;
-    	idx--;
-    	P ret;
-    	ret += a[idx];
-    	if(change[op].rev) {
-    		swap(ret.dx, ret.dy);
-    	}
-    	ret.mulx(change[op].dx.second);
-    	ret.muly(change[op].dy.second);
-    	ret += make_pair(change[op].dx.first, change[op].dy.first);
-    	cout << ret.dx.first << " " << ret.dy.first << '\n';
-    }
+    For(i, n){
+	    out(a[i] >= 100 || sum[a[i]]);
+	}
 }
 
 signed main()
@@ -245,7 +187,7 @@ signed main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     int t = 1;
-    // cin >> t;
+    cin >> t;
     FOR(tt, t) solve();
     return 0;
 }
