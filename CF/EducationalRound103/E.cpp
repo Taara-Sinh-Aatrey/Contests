@@ -1,6 +1,6 @@
 /**
  *    author:  Taara Sinh Aatrey
- *    created: 29.01.2021 21:49:01
+ *    created: 04.02.2021 03:04:48
 **/
 // #undef _GLIBCXX_DEBUG
 #include <bits/stdc++.h>
@@ -123,7 +123,6 @@ ostream& operator<<(ostream& out, vt<T>& a) {
         out << x;
         f = true;
     }
-    out << '\n';
     return out;
 }
 void out(bool ok, bool cap = true) {
@@ -143,7 +142,7 @@ T amin(T& a, T1 b) {
 
 const int mod = 1e9 + 7;
 const int INF = 1e18L + 5;
-const int N = 2e5 + 5;
+const int N = 1e5 + 5;
 
 // x | (x + 1) sets lowest unset bit of x
 // x & (x - 1) unsets lowest set bit of x
@@ -151,24 +150,67 @@ const int N = 2e5 + 5;
 void solve() {
     int n, m, k;
     cin >> n >> m >> k;
-    vt<string> p(n);
-    vt<pair<string, int>> s(m);
-    cin >> p >> s;
-    auto match = [&] (string &a, string &b) {
-    	For(i, k) {
-    		if(a[i] != b[i]) {
-    			return false;
-    		}
-    	}
-    	return true;
+    map<string, int> p;
+    for(int i = 0; i < n; i++) {
+        string s;
+        cin >> s;
+        p[s] = i;
+    }
+    vt<int> g[n];
+    for(int i = 0; i < m; i++) {
+        string s; int mt;
+        cin >> s >> mt;
+        mt--;
+        bool ok = false;;
+        for(int mask = 0; mask < (1 << k); mask++) {
+            string cand = "";
+            for(int j = 0; j < k; j++) {
+                if(mask >> j & 1) {
+                    cand += s[j];
+                } else {
+                    cand += "_";
+                }
+            }
+            if(p.count(cand)) {
+                int v = p[cand];
+                if(v == mt) {
+                    ok = true;
+                } else {
+                    g[mt].push_back(p[cand]);
+                }
+            }
+        }
+        if(!ok) {
+            cout << "NO\n";
+            return;
+        }
+    }
+    vt<bool> vis(n, 0), act(n, 0);
+    vt<int> vec;
+    function<void(int)> dfs = [&](int u) {
+        vis[u] = 1;
+        act[u] = 1;
+        for(int& v: g[u]) {
+            if(!vis[v]) {
+                dfs(v);
+            } else if(act[v]) {
+                // cycle found
+                cout << "NO\n";
+                exit(0);
+            }
+        }
+        vec.pb(u);
+        act[u] = 0;
     };
-    sort(all(s), [&] (const pair<string, int>& a, const pair<string, int>& b) {
-    	return a.second < b.second;
-    });
-    For(i, m) {
-    	string& st = s[i].first;
-    	int& idx = s[i].second;
-
+    for(int i = 0; i < n; i++) {
+        if(!vis[i]) {
+            dfs(i);
+        }
+    }
+    cout << "YES\n";
+    reverse(all(vec));
+    for(auto& x: vec) {
+        cout << x + 1 << " ";
     }
 }
 
@@ -185,3 +227,4 @@ signed main()
     FOR(tt, t) solve();
     return 0;
 }
+
