@@ -47,6 +47,7 @@ for problems in problem_tags:
 	os.system('python automate.py' + problem_url + problem_path + "\"") 
 
 os.system('subl ' + path)
+# os.system('google-chrome ' + url + '/standings/friends/true' + " & disown")
 
 
 # import json
