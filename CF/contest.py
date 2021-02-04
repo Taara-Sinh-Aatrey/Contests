@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import os
 import subprocess
 
-url = input("Enter Contest Id : ")
+url = input("Enter Codeforces Contest Id : ")
 url = "https://codeforces.com/contest/" + url
 if(url.find('https://codeforces.com/contest') == -1):
 	print("Invalid Url")
@@ -55,27 +55,3 @@ for problems in problem_tags:
 	subprocess.run(["firefox", x], stdout=subprocess.DEVNULL)
 
 subprocess.run(["subl", path], stdout=subprocess.DEVNULL)
-
-
-# for firefox users
-# # for linux
-# os.system('firefox ' + url + '/submit & disown')
-# os.system('firefox ' + url + '/standings/friends/true & disown')
-# # for windows : you don't need "& disown"
-# # os.system('firefox ' + url + '/submit')
-# # os.system('firefox ' + url + '/standings/friends/true')
-
-
-# for problems in problem_tags:
-# 	problem_path = os.path.join(path,problems)
-# 	print(problem_path)
-# 	with open(problem_path+".cpp", "a") as sec:
-# 		pass
-# 	problem_url = " " + url + "/problem/" + problems + " \"";
-# 	os.system('python automate.py' + problem_url + problem_path + "\"")
-# 	# for linux
-# 	os.system('firefox ' + url + '/problem/' + problems + ' & disown')
-# 	# for windows : you don't need "& disown"
-# 	# os.system('firefox ' + url + '/problem/' + problems)
-
-# os.system('subl ' + path)
