@@ -39,9 +39,9 @@ if not os.path.exists(path):
 	os.mkdir(path)
 
 x = url + '/submit'
-subprocess.run(["firefox", x], stdout=subprocess.DEVNULL)
+subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
 x = url + '/standings/friends/true'
-subprocess.run(["firefox", x], stdout=subprocess.DEVNULL)
+subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
 
 
 for problems in problem_tags:
@@ -52,6 +52,6 @@ for problems in problem_tags:
 	problem_url = " " + url + "/problem/" + problems + " \"";
 	os.system('python automate.py' + problem_url + problem_path + "\"")
 	x = url + '/problem/' + problems
-	subprocess.run(["firefox", x], stdout=subprocess.DEVNULL)
+	subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
 
 subprocess.run(["subl", path], stdout=subprocess.DEVNULL)
