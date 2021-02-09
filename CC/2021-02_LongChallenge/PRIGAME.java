@@ -1,45 +1,46 @@
 import java.util.*;
 import java.io.*;
 
-class MEET
+class PRIGAME
 {
     static FastScanner sc = new FastScanner();	
 	static PrintWriter out = new PrintWriter(System.out);
 
-	public static int read_time() {
-		String a = sc.next(), b = sc.next();
-		a = "" + a.charAt(0) + a.charAt(1) + a.charAt(3) + a.charAt(4);
-		int A = Integer.parseInt(a);
-		if(b.equals("AM") && A >= 1200) {
-			A -= 1200;
-		}
-		if(b.equals("PM") && A < 1200) {
-			A += 1200;
-		}
-		return A;
+	static int N = 1000001;
+
+	static int cnt[] = new int[N];
+	static boolean prime[] = new boolean[N];
+	public static void sieve() {
+	    prime[0] = prime[1] = false;
+	    cnt[0] = 0; cnt[1] = 0;
+	    for(int i = 2; i < N; i++) {
+	    	prime[i] = true;
+	    }
+	    for(int i = 2; i < N; i++) {
+	    	cnt[i] = cnt[i - 1];
+	    	if(prime[i]) {
+	    		cnt[i]++;
+	    		for(int j = 2 * i; j < N; j += i) {
+	    			prime[j] = false;
+	    		}
+	    	}
+	    }
 	}
     
 	public static void solve() throws IOException {
-		int a = read_time();
-		int q = sc.nextInt();
-		while(q-- > 0) {
-			int l = read_time(), r = read_time();
-			if(l <= a && a <= r) {
-				out.print("1");
-			} else {
-				out.print("0");
-			}
-		}
-		out.println();
-		out.flush();
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		out.println(y >= cnt[x] ? "Chef" : "Divyam");
 	}
 
     public static void main(String [] args) throws IOException {
+    	sieve();
     	int t = 1;
     	t = sc.nextInt();
     	while(t-- > 0) { 
     		solve();
     	}
+    	out.flush();
     }
 
     static void sort(int[] a) {

@@ -1,45 +1,68 @@
 import java.util.*;
 import java.io.*;
 
-class MEET
+class sol
 {
     static FastScanner sc = new FastScanner();	
 	static PrintWriter out = new PrintWriter(System.out);
 
-	public static int read_time() {
-		String a = sc.next(), b = sc.next();
-		a = "" + a.charAt(0) + a.charAt(1) + a.charAt(3) + a.charAt(4);
-		int A = Integer.parseInt(a);
-		if(b.equals("AM") && A >= 1200) {
-			A -= 1200;
+	static Long mod = 998244353;
+	static Long MAX = 200001;
+	Long fac[] = new Long fac[MAX];
+	Long inv[] = new Long inv[MAX];
+
+	public static Long Pow(Long a, Long b) {
+	    Long res = 1;
+	    while(b > 0) {
+	        if(b & 1) res = res * a % mod;
+	        a = a * a % mod;
+	        b >>= 1;
+	    }
+	    return res;
+	}
+
+	public static Long NCR(int N, int R) {
+		if(R > N) {
+			return 0;
 		}
-		if(b.equals("PM") && A < 1200) {
-			A += 1200;
-		}
-		return A;
+		return fac[N] * inv[R] % mod * inv[N - R] % mod;
 	}
     
 	public static void solve() throws IOException {
-		int a = read_time();
-		int q = sc.nextInt();
-		while(q-- > 0) {
-			int l = read_time(), r = read_time();
-			if(l <= a && a <= r) {
-				out.print("1");
-			} else {
-				out.print("0");
+		int n = sc.nextInt();
+		int cnt[] = new int[30];
+		Long ans[] = new Long[n + 1];
+
+		fac[0] = 1; inv[0] = 1;
+
+		for(int i = 1; i <= n; i++) {
+
+			fac[i] = (i * fac[i - 1]) % mod;
+			inv[i] = Pow(fac[i], mod - 2);
+
+			int num = sc.nextInt();
+			for(int j = 0; j < 30; j++) {
+				if(num >> j & 1) {
+					cnt[j]++;
+				}
 			}
 		}
-		out.println();
-		out.flush();
+
+		for(int b = 0; b < 30; b++) {
+			int k = cnt[b];
+			
+		}
 	}
 
     public static void main(String [] args) throws IOException {
+	    // System.setIn(new FileInputStream(new File("in")));
+        // System.setOut(new PrintStream(new File("out")));
     	int t = 1;
-    	t = sc.nextInt();
+    	// t = sc.nextInt();
     	while(t-- > 0) { 
     		solve();
     	}
+    	out.flush();
     }
 
     static void sort(int[] a) {
