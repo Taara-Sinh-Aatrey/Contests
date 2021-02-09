@@ -155,17 +155,14 @@ void solve() {
     cin >> c >> a >> b;
     int ans = 0, cur = c[0];
     for(int i = 1; i < n; i++) {
-		int diff = abs(a[i] - b[i]);
-    	if(i == 1) {
-    		cur = diff + 1;
-    		cur += c[i];
-    	} else if(a[i] == b[i]) {
-    		cur = 1 + c[i];
-    	} else {
-    		cur = max(diff + 1, cur - (diff - 1));
-    		cur += c[i];
-    	}
-		amax(ans, cur);
+        int diff = abs(a[i] - b[i]);
+        if(i == 1 || a[i] == b[i]) {
+            cur = diff + 1;
+        } else {
+            cur = max(diff + 1, cur - (diff - 1));
+        }
+        cur += c[i];
+        amax(ans, cur);
     }
     cout << ans << '\n';
 }
