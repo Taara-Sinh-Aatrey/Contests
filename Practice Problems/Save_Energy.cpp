@@ -155,13 +155,14 @@ const int N = 2e5 + 5;
 
 	if abs(A[j]) < abs(A[i]):
 		y - x > 0
-		y > x
+		x < y
 		so x is better (go to j)
 	else if abs(A[j]) == abs(A[i])
 		y - x = (k - j) * (A[i] - A[j]) >= 0
 		when A[i] >= A[j] which is when A[i] >= 0
-		so y - x >= 0 (go to j)
-		when A[i] >= 0
+		so y - x >= 0 
+        x <= y
+		when A[i] >= 0 (go to j)
 
     conclusion: go to first element j such that abs(A[j]) < abs(A[i]) || abs(A[i]) == abs(A[j]) && A[i] >= 0
 */
