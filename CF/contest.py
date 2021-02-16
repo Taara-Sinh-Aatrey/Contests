@@ -38,10 +38,10 @@ path = os.path.join(parent_dir,path)
 if not os.path.exists(path):
 	os.mkdir(path)
 
-x = url + '/submit'
-subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
-x = url + '/standings/friends/true'
-subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
+# x = url + '/submit'
+# subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
+# x = url + '/standings/friends/true'
+# subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
 
 
 for problems in problem_tags:
@@ -51,7 +51,7 @@ for problems in problem_tags:
 		pass
 	problem_url = " " + url + "/problem/" + problems + " \"";
 	os.system('python automate.py' + problem_url + problem_path + "\"")
-	x = url + '/problem/' + problems
-	subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
+	# x = url + '/problem/' + problems
+	# subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
 
 subprocess.run(["subl", path], stdout=subprocess.DEVNULL)

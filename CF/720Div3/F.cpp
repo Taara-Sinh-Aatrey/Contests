@@ -1,6 +1,6 @@
 /**
  *    author:  Taara Sinh Aatrey
- *    created: 16.02.2021 02:00:35
+ *    created: 16.02.2021 20:52:25
 **/
 
 // #undef _GLIBCXX_DEBUG
@@ -141,51 +141,27 @@ const int N = 2e5 + 5;
 
 
 void solve() {
-    vt<int> n(4);
+    int n;
     cin >> n;
-    vt<int> a[4];
-    vt<int> b[4];
-    For(i, 4) { 
-        a[i].resize(n[i]);
-        b[i].resize(n[i]);
-        cin >> a[i];
-        iota(all(b[i]), 0);
+    map<int, int> mp;
+    for(int i = 0; i < n; i++) {
+        int num;
+        cin >> num;
+        mp[num]++;
     }
-    Rep(i, 1, 3) {
-        sort(all(b[i - 1]), [&](const int &x, const int &y) {
-            return a[i - 1][x] < a[i - 1][y];
-        });
-        sort(all(a[i - 1]));
-        vt<int> idx(n[i - 1]);
-        For(j, n[i - 1]) {
-            idx[b[i - 1][j]] = j;
-        }
-        int m;
-        cin >> m;
-        vt<int> g[n[i]];
-        while(m--) {
-            int x, y;
-            cin >> x >> y;
-            x--, y--;
-            g[y].pb(idx[x]);
-        }
-        For(j, n[i]) {
-            sort(all(g[j]));
-            int mex = 0;
-            int siz = sz(g[j]);
-            while(mex < siz && g[j][mex] == mex) {
-                mex++;
-            }
-            if(mex < n[i - 1]) {
-                a[i][j] += a[i - 1][mex];
-            } else {
-                a[i][j] = INF;
-            }
-        }
+    vt<int> freq(n + 1, 0);
+    for(auto& p: mp) {
+        freq[p.second]++;
     }
-    int ans = *min_element(all(a[3]));
-    if(ans >= INF) ans = -1;
-    cout << ans << '\n';
+    for(int i = 1; i <= n; i++) {
+        freq[i] += freq[i - 1];
+    }
+    int best = n;
+    for(int i = 1; i <= n; i++) {
+        int cur = n - i * (freq[n] - freq[i - 1]);
+        amin(best, cur);
+    }
+    cout << best << '\n';
 }
 
 signed main()
@@ -197,7 +173,7 @@ signed main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     int t = 1;
-    // cin >> t;
+    cin >> t;
     FOR(tt, t) solve();
     return 0;
 }

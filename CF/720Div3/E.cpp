@@ -1,6 +1,6 @@
 /**
  *    author:  Taara Sinh Aatrey
- *    created: 16.02.2021 02:00:35
+ *    created: 16.02.2021 20:41:00
 **/
 
 // #undef _GLIBCXX_DEBUG
@@ -141,51 +141,30 @@ const int N = 2e5 + 5;
 
 
 void solve() {
-    vt<int> n(4);
+    int n;
     cin >> n;
-    vt<int> a[4];
-    vt<int> b[4];
-    For(i, 4) { 
-        a[i].resize(n[i]);
-        b[i].resize(n[i]);
-        cin >> a[i];
-        iota(all(b[i]), 0);
+    vt<pii> a(n);
+    For(i, n) {
+        cin >> a[i].first;
+        a[i].second = i;
     }
-    Rep(i, 1, 3) {
-        sort(all(b[i - 1]), [&](const int &x, const int &y) {
-            return a[i - 1][x] < a[i - 1][y];
-        });
-        sort(all(a[i - 1]));
-        vt<int> idx(n[i - 1]);
-        For(j, n[i - 1]) {
-            idx[b[i - 1][j]] = j;
-        }
-        int m;
-        cin >> m;
-        vt<int> g[n[i]];
-        while(m--) {
-            int x, y;
-            cin >> x >> y;
-            x--, y--;
-            g[y].pb(idx[x]);
-        }
-        For(j, n[i]) {
-            sort(all(g[j]));
-            int mex = 0;
-            int siz = sz(g[j]);
-            while(mex < siz && g[j][mex] == mex) {
-                mex++;
-            }
-            if(mex < n[i - 1]) {
-                a[i][j] += a[i - 1][mex];
-            } else {
-                a[i][j] = INF;
-            }
+    sort(all(a));
+    vt<int> pref(n);
+    for(int i = 0; i < n; i++) {
+        pref[i] = a[i].first + (i > 0 ? pref[i - 1] : (int) 0);
+    }
+    vt<int> win(n, 0);
+    win[n - 1] = 1;
+    vt<int> winners(1, a[n - 1].second + 1);
+    for(int i = n - 2; i >= 0; i--) {
+        if(pref[i] >= a[i + 1].first && win[i + 1]) {
+            win[i] = 1;
+            winners.pb(a[i].second + 1);
         }
     }
-    int ans = *min_element(all(a[3]));
-    if(ans >= INF) ans = -1;
-    cout << ans << '\n';
+    sort(all(winners));
+    cout << sz(winners) << '\n';
+    cout << winners << '\n';
 }
 
 signed main()
@@ -197,7 +176,7 @@ signed main()
     ios::sync_with_stdio(0);
     cin.tie(0);
     int t = 1;
-    // cin >> t;
+    cin >> t;
     FOR(tt, t) solve();
     return 0;
 }
