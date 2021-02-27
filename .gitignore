@@ -1,6 +1,5 @@
 .vscode
 .clang-format
-ProblemSetting
 *.exe
 *.out
 out
