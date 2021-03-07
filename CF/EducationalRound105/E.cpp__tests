@@ -1,0 +1,1 @@
+[{"correct_answers": ["YES\nNO\nYES"], "test": "3 11\n+ 1 2 a\n+ 2 3 b\n+ 3 2 a\n+ 2 1 b\n? 3\n? 2\n- 2 1\n- 3 2\n+ 2 1 c\n+ 3 2 d\n? 5\n"}]

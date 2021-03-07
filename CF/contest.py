@@ -6,7 +6,7 @@ import subprocess
 
 url = input("Enter Codeforces Contest Id : ")
 url = "https://codeforces.com/contest/" + url
-if(url.find('https://codeforces.com/contest') == -1):
+if(url.find('https://codeforces.com/contest') == -1 and url.find('https://codeforces.com/gym') == -1):
 	print("Invalid Url")
 	exit()
 else:
