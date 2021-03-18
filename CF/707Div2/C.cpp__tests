@@ -1,0 +1,39 @@
+[
+	{
+		"correct_answers":
+		[
+			"YES\n2 3 1 6",
+			"YES\n6 1 2 3",
+			"YES\n1 6 2 3"
+		],
+		"test": "6\n2 1 5 2 7 4\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "5\n1 3 1 9 20\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES\n1 3 2 4"
+		],
+		"test": "5\n1 1 3 3 10\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES\n1 2 3 4"
+		],
+		"test": "5\n1 1 1 1 100\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES\n1 2 3 4"
+		],
+		"test": "4\n2 2 1 3\n"
+	}
+]
