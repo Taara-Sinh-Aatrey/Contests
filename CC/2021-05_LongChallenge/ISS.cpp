@@ -48,6 +48,7 @@ void factorise(int num, vector<int>& vec) {
 void solve(int tt) {
     int k;
     cin >> k;
+    k = tt;
     cout << ans[k] << '\n';
 }
 
@@ -55,7 +56,7 @@ signed main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
 
-    int t;
+    int t;  
     cin >> t;
 
     sieve();

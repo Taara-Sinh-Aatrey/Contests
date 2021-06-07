@@ -61,8 +61,3 @@ for _ in range(t):
     ans[0] *= x
     ans[0] = ans[0] % mod
     print(ans[0])
-
-    
-wimport sys
-sys.stdin = open('in', 'r')  
-sys.stdout = open('out', 'w')
