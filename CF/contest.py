@@ -6,6 +6,7 @@ import subprocess
 
 url = input("Enter Codeforces Contest Id : ")
 url = "https://codeforces.com/contest/" + url
+# url = "https://codeforces.com/gym/" + url
 if(url.find('https://codeforces.com/contest') == -1 and url.find('https://codeforces.com/gym') == -1):
 	print("Invalid Url")
 	exit()
@@ -40,9 +41,13 @@ if not os.path.exists(path):
 
 # x = url + '/submit'
 # subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
-# x = url + '/standings/friends/true'
-# subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
 
+subprocess.run(["subl", "-a", path], stdout=subprocess.DEVNULL)
+x = url + '/standings/friends/true'
+subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
+subprocess.run(["google-chrome", url], stdout=subprocess.DEVNULL)
+x = url + "/problem/A"
+subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
 
 for problems in problem_tags:
 	problem_path = os.path.join(path,problems)
@@ -54,4 +59,4 @@ for problems in problem_tags:
 	# x = url + '/problem/' + problems
 	# subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
 
-subprocess.run(["subl", path], stdout=subprocess.DEVNULL)
+# subprocess.run(["google-chrome", url], stdout=subprocess.DEVNULL)
