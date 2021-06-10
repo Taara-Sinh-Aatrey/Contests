@@ -162,18 +162,23 @@ void solve() {
         if(depth[a] > depth[b]) {
             swap(a, b);
         }
+
         int lca = find_lca(a, b);
+        int d = depth[a] + depth[b] - 2 * depth[lca]; 
+        int db = (d - 1) / 2;
+        int da = d - db;
+        int c = get(b, db);
 
-        cerr << a << " " << b << " " << lca << endl;
-
-        int ans = down_sum[a] + (depth[a] - depth[lca] - 1) * (depth[a] - depth[lca]) / 2 + top_sum[lca];
+        int ans = 0;
 
         if(lca != a) {
-            // int da = depth[a] - depth[lca];
-            // int db = depth[b] - depth[lca];
-            // int mn = min(da, db);
-            // ans += down_sum[lca] - (down_sum[_a] + sz[_a]) - (down_sum[_b] + sz[_b]);
-            // ans += top_sum[lca] + mn * (n - sz[lca]);
+            ans += down_sum[a] + top_sum[a] - (down_sum[c] + da * sz[c]);
+            ans += down_sum[b] + top_sum[b] - (top_sum[c] + (n - sz[c]) * db);
+        }
+        else {
+            ans = down_sum[b] + top_sum[a];
+            ans += down_sum[a] - (down_sum[c] + sz[c] * da);
+            ans += top_sum[b] - (top_sum[c] + (n - sz[c]) * db);
         }
 
         cout << ans << '\n';
