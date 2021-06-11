@@ -5,21 +5,20 @@ from bs4 import BeautifulSoup
 import os
 import sys 
 
-if(len(sys.argv)<3):
+if(len(sys.argv) < 4):
 	exit()
 else:
-	url = sys.argv[1]
-	filename = sys.argv[2] + ".cpp__tests"
+	problem = sys.argv[1]
+	url = sys.argv[2]
+	filename = sys.argv[3] + ".cpp__tests"
 
 if( url.find('https://codeforces.com/') == -1):
-	with open("solution.cpp__tests", "w") as outfile:
-		outfile.write('Please open a problem page')
 	exit()
 else:
 	try:
 		page = urllib.request.urlopen(url, timeout=20)
 	except:
-		print(url)
+		print("Couldn't parse", problem+".cpp__tests")
 		exit()
 soup = BeautifulSoup(page, features = "html.parser")
 
@@ -40,20 +39,12 @@ for elements in y:
 		t = t[:6] + '\n' + t[6:]
 	out += t
 
-# print(res)
-# print(out)
-
-
 res = res.split('Input\n')
 out = out.split('Output\n')
-
-# print(res)
-# print(out)
 
 res.remove("")
 out.remove("")
 
-#res = [elements.strip() for elements in res]
 out = [elements.strip() for elements in out]
 
 correct = []
@@ -65,11 +56,13 @@ sz = len(res)
 
 for i in range(sz):
 	dic = {
-		"correct_answers" : correct[i],
-		"test" : res[i]
+		"test" : res[i],
+		"correct_answers" : correct[i]
 	}
 	final.append(dic) 
 
 
 with open(filename, "w") as outfile: 
     outfile.write(json.dumps(final)) 
+
+print("Parsed", problem+".cpp__tests")

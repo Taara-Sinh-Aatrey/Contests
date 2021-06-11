@@ -3,10 +3,17 @@ import urllib.request
 from bs4 import BeautifulSoup
 import os
 import subprocess
+import sys
 
-url = input("Enter Codeforces Contest Id : ")
-url = "https://codeforces.com/contest/" + url
-# url = "https://codeforces.com/gym/" + url
+# Run this file as "python contest.py https://codeforces.com/contest/contest_id contest_folder_name"
+
+if(len(sys.argv) < 3):
+	print('Run this file as "python contest.py contest_link contest_folder_name"')
+	exit()
+else:
+	url = sys.argv[1]
+	contest_id = sys.argv[2]
+
 if(url.find('https://codeforces.com/contest') == -1 and url.find('https://codeforces.com/gym') == -1):
 	print("Invalid Url")
 	exit()
@@ -24,39 +31,40 @@ for row in rows:
 	cols = [ele.text.strip() for ele in cols]
 	data.append([ele for ele in cols if ele])
 
-problem_tags = []
+problems = []
 for i in range(len(data)):
 	if(len(data[i])>0):
-		problem_tags.append(data[i][0])
+		problems.append(data[i][0])
 
-print(problem_tags)
+print("Problem Names :", problems, "\n")
 
-contest_id = url[-4] + url[-3] + url[-2] + url[-1]
 path = contest_id
 parent_dir = os.getcwd()
 
 path = os.path.join(parent_dir,path)
 if not os.path.exists(path):
 	os.mkdir(path)
+	print("Created folder", contest_id, "\n")
 
-# x = url + '/submit'
-# subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
-
+# open folder in sublime
 subprocess.run(["subl", "-a", path], stdout=subprocess.DEVNULL)
+
+# open friends standings
 x = url + '/standings/friends/true'
 subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
+
+# open dashboard
 subprocess.run(["google-chrome", url], stdout=subprocess.DEVNULL)
+
+# open problem A
 x = url + "/problem/A"
 subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
 
-for problems in problem_tags:
-	problem_path = os.path.join(path,problems)
-	print(problem_path)
+for problem in problems:
+	problem_path = os.path.join(path,problem)
 	with open(problem_path+".cpp", "a") as sec:
 		pass
-	problem_url = " " + url + "/problem/" + problems + " \"";
-	os.system('python automate.py' + problem_url + problem_path + "\"")
-	# x = url + '/problem/' + problems
-	# subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
-
-# subprocess.run(["google-chrome", url], stdout=subprocess.DEVNULL)
+	print("created file", problem+".cpp")
+	problem_url = " " + url + "/problem/" + problem + " \"";
+	os.system('python automate.py ' + problem + problem_url + problem_path + "\"")
+	print("")
