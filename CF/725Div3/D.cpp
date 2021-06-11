@@ -72,7 +72,84 @@ T amin(T& a, T1 b, Tail... c) {
 
 const int mod = 1e9 + 7;
 const int INF = 1e18L + 5;
-const int N = 2e5 + 5;
+const int N = 1e3 + 5;
+
+vector<int> spf(N, 0);
+// vector<int> unique_primes(N, 0);
+vector<bool> prime(N, true);
+vector<int> primes;
+void sieve() {
+    prime[0] = prime[1] = false;
+    for(int i = 2; i < N; i++) {
+        if(prime[i]) {
+            spf[i] = i;
+            primes.push_back(i);
+        }
+        int prod;
+        for(int j = 0; j < (int) primes.size() && primes[j] <= spf[i] && (prod = primes[j] * i) < N; j++) {
+            spf[prod] = primes[j];
+            prime[prod] = false;
+        }
+    }
+    // for(int i = 2; i < N; i++) {
+    //     int p = spf[i];
+    //     unique_primes[i] = unique_primes[i / p] + ((i / p) % p != 0);
+    // }
+}
+
+vector<pair<int, int>> factorise(int num) {
+    vector<pair<int, int>> factors;
+    while(num > 1) {
+        int factor = spf[num];
+        int cnt = 0;
+        while(spf[num] == factor) {
+            num /= spf[num];
+            cnt++;
+        }
+        factors.emplace_back(factor, cnt);
+    }
+    return factors;
+};
+
+int Pow(int a, int b, int P = mod){
+    int res = 1;
+    while(b > 0) {
+        if(b & 1) res = res * a % P;
+        a = a * a % P;
+        b >>= 1;
+    }
+    return res;
+}
+
+// check for primes in n^(1/3) complexity
+bool miller_rabin(unsigned n) {
+    if (n < 2)
+        return false;
+ 
+    // Check small primes.
+    for (unsigned p : {2, 3, 5, 7, 11, 13, 17, 19, 23, 29})
+        if (n % p == 0)
+            return n == p;
+ 
+    int r = __builtin_ctz(n - 1);
+    unsigned d = (n - 1) >> r;
+ 
+    // https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test#Testing_against_small_sets_of_bases
+    for (unsigned a : {2, 7, 61}) {
+        unsigned x = Pow(a % n, d, n);
+ 
+        if (x <= 1 || x == n - 1)
+            continue;
+ 
+        for (int i = 0; i < r - 1 && x != n - 1; i++)
+            x = unsigned(uint64_t(x) * x % n);
+ 
+        if (x != n - 1)
+            return false;
+    }
+ 
+    return true;
+}
 
 
 void solve() {
@@ -84,25 +161,19 @@ void solve() {
 
     auto factors = [&](int num) {
         int ret = 0;
-        for(int i : {2, 3}) {
-            while(num % i == 0) {
-                num /= i;
+        for(int p : primes) {
+            if(p * p * p > num) {
+                break;
+            }
+            while(num % p == 0) {
+                num /= p;
                 ret++;
             }
         }
-        for(int i = 5; i * i <= num;) {
-            while(num % i == 0) {
-                num /= i;
-                ret++;
-            }
-            i += 2;
-            while(num % i == 0) {
-                num /= i;
-                ret++;
-            }
-            i += 4;
+        if(num > 1) {
+            // a number 'n' can have atmost 2 factors greater than n^(1/3)
+            ret += miller_rabin(num) ? 1 : 2;
         }
-        ret += num > 1;
         return ret;
     };
 
@@ -120,6 +191,8 @@ signed main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
+
+    sieve();
 
     int t = 1;
     cin >> t;
