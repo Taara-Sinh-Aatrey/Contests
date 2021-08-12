@@ -1,21 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-long long taxiDriver(vector<int> pickup, vector<int> drop, vector<int> tip) {
-    long long n = pickup.size();
-    vector<long long> order(n);
+#define ll long long
+
+ll taxiDriver(vector<ll> pickup, vector<ll> drop, vector<ll> tip) {
+    ll n = pickup.size();
+    vector<ll> order(n);
     iota(order.begin(), order.end(), 0);
-    sort(order.begin(), order.end(), [&](long long i, long long j) {
+    sort(order.begin(), order.end(), [&](ll i, ll j) {
         if(pickup[i] == pickup[j]) {
             return drop[i] < drop[j];
         }
         return pickup[i] < pickup[j];
     });
     
-    map<long long, long long> mp;
+    map<ll, ll> mp;
     mp[0] = 0;
     
-    long long ans = 0;
+    ll ans = 0;
     
     for(auto& i : order) {
         auto it = mp.upper_bound(pickup[i]);
@@ -31,13 +33,10 @@ long long taxiDriver(vector<int> pickup, vector<int> drop, vector<int> tip) {
     return ans;
 }
 
-signed main()
+int main()
 {
     cout << taxiDriver({1, 4}, {5, 6}, {2, 5}) << endl;
     cout << taxiDriver({0, 4, 5}, {3, 5, 7}, {1, 2, 2}) << endl;
-    
-    long long a = 0;
-    
     
     return 0;
 }
