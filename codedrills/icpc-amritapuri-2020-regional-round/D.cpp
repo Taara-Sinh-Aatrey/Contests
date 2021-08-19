@@ -56,62 +56,10 @@ void solve() {
     cin >> pb >> bt >> tp;
     
     vector<vector<int>> d = {{0, pb, tp}, {pb, 0, bt}, {tp, bt, 0}};
-    
     int area = 0;
-    
     vector<P> ans;
-    
     int diff = 1e9;
-    
-    // auto solve = [&](int bx, int by) {
-    //     if(bx < 0 || by < 0) return;
-    //     int tx = ((tp + py + px) - (bt + by - bx)) / 2;
-    //     int ty = ((tp + py + px) + (bt + by - bx)) / 2;
-    //     vector<P> pt(3);
-    //     pt[0].x = 0, pt[0].y = 0;
-    //     pt[1].x = bx, pt[1].y = by;
-    //     pt[2].x = tx, pt[2].y = ty;
-        
-    //     if(pt[2].y - pt[2].x != bt + by - bx || pt[2].y + pt[2].x != tp + py + px) {
-    //         return;
-    //     }
-        
-    //     if(pt[0].x > pt[2].x || pt[2].x > pt[1].x || pt[2].y < max(pt[0].y, pt[1].y)) {
-    //         return;
-    //     }
-        
-    //     int cur = 0;
-    //     int mnx = INF, mxx = -INF, mny = INF, mxy = -INF;
-    //     for (int i = 0; i < 3; i++) {
-    //         cur += pt[i] * pt[(i + 1) % 3];
-    //         amin(mnx, pt[i].x);
-    //         amax(mxx, pt[i].x);
-    //         amin(mny, pt[i].y);
-    //         amax(mxy, pt[i].y);
-    //         // here we have taken origin as the Nail/pivot point for calculating
-    //         // the area (and thus for cross product)
-    //     }
-        
-    //     if(mxx - mnx + 1 > diff || mxy - mny + 1 > diff) {
-    //         return;
-    //     }
-        
-    //     for (int i = 0; i < 3; i++) {
-    //         pt[i].x = pt[i].x - mnx + 1;
-    //         pt[i].y = pt[i].y - mny + 1;
-    //         // here we have taken origin as the Nail/pivot point for calculating
-    //         // the area (and thus for cross product)
-    //     }
-        
-    //     cur = abs(cur);
-        
-    //     if(area <= cur) {
-    //         ans = pt;
-    //         area = cur;
-    //     }
-    // };
 
-    
     auto fun = [&](int i, int j, int k) {
         vector<P> pt(3);
         pt[i].x = 0, pt[i].y = 0;
