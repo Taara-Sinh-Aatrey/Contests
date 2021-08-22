@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import os
 import subprocess
 import sys
+import platform
 
 # Run this file as "python contest.py https://codeforces.com/contest/contest_id contest_folder_name"
 
@@ -48,18 +49,27 @@ if not os.path.exists(path):
 
 # open folder in sublime
 subprocess.run(["subl", "-a", path], stdout=subprocess.DEVNULL)
-
+	
 # open friends standings
 x = url + '/standings/friends/true'
-subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
-
+if platform.system() == 'Linux':
+	subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
+else:
+	os.system("start chrome " + x)
+	
 # open dashboard
-subprocess.run(["google-chrome", url], stdout=subprocess.DEVNULL)
-
+if platform.system() == 'Linux':
+	subprocess.run(["google-chrome", url], stdout=subprocess.DEVNULL)
+else:
+	os.system("start chrome " + url)
+	
 # open problem A
 x = url + "/problem/A"
-subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
-
+if platform.system() == 'Linux':
+	subprocess.run(["google-chrome", x], stdout=subprocess.DEVNULL)
+else:
+	os.system("start chrome " + x)
+	
 for problem in problems:
 	problem_path = os.path.join(path,problem)
 	with open(problem_path+".cpp", "a") as sec:
