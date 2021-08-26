@@ -92,15 +92,19 @@ print('Enter folder name')
 path = input()
 
 gym = 0
-print('Enter 0 for regular contest, 1 for a gym contest?')
+print('Enter 0 for regular contest, 1 for a gym contest')
 gym = int(input())
+
+if gym != 0 and gym != 1:
+    print('Invalid option')
+    exit()
 
 print('Enter contest id')
 contest_id = input()
 
 if gym == 0:
 	url = 'https://codeforces.com/contest/' + contest_id
-else:
+elif gym == 1:
 	url = 'https://codeforces.com/gym/' + contest_id
 
 page = urllib.request.urlopen(url, timeout=20)
