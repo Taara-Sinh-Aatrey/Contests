@@ -1,0 +1,76 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+template<typename A, typename B> istream& operator>>(istream &is, pair<A, B> &p) { return is >> p.first >> p.second;} template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> istream& operator>>(istream &is, T_container &v) { for (T& x : v) is >> x; return is;} bool debug;
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return debug ? os << '(' << p.first << ", " << p.second << ')' : os << p.first << " " << p.second;} template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { if(debug) { os << "{"; string sep; for (const T &x : v) os << sep << x, sep = ", "; os << '}'; } else { bool f = false; for (const T &x : v) { if(f) {os << " ";} os << x, f = true; } } return os;}
+template <typename T, typename T1, typename... Tail> T amin(T& a, T1 b, Tail... c) { if(b < a) a = b; if constexpr (sizeof...(c) != 0) { amin(a, c...); } return a; } template <typename T, typename T1, typename... Tail> T amax(T& a, T1 b, Tail... c) { if(b > a) a = b; if constexpr (sizeof...(c) != 0) { amax(a, c...); } return a; }
+void dbg_out() { cerr << endl; } template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
+
+#ifdef ONLINE_JUDGE
+#define dbg(...)
+#else
+#define dbg(...) cerr << "[" << #__VA_ARGS__ << "]:", debug = true, dbg_out(__VA_ARGS__), debug = false
+#endif
+
+#define int int64_t
+const int mod = 1e9 + 7; const int INF = 1e18L + 5; const int N = 2e5 + 5;
+
+void solve() {
+    
+    int n, k, s;
+    cin >> n >> k >> s, --s;
+    vector<int> a(n);
+    for(auto& x : a) {
+        cin >> x, --x;
+    }
+    
+    vector<vector<int>> g(k, vector<int>(k, INF));
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < k; j++) {
+            int x;
+            cin >> x;
+            if(x == -1) x = INF;
+            amin(g[a[i]][j], x);
+        }
+    }
+    
+    for(int i = 0; i < k; i++) {
+        g[i][i] = 0;
+    }
+    
+    s = a[s];
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    pq.emplace(0, s);
+    vector<int> d(k, INF);
+    d[s] = 0;
+    
+    while(!pq.empty()) {
+        auto [dis, u] = pq.top();
+        pq.pop();
+        if(dis > d[u]) continue;
+        for(int v = 0; v < k; v++) {
+            if(d[v] > d[u] + g[u][v]) {
+                d[v] = d[u] + g[u][v];
+                pq.emplace(d[v], v);
+            }
+        }   
+    }
+    
+    for(int i = 0; i < n; i++) {
+        cout << (d[a[i]] < INF ? d[a[i]] : -1) << " \n"[i == n - 1];
+    }
+}
+
+signed main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+    int t = 1;
+
+    for (int tt = 1; tt <= t; tt++) {
+        solve();
+    }
+    
+    return 0;
+}
