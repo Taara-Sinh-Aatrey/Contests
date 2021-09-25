@@ -49,9 +49,8 @@ void solve() {
                 rem.emplace_back(x);
             }
         }
-        int used_for_free = min<int>(rem.size(), free);
-        never_changed -= used_for_free;
-        ans += rem.size() - used_for_free;
+        never_changed -= free;
+        ans += rem.size() - free;
         for(auto& x : rem) {
             nmp[x][1]++;
         }
