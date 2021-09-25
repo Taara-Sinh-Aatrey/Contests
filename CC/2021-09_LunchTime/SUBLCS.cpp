@@ -106,25 +106,20 @@ void solve() {
     // dbg(inc_s);
     int ans = 0;
     for(int i = 0; i < n; i++) {
-        int mn1 = inf, mx1 = -inf;
-        int mn2 = inf, mx2 = -inf;
-        for (int it = 0; it < idxs[i].size(); it++) {
-            int j = idxs[i][it];
-            if(inc_p[j] + dec_s[j] - 1 == len_inc) {
-                mx1 = max(mx1, it);
-                mn1 = min(mn1, it);
+        vector<int> L(1, 0);
+        for (auto& j : idxs[i]) {
+            bool ok = true;
+            ok &= inc_p[j] + dec_s[j] - 1 == len_inc;
+            ok &= inc_s[j] + dec_p[j] - 1 == len_dec;
+            L.emplace_back(L.back());
+            if(ok) {
+                L.back()++;
             }
-            if(inc_s[j] + dec_p[j] - 1 == len_dec) {
-                mx2 = max(mx2, it);
-                mn2 = min(mn2, it);
+            else {
+                L.back() = 0;
             }
         }
-        // dbg(i, mn1, mx1);
-        // dbg(i, mn2, mx2);
-        int mn = max(mn1, mn2);
-        int mx = min(mx1, mx2);
-        // dbg(mn, mx, mx - mn + 1, i);
-        ans = max(ans, mx - mn + 1);
+        ans = max(ans, *max_element(L.begin(), L.end()));
     }
     print(ans);
 }
