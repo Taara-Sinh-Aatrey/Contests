@@ -36,30 +36,32 @@ void solve() {
         cnt[a[i]]++;
     }
     vector<unordered_map<int, int>> dp(n);
+    vector<int> bad(n);
     int ans = 0;
+    auto add = [&](int u, int x, int y) {
+        auto &val = dp[u][x];
+        if(val == 0) bad[u]++;
+        val += y;
+        if(val == cnt[x]) bad[u]--;
+    };
     function<void(int, int)> dfs = [&](int u, int par) {
-        dp[u][a[u]]++;
+        add(u, a[u], 1);
         for(auto& v : g[u]) {
             if(v == par) continue;
             dfs(v, u);
             if(dp[u].size() < dp[v].size()) {
                 swap(dp[u], dp[v]);
+                swap(bad[u], bad[v]);
             }
             for(auto& [x, y] : dp[v]) {
-                dp[u][x] += y;
+                add(u, x, y);
             }
+            dp[v] = unordered_map<int, int>();
         }
         if(par == -1) return;
-        bool ok = true;
-        for(auto& [f, w] : dp[u]) {
-            if(cnt[f] != w) {
-                ok = false;
-                break;
-            }
-        }
-        if(ok) {
+        if(bad[u] == 0) {
             ans++;
-            dp[u].clear();
+            dp[u] = unordered_map<int, int>();
         }
     };
     dfs(0, -1);
