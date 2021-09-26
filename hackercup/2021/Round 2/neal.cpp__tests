@@ -1,0 +1,5 @@
+[
+	{
+		"test": "1\n6 16 4 21\n..XXX..X.X.XXX..\n.XXXX...XX..XX..\nX....X.X.X.X..X.\nX.X.X.X.XXXXX.XX\nXX.XXX...X.X.XXX\n.XX....XXXX..XXX\n1 3\n6 14\n4 13\n1 3\n5 14\n4 6\n6 13\n2 1\n5 16\n2 16\n3 10\n2 9\n6 4\n5 5\n3 8\n2 4\n1 4\n5 7\n1 15\n4 6\n1 6\n"
+	}
+]
