@@ -233,6 +233,10 @@ struct P {
     line l;
     point p;
     int w;
+    bool operator<(const P &other) {
+        int w1 = -w, w2 = -other.w;
+        return tie(l, p, w1) < tie(other.l, other.p, w2);
+    }
 };
 
 void solve() {
@@ -251,13 +255,7 @@ void solve() {
             v.push_back({l, mid, a.w + b.w});
         }
     }
-    
-    sort(v.begin(), v.end(), [&](auto a, auto b) {
-        if (a.l != b.l) return a.l < b.l; 
-        else if (a.p != b.p) return a.p < b.p;
-        else return a.w > b.w;
-    });
-    
+    sort(v.begin(), v.end());
     int ans = -1;
     for (int i = 0, j; i < v.size(); i = j) {
         for (j = i; j < v.size() && v[i].l == v[j].l; j++) ;
