@@ -15,17 +15,6 @@ void dbg_out() { cerr << "\n"; } template <typename Head, typename ...Tail> void
 #define dbg(...)
 #endif
 
-#define int int64_t
-// struct S {
-//     int add = inf;
-//     int nxt_range = 0;
-//     int cur;
-//     S (int _add, int _nxt_range, int _cur) : add(_add), nxt_range(_nxt_range), cur(_cur) {}
-//     bool operator< (const S &other) const {
-//         if (add != other.add) 
-//     } 
-// };
-
 template <typename T, typename T1, typename... Tail>
 T amax(T& a, T1 b, Tail... c) {
     if(b > a) a = b;
@@ -43,96 +32,33 @@ T amin(T& a, T1 b, Tail... c) {
     return a;
 }
 
-const int inf = 1e18L + 5, mod = 1e9 + 7, N = 40;
+#define int int64_t
+const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e3;
 
 void solve() {
     int n;
     scan(n);
     vector<int> a(n);
     scan(a);
-    // dp[j] is max value of next free range for range j
-    // vector<int> dpmn(2 * N + 1, -1);
-    vector<int> dpmn(2 * N + 1, inf);
-    vector<int> dpmx(2 * N + 1, -1);
-    dpmn[a[0]] = a[0];
-    dpmx[a[0]] = a[0];
-    for (int i = 1; i < n; i++) {
-        vector<int> ndpmn(2 * N + 1, inf);
-        vector<int> ndpmx(2 * N + 1, -1);
-        for (int j = 1; j + a[i] <= 2 * N; j++) {
-            // print(j);
-            if(dpmx[j] < 0 || dpmn[j] >= inf) continue;
-            {
-                int x = dpmx[j];
-                if(a[i] >= x) {
-                    // print(j + a[i] - x);
-                    amax(ndpmx[j + a[i] - x], j + a[i] - x); 
-                    amin(ndpmn[j + a[i] - x], j + a[i] - x); 
-                }
-                else {
-                    // print(j + a[i] - x);
-                    amax(ndpmx[j], max(x - a[i], j + a[i] - x)); 
-                    amin(ndpmn[j], max(x - a[i], j + a[i] - x)); 
-                }
-                
-            }
-            {
-                int x = j - dpmx[j];
-                if(a[i] >= x) {
-                    // print(j + a[i] - x);
-                    amax(ndpmx[j + a[i] - x], j + a[i] - x); 
-                    amin(ndpmn[j + a[i] - x], j + a[i] - x); 
-                }
-                else {
-                    amax(ndpmx[j], max(x - a[i], j + a[i] - x)); 
-                    amin(ndpmn[j], max(x - a[i], j + a[i] - x)); 
-                }
-            }
-            
-            
-            {
-                int x = dpmn[j];
-                if(a[i] >= x) {
-                    // print(j + a[i] - x);
-                    amax(ndpmx[j + a[i] - x], j + a[i] - x); 
-                    amin(ndpmn[j + a[i] - x], j + a[i] - x); 
-                }
-                else {
-                    // print(j + a[i] - x);
-                    amax(ndpmx[j], max(x - a[i], j + a[i] - x)); 
-                    amin(ndpmn[j], max(x - a[i], j + a[i] - x)); 
-                }
-                
-            }
-            {
-                int x = j - dpmn[j];
-                if(a[i] >= x) {
-                    // print(j + a[i] - x);
-                    amax(ndpmx[j + a[i] - x], j + a[i] - x); 
-                    amin(ndpmn[j + a[i] - x], j + a[i] - x); 
-                }
-                else {
-                    amax(ndpmx[j], max(x - a[i], j + a[i] - x)); 
-                    amin(ndpmn[j], max(x - a[i], j + a[i] - x)); 
-                }
+    vector<int> dp(N + 1);
+    for (int i = 0; i < n; i++) {
+        vector<int> new_dp(N + 1, inf);
+        for (int j = 0; j <= N; j++) {
+            int new_j = max<int>(0, j - a[i]);
+            amin(new_dp[new_j], a[i] + dp[j]);
+            new_j = j + a[i];
+            if (new_j <= N) {
+               amin(new_dp[new_j], max<int>(0, dp[j] - a[i]));
             }
         }
-        swap(dpmn, ndpmn);
-        swap(dpmx, ndpmx);
-        // for (int j = 0; j <= 2 * N; j++) {
-        //     if(dpmn[j] > 0) {
-        //         print(j, dpmn[j]);
-        //     }
-        // }
-        // print();
+        swap(dp, new_dp);
     }
+    
     int ans = inf;
-    for (int i = 1; i <= 2 * N; i++) {
-        if (dpmn[i] <= 0) continue;
-        print(i);
-        return;
+    for (int i = 0; i <= N; i++) {
+        amin(ans, i + dp[i]);
     }
-    // assert(false);
+    cout << ans << "\n";
 }
 
 signed main() {

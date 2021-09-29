@@ -1,5 +1,4 @@
 #include "bits/stdc++.h"
-#include <numeric>
 using namespace std;
 
 bool debug;
@@ -25,21 +24,16 @@ void solve() {
     vector<int> a(n);
     scan(a);
     priority_queue<pair<int, int>> pq; 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) 
         pq.emplace(a[i], i);
-    }
     vector<pair<int, int>> ans;
     while(pq.size() > 1) {
-        auto [x, i] = pq.top();
-        pq.pop();
-        auto [y, j] = pq.top();
-        pq.pop();
-        if(y == 0) continue;
+        auto [x, i] = pq.top(); pq.pop();
+        auto [y, j] = pq.top(); pq.pop();
+        if(y == 0) break;
         ans.emplace_back(i + 1, j + 1);
-        x--;
-        y--;
-        if(x > 0) pq.emplace(x, i);
-        if(y > 0) pq.emplace(y, j);
+        if(x > 1) pq.emplace(x - 1, i);
+        if(y > 1) pq.emplace(y - 1, j);
     }
     print(ans.size());
     for (auto& p : ans) print(p);

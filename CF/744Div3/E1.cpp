@@ -35,7 +35,6 @@ void solve() {
         int x;
         cin >> x;
         if(i == 0 || x < dq.front()) {
-            assert(st.empty() || st.begin()->first >= x);
             dq.push_front(x);
         }
         else {

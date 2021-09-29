@@ -28,31 +28,19 @@ const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 void solve() {
     int n;
     scan(n);
-    deque<int> dq;
     oset<pair<int, int>> st;
     int ans = 0;
     for (int i = 0; i < n; i++) {
         int x;
         cin >> x;
-        if(i == 0) {
-            dq.push_front(x);
-        }
-        else {
+        if(i > 0) {
             int big = i - st.order_of_key({x + 1, -1});
             int small = st.order_of_key({x, -1});
-            if(small <= big) {
-                dq.push_back(x);
-                ans += small;
-            }
-            else {
-                dq.push_front(x);
-                ans += big;
-            }            
+            ans += min(small, big);     
         }
         st.insert({x, i});
     }
     print(ans);
-    print(dq);
 }
 
 signed main() {
