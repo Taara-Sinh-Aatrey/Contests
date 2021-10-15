@@ -1,0 +1,16 @@
+[
+	{
+		"correct_answers":
+		[
+			"bzz\nbzy\nabx\ncaa"
+		],
+		"test": "bacdefghijklmnopqrstuvwxzy\n4\nabx\nbzz\nbzy\ncaa\n"
+	},
+	{
+		"correct_answers":
+		[
+			"b\na\nac\nab\nabc"
+		],
+		"test": "zyxwvutsrqponmlkjihgfedcba\n5\na\nab\nabc\nac\nb\n"
+	}
+]
