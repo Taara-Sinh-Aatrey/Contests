@@ -38,42 +38,23 @@ void solve() {
         return;
     }
     print("YES");
-    function<bool(int, int, int, int, vector<int>&)> rec = [&] (int b, int k, int start, int sign, vector<int>& starting_points) {
-        // the actual starting point of current range is `start + 1`
-        if (b == -1) {
-            return k == 0;
-        }
-        int cur_len = 1 << b;
-        
-        // check for out of range 
-        if (sign == 1) {
-            if (start + 1 <= 0 || start + cur_len > n)
-                return false;
+    vector<int> starting_points;
+    int start = 0;
+    for (int i = msb; i >= 0; i--) {
+        int cur_len = 1 << i;
+        if (k >= cur_len) {
+            starting_points.emplace_back(start + 1);
+            start += cur_len;
+            k -= cur_len;
         }
         else {
-            if (start - cur_len + 1 <= 0 || start > n)
-                return false;
+            start -= cur_len - k;
+            starting_points.emplace_back(start + 1);
+            k = cur_len - k;
         }
-        
-        int nstart = start + sign * cur_len; // start point of the next range
-        int nsign = k > cur_len ? sign : -sign; // direction of the next range
-        int nk = abs(k - cur_len); // k for the next range
-        
-        // go towards nsign direction
-        if(!rec(b - 1, nk, nstart, nsign, starting_points)) {
-            // clear the constructed answer
-            starting_points.clear();
-            
-            // nsign goes out of range, try opposite direction which essentially means instead of traversing a->b, traverse b->a and this must work (since k isn't big enough), hence the assert
-            assert(rec(b - 1, nk, nstart + nsign * nk, -nsign, starting_points));
-        }
-        
-        starting_points.emplace_back(sign == 1 ? start + 1 : start - cur_len + 1);
-        return true;
-    };
-    vector<int> starting_points;
-    assert(rec(msb, k, 0, 1, starting_points));
+    }
     print(msb + 1);
+    reverse(starting_points.begin(), starting_points.end());
     for (auto x : starting_points) {
         print(x);
     }
