@@ -2,8 +2,9 @@
 .clang-format
 *.sublime-workspace
 *.exe
-*.out
+*.out*
 out
 in
 ok
 test/*
+*.DS_Store*
