@@ -19,3 +19,36 @@ void dbg_out() { cerr << "\n"; } template <typename Head, typename ...Tail> void
 #define ll long long
 const ll inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 
+class Solution {
+public:
+    vector<int> platesBetweenCandles(string s, vector<vector<int>>& q) {
+        vector<int> ans;
+        vector<int> p;
+        vector<int> pref(s.size());
+        for (int i = 0; i < s.size(); i++) {
+            if (i > 0) pref[i] = pref[i - 1];
+            if (s[i] == '|') {
+                p.emplace_back(i);
+            }
+            else {
+                pref[i]++;
+            }
+        }
+        for (auto &v : q) {
+            int l = v[0], r = v[1];
+            auto it = lower_bound(p.begin(), p.end(), l);
+            if (it == p.end()) {
+                ans.emplace_back(0);
+                continue;
+            }
+            l = *it;
+            r = *prev(upper_bound(p.begin(), p.end(), r));
+            if (l > r) {
+                ans.emplace_back(0);
+                continue;
+            }
+            ans.emplace_back(pref[r] - (l > 0 ? pref[l - 1] : 0));
+        }
+        return ans;
+    }
+};

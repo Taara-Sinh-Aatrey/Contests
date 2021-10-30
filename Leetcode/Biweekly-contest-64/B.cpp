@@ -19,3 +19,23 @@ void dbg_out() { cerr << "\n"; } template <typename Head, typename ...Tail> void
 #define ll long long
 const ll inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 
+class Solution {
+public:
+    int maxTwoEvents(vector<vector<int>>& a) {
+        int mx = 0;
+        sort(a.begin(), a.end());
+        int n = a.size();
+        int j = 0;
+        int ans = 0;
+        multiset<pair<int, int>> ms;
+        for (int i = 0; i < n; i++) {
+            while (!ms.empty() && ms.begin()->first < a[i][0]) {
+                amax(mx, ms.begin()->second);
+                ms.erase(ms.begin());
+            }
+            ans = max(ans, a[i][2] + mx);
+            ms.emplace(a[i][1], a[i][2]);
+        }
+        return ans;
+    }
+};

@@ -19,3 +19,21 @@ void dbg_out() { cerr << "\n"; } template <typename Head, typename ...Tail> void
 #define ll long long
 const ll inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 
+class Solution {
+public:
+    string kthDistinct(vector<string>& arr, int k) {
+        set<string> st;
+        map<string, int> cnt;
+        for (auto &s : arr) {
+            cnt[s]++;
+        }
+        for (auto &s : arr) {
+            if (cnt[s] != 1) continue;
+            st.insert(s);
+            if (st.size() == k) {
+                return s;
+            }
+        }
+        return "";
+    }
+};

@@ -1,4 +1,5 @@
 #include "bits/stdc++.h"
+#include <functional>
 using namespace std;
 
 bool debug;
@@ -19,3 +20,65 @@ void dbg_out() { cerr << "\n"; } template <typename Head, typename ...Tail> void
 #define ll long long
 const ll inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 
+int dx[] = {-1, -1, -1, 0, 0, 1, 1, 1};
+int dy[] = {0, -1, 1, -1, 1, -1, 0, 1};
+map<string, vector<int>> mp;
+
+class Solution {
+public:
+    int countCombinations(vector<string>& pieces, vector<vector<int>>& positions) {
+        mp["queen"] = {0, 1, 2, 3, 4, 5, 6, 7};
+        mp["rook"] = {0, 3, 4, 6};
+        mp["bishop"] = {1, 2, 5, 7};
+        int ans = 0;
+        int n = pieces.size();
+        auto check = [&] (vector<pair<int, int>> a) {
+            auto p = positions;
+            int steps = 0;
+            bool ok = true;
+            while (ok) {
+                ok = false;
+                steps++;
+                for (int i = 0; i < n; i++) {
+                    if (steps <= a[i].second) {
+                        p[i][0] += dx[a[i].first];
+                        p[i][1] += dy[a[i].first];
+                    }
+                    if (steps < a[i].second) {
+                        ok = true;
+                    }
+                }
+                for (int i = 0; i < n; i++) {
+                    for (int j = i + 1; j < n; j++) {
+                        if (p[i] == p[j]) return 0;
+                    }
+                }
+            }
+            return 1;
+        };
+        vector<pair<int, int>> vec;
+        function<void(int)> rec = [&] (int i) {
+            if (i >= n) {
+                ans += check(vec);
+                return;
+            }
+            int w = 0;
+            for (auto &dir : mp[pieces[i]]) {
+                for (int x = 0; x <= 7; x++) {
+                    if (x == 0 && w != 0) continue;
+                    int nx = positions[i][0] + dx[dir] * x;
+                    int ny = positions[i][1] + dy[dir] * x;
+                    if (nx > 8 || nx < 1 || ny > 8 || ny < 0) {
+                        continue;
+                    } 
+                    w = 1;
+                    vec.emplace_back(dir, x);
+                    rec(i + 1);
+                    vec.pop_back();
+                }
+            }
+        };
+        rec(0);
+        return ans;
+    }
+};
