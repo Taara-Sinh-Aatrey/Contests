@@ -1,1 +1,0 @@
-[{"correct_answers": ["Yes"], "test": "3\n0 0\n0 1\n1 0\n2 0\n3 0\n3 1\n"}, {"correct_answers": ["No"], "test": "3\n1 0\n1 1\n3 0\n-1 0\n-1 1\n-3 0\n"}, {"correct_answers": ["Yes"], "test": "4\n0 0\n2 9\n10 -2\n-6 -7\n0 0\n2 9\n10 -2\n-6 -7\n"}, {"correct_answers": ["Yes"], "test": "6\n10 5\n-9 3\n1 -5\n-6 -5\n6 9\n-9 0\n-7 -10\n-10 -5\n5 4\n9 0\n0 -10\n-10 -2\n"}]
