@@ -1,1 +1,0 @@
-[{"correct_answers": ["20"], "test": "5 6\n1 2 3 4 5\n"}, {"correct_answers": ["1250000000000"], "test": "2 1000000000000\n500000 1000000\n"}, {"correct_answers": ["62"], "test": "8 5\n1 3 4 5 10 11 12 13\n"}]
