@@ -1,0 +1,556 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"remai",
+				"remaining_mask"
+			],
+			[
+				"__buil",
+				"__builtin_ctzll("
+			],
+			[
+				"__builtin",
+				"63 - __builtin_clzll("
+			],
+			[
+				"__bul",
+				"__builtin_ctzll("
+			],
+			[
+				"se",
+				"secondTown"
+			],
+			[
+				"fi",
+				"firstTown"
+			],
+			[
+				"dsu",
+				"snippet_dsu"
+			],
+			[
+				"repe",
+				"repeatIndex"
+			],
+			[
+				"repea",
+				"repeatIndex"
+			],
+			[
+				"tree",
+				"snippet_tree_dfs"
+			],
+			[
+				"read",
+				"readInt"
+			],
+			[
+				"s",
+				"sublime_plugin"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/User/Builds/C++ (Fast Olympic Coding).sublime-build",
+					""
+				],
+				[
+					"Packages/User/Builds/C++ (Fast Olympic Coding).sublime-build",
+					"Fast Compile And Run"
+				]
+			],
+			[
+				"Packages/User/Builds/C++ (Fast Olympic Coding).sublime-build",
+				"Fast Compile And Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Builds/C++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Builds/C++.sublime-build",
+					"Fast Compile And Run"
+				]
+			],
+			[
+				"Packages/User/Builds/C++.sublime-build",
+				"Fast Compile And Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/TestMultiExec.sublime-build",
+					""
+				],
+				[
+					"Packages/User/TestMultiExec.sublime-build",
+					"Fast Compile And Run"
+				]
+			],
+			[
+				"Packages/User/TestMultiExec.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"lis",
+				"Set Syntax: Lisp"
+			],
+			[
+				"Snippet: ",
+				"Snippet: z_function"
+			],
+			[
+				"rename",
+				"Rename File"
+			],
+			[
+				"Snippet: dsu",
+				"Snippet: dsu"
+			],
+			[
+				"vpf",
+				"View Package File"
+			],
+			[
+				"de",
+				"DeleteCurrentFile: Delete File"
+			],
+			[
+				"lsp",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"llsp",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp ena",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"hyo",
+				"HyperHelp: Help on Help"
+			],
+			[
+				"hyper",
+				"HyperHelp: Browse Available Help"
+			],
+			[
+				"hyperhelp",
+				"HyperHelp: Browse Available Help"
+			],
+			[
+				"package con",
+				"Package Control: Remove Repository"
+			],
+			[
+				"Snippet: cpp",
+				"Snippet: cpp_basic"
+			],
+			[
+				"vpf ",
+				"View Package File"
+			],
+			[
+				"ter",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"terminus",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"sbc",
+				"Scratch Buffer: C++"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"window.active_view().set_name('make.py')",
+			"window.active_view().set_name(make.py)",
+			"window.active_view().set(make.py)",
+			"window.new_file()",
+			"winodw.new_file()",
+			"window.active_view().new_file()",
+			"view.run_command(\"view_tester\", {\"action\": \"make_opd\", \"use_debugger\": False})",
+			"view.run_command(\"view_tester\", {\"action\": \"make_opd\", \"use_debugger\": false})",
+			"view.run_command(\"view_tester\", {\"action\": \"make_opd\", \"use_debugger\": false)})",
+			"view.run(\"command\": \"view_tester\", \"args\": {\"action\": \"make_opd\", \"use_debugger\": false)})",
+			"view.run_command(\"command\": \"view_tester\", \"args\": {\"action\": \"make_opd\", \"use_debugger\": false)})",
+			"view.run(            \"command\": \"view_tester\",\n            \"args\": {\n                \"action\": \"make_opd\",\n                \"use_debugger\": false\n            },        \n)",
+			"a",
+			"a = sublime.expand_variables(a, window.extract_variables())",
+			"a = {\"x\" : \"${file_base_name}\"}",
+			"a",
+			"a = sublime.expand_variables(a, window.extract_variables())",
+			"a = {\"x\" : \"file_base_name\"}",
+			"sublime.expand_variables(\"${file_base_name}\", window.extract_variables())",
+			"\"dbrun sublime.expand_variables(\"${file_base_name}\", window.extract_variables())\"",
+			"\"shell_cmd\": \"dbrun sublime.expand_variables(\"${file_base_name}\", window.extract_variables())\"",
+			"sublime.expand_variables(\"${file_base_name}\", window.extract_variables())",
+			"sublime.expand_variables(\\\"${file_base_name}\\\", window.extract_variables())",
+			"sublime.expand_variables(\"dbrun \\\"${file_base_name}\\\"\", window.extract_variables())",
+			"sublime.expand_variables(\"shell_cmd\": \"dbrun \\\"${file_base_name}\\\"\", window.extract_variables())",
+			"sublime.expand_variables(\"${file_base_name}\", window.extract_variables())",
+			"window.extract_variables()",
+			"sublime.expand_variables(\"${file_base_name}\", window.extract_variables())",
+			"sublime.expand_variables(\"${file_base_name}\", self.window.extract_variables())",
+			"sublime.expand_variables(\"${file_base_name}\", self.window.extract_variables()})",
+			"sublime.expand_variables(\"${file_base_name}\", {\"file_base_name\": file_base_name})",
+			"sublime.expand_variables(\"Hello, ${name}\", {\"name\": \"Foo\"})",
+			"sublime.expand_variables(\"${file_base_name}\", {})",
+			"sublime.expand_variables(\"${ile_base_name}\", {})",
+			"sublime.expand_variables(x, 'file_base_name')",
+			"sublime.expand_variables('file_base_name')",
+			"sublime.expand_variables(file_base_name)",
+			"window.extract_variables()",
+			"window.active_view().file_base_name()",
+			"window.active_view().file_name()",
+			"active_view().file_name()",
+			"view.file_base_name()",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sys.platform",
+			"sys.platform()",
+			"import sys",
+			"os.platform()",
+			"sys.platform()"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/Users/aatrey/Contests/Placement/Cred - 30Nov2021/A.cpp",
+		"/Users/aatrey/Contests/Placement/Cred - 30Nov2021/B.cpp",
+		"/Users/aatrey/Contests/Placement/CodeDrift | Compete & Win - 20Nov2021/E.cpp",
+		"/Users/aatrey/Contests/Placement/CodeDrift | Compete & Win - 20Nov2021/A.cpp",
+		"/Users/aatrey/Contests/Placement/CodeDrift | Compete & Win - 20Nov2021/B.cpp",
+		"/Users/aatrey/Contests/Placement/Ola - 27Nov2021/B.cpp",
+		"/Users/aatrey/Contests/Placement/Ola - 27Nov2021/B.cpp__tests",
+		"/Users/aatrey/Contests/Placement/CodeDrift | Compete & Win - 20Nov2021/file",
+		"/Users/aatrey/Contests/Placement/CodeDrift | Compete & Win - 20Nov2021/parsed_file",
+		"/Users/aatrey/Contests/Placement/CodeDrift | Compete & Win - 20Nov2021/B.ii",
+		"/Users/aatrey/Contests/Placement/CodeDrift | Compete & Win - 20Nov2021/D.cpp",
+		"/Users/aatrey/Contests/Placement/sol.cpp",
+		"/Users/aatrey/Library/Mobile Documents/com~apple~CloudDocs/bin/compile",
+		"/Users/aatrey/Library/Mobile Documents/com~apple~CloudDocs/bin/run",
+		"/Users/aatrey/Contests/Placement/Apple - 16Nov2021/A.cpp",
+		"/Users/aatrey/Contests/Placement/Apple - 16Nov2021/B.cpp",
+		"/Users/aatrey/Contests/Placement/DEShaw - 11Sep2021/B.cpp",
+		"/Users/aatrey/Contests/Placement/DEShaw - 11Sep2021/A.cpp",
+		"/Users/aatrey/Contests/Placement/Intuit - 10Nov2021/C.cpp",
+		"/Users/aatrey/Contests/Placement/Intuit - 10Nov2021/D.cpp",
+		"/Users/aatrey/Contests/Placement/Amazon - 13Nov2021/A.cpp",
+		"/Users/aatrey/Contests/Placement/Amazon - 13Nov2021/B.cpp",
+		"/Users/aatrey/Contests/Placement/Amazon - 13Nov2021/D.cpp",
+		"/Users/aatrey/Contests/Placement/Amazon - 13Nov2021/C.cpp",
+		"/Users/aatrey/Contests/Placement/SnowFlake - 23Sep2021/A.cpp",
+		"/Users/aatrey/Contests/Placement/Maventic - 13Nov2021/A.cpp",
+		"/Users/aatrey/Contests/Placement/Intuit - 2Aug2021/A2.cpp",
+		"/Users/aatrey/Contests/Placement/Intuit - 2Aug2021/A1.cpp",
+		"/Users/aatrey/.zshrc",
+		"/Users/aatrey/Contests/Placement/Sprinklr - 8Nov2021/A.cpp",
+		"/Users/aatrey/Contests/Placement/Sprinklr - 8Nov2021/A_brute.cpp",
+		"/Users/aatrey/Contests/Placement/Sprinklr - 8Nov2021/A_gen.cpp",
+		"/Users/aatrey/Contests/Placement/Sprinklr - 8Nov2021/B.cpp",
+		"/Users/aatrey/Contests/Placement/Sprinklr - 8Nov2021/in",
+		"/Users/aatrey/Contests/Placement/Sprinklr - 8Nov2021/ok",
+		"/Users/aatrey/Contests/Placement/Sprinklr - 8Nov2021/out",
+		"/Users/aatrey/Contests/Placement/Sprinklr - 8Nov2021/C.cpp",
+		"/Users/aatrey/Contests/Placement/Sprinklr - 8Nov2021/D.cpp",
+		"/Users/aatrey/Contests/Placement/Goldman Sachs - 24Oct2021/A.cpp",
+		"/Users/aatrey/Contests/Placement/Goldman Sachs - 24Oct2021/Charm.java",
+		"/Users/aatrey/Contests/Placement/Infosys - 8Aug2021/B.cpp",
+		"/Users/aatrey/Contests/Placement/Infosys - 8Aug2021/C.cpp",
+		"/Users/aatrey/Contests/Placement/A.cpp",
+		"/Users/aatrey/Contests/Placement/Amex - 23Oct2021/B.cpp",
+		"/Users/aatrey/Contests/Placement/Amex - 23Oct2021/A.cpp",
+		"/Users/aatrey/Contests/Placement/Amex - 23Oct2021/C.cpp",
+		"/Users/aatrey/Contests/Placement/Amex - 23Oct2021/A1.cpp",
+		"/Users/aatrey/.zsh_history",
+		"/Users/aatrey/test/test2.txt",
+		"/Users/aatrey/Pictures/Photos",
+		"/Users/aatrey/Pictures/Photos Library.photoslibrary/database/Photos.sqlite",
+		"/Users/aatrey/Library.photoslibrary/database/Photos.sqlite",
+		"/Users/aatrey/Contests/Placement/TechGig - 21Oct2021/A.cpp",
+		"/Users/aatrey/tes",
+		"/Users/aatrey/Contests/Placement/TechGig - 21Oct2021/A.cpp__tests",
+		"/Users/aatrey/Contests/Placement/TechGig - 21Oct2021/A_gen.cpp",
+		"/Users/aatrey/Contests/Placement/TechGig - 21Oct2021/A_brute.cpp",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/PackageDev/plugins/new_resource_file/__init__.py",
+		"/usr/local/bin/gen",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/CppFastOlympicCoding/Default.sublime-commands",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/CppFastOlympicCoding/ContestHandler.py",
+		"/opt/homebrew/Cellar/gcc/11.2.0/include/c++/11.1.0/aarch64-apple-darwin20/bits/stdc++.h",
+		"/opt/homebrew/Cellar/llvm/13.0.0_1/include/c++/v1/bits/stdc++.h",
+		"/usr/local/bin/dbcompile",
+		"/usr/local/bin/compile"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"/Users/aatrey/Contests/Placement,<project filters>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"->",
+			"lower_bound",
+			"signed",
+			"s",
+			"cerr << \"\\n\";",
+			"int",
+			"DEBUG",
+			"//",
+			"y",
+			"x",
+			"mask",
+			"submask",
+			"mask2",
+			"submask",
+			"signed",
+			"compile",
+			"]);\n",
+			"signed",
+			"secondTown",
+			"edge",
+			"c",
+			"1, 10",
+			"osx",
+			"Hard",
+			"signed",
+			"int",
+			"sumu",
+			"sumd",
+			"mxd",
+			"n",
+			"signed",
+			"v",
+			" << endl",
+			"cout << ",
+			"find",
+			".back()",
+			"int",
+			"long long",
+			"signed",
+			"int",
+			"dbg",
+			"score",
+			"0",
+			"int",
+			"x",
+			"taarasinhaatrey",
+			"touch"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/aatrey/Contests/Placement"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 70.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.Terminus":
+	{
+		"height": 305.0
+	},
+	"output.Terminus Build Results":
+	{
+		"height": 162.0
+	},
+	"output.diagnostics":
+	{
+		"height": 162.0
+	},
+	"output.exec":
+	{
+		"height": 165.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.language servers":
+	{
+		"height": 162.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/Builds/C++ Fast Olympic Coding.sublime-build",
+	"project": "",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Contests/CF/CF.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 167.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 574.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 312.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

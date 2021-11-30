@@ -1,0 +1,7721 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mod",
+				"snippet_mod"
+			],
+			[
+				"tree",
+				"snippet_tree_input"
+			],
+			[
+				"binary",
+				"snippet_binary_exponentiation"
+			],
+			[
+				"dfs",
+				"snippet_tree_dfs"
+			],
+			[
+				"__buil",
+				"__builtin_ctzll("
+			],
+			[
+				"start",
+				"starting_points"
+			],
+			[
+				"pu",
+				"push_front"
+			],
+			[
+				"rand",
+				"snippet_rand"
+			],
+			[
+				"snippet",
+				"snippet_notes"
+			],
+			[
+				"kmp_",
+				"kmp_table"
+			],
+			[
+				"read",
+				"readInt"
+			],
+			[
+				"s",
+				"sublime_plugin"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "November Lunchtime 2021 Division 1/CHASE.cpp",
+			"settings":
+			{
+				"buffer_size": 0,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": "c"
+					},
+					"AQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					13,
+					1,
+					"insert",
+					{
+						"characters": "p"
+					},
+					"AQAAAAEAAAAAAAAAAgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					1,
+					"insert",
+					{
+						"characters": "p"
+					},
+					"AQAAAAIAAAAAAAAAAwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAgAAAAAAAAACAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"insert_completion",
+					{
+						"completion": "#include \"bits/stdc++.h\"\nusing namespace std;\n\nbool debug;\ntemplate <typename T, typename U> istream& operator>>(istream &is, pair<T, U> &p) { return is >> p.first >> p.second; }\ntemplate <typename T, typename U> ostream& operator<<(ostream &os, const pair<T, U> &p) { return debug ? os << \"(\" << p.first << \", \" << p.second << \")\" : os << p.first << \" \" << p.second; }\ntemplate <typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> istream &operator>>(istream &is, T_container &v) { for (T &x : v) is >> x; return is; }\ntemplate <typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream &operator<<(ostream &os, const T_container &v) { bool f = false; if(debug) { os << \"[\"; for (const T &x : v) { if (f) os << \", \"; os << x; f = true; } os << \"]\"; } else { for (const T &x : v) { if (f) os << \" \"; os << x; f = true; } } return os; }\nvoid scan() {} template <typename Head, typename ...Tail> void scan(Head &H, Tail &...T) { cin >> H; scan(T...); }\nvoid print() { cout << \"\\n\"; } template <typename Head> void print(const Head &H) { cout << H << \"\\n\"; } template <typename Head, typename ...Tail> void print(const Head &H, const Tail &...T) { cout << H << \" \"; print(T...); }\ntemplate <typename Head> void dbg_out(string var, const Head &H) { cerr << var << \" = \" << H << endl; } template <typename Head, typename ...Tail> void dbg_out(string var, const Head &H, const Tail &...T) { for (int i = 0, b = 0; i < int(var.size()); i++) { if (var[i] == '(' || var[i] == '{') { b++; } else if (var[i] == ')' || var[i] == '}') { b--; } else if (var[i] == ',' && b == 0) { cerr << var.substr(0, i) << \" = \" << H << \" | \"; dbg_out(var.substr(var.find_first_not_of(' ', i + 1)), T...); break; } } }\ntemplate <typename T, typename T1, typename... Tail> T amin(T& a, T1 b, Tail... c) { if(b < a) a = b; if constexpr (sizeof...(c) != 0) { amin(a, c...); } return a; } template <typename T, typename T1, typename... Tail> T amax(T& a, T1 b, Tail... c) { if(b > a) a = b; if constexpr (sizeof...(c) != 0) { amax(a, c...); } return a; }\n#ifndef ONLINE_JUDGE\n#define dbg(...) debug = true, dbg_out(#__VA_ARGS__, __VA_ARGS__), debug = false\n#else\n#define dbg(...)\n#endif\n\n#define int int64_t\nconst int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;\n\nvoid solve() {\n    int n;\n    scan(n);\n    vector<int> a(n);\n    scan(a);$0\n}\n\nsigned main() {\n    ios::sync_with_stdio(0);\n    cin.tie(0);\n    cout.tie(0);\n    int t = 1;\n    ${1:cin >> t;}\n    for (int tt = 1; tt <= t; tt++) {\n        solve();\n    }\n    return 0;\n}",
+						"format": "snippet",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "snippet_cpp_basic"
+					},
+					"AgAAAAAAAAAAAAAAAAAAAAAAAAADAAAAY3BwAAAAAAAAAABgCgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAwAAAAAAAAADAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					22,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							[
+								[
+									4,
+									33
+								],
+								[
+									4,
+									34
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									4,
+									41
+								],
+								[
+									4,
+									41
+								],
+								" ",
+								null
+							],
+							[
+								[
+									4,
+									42
+								],
+								[
+									4,
+									43
+								],
+								"",
+								null
+							],
+							[
+								[
+									4,
+									83
+								],
+								[
+									4,
+									84
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									4,
+									117
+								],
+								[
+									4,
+									118
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									5,
+									33
+								],
+								[
+									5,
+									34
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									5,
+									41
+								],
+								[
+									5,
+									41
+								],
+								" ",
+								null
+							],
+							[
+								[
+									5,
+									42
+								],
+								[
+									5,
+									43
+								],
+								"",
+								null
+							],
+							[
+								[
+									5,
+									89
+								],
+								[
+									5,
+									90
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									5,
+									152
+								],
+								[
+									5,
+									153
+								],
+								"\n               ",
+								null
+							],
+							[
+								[
+									5,
+									188
+								],
+								[
+									5,
+									189
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									6,
+									64
+								],
+								[
+									6,
+									64
+								],
+								"\n                                    ",
+								null
+							],
+							[
+								[
+									6,
+									101
+								],
+								[
+									6,
+									102
+								],
+								"\n                                    ",
+								null
+							],
+							[
+								[
+									6,
+									142
+								],
+								[
+									6,
+									143
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									6,
+									193
+								],
+								[
+									6,
+									194
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									6,
+									208
+								],
+								[
+									6,
+									209
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									6,
+									217
+								],
+								[
+									6,
+									218
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									6,
+									228
+								],
+								[
+									6,
+									229
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									7,
+									64
+								],
+								[
+									7,
+									64
+								],
+								"\n                                    ",
+								null
+							],
+							[
+								[
+									7,
+									101
+								],
+								[
+									7,
+									102
+								],
+								"\n                                    ",
+								null
+							],
+							[
+								[
+									7,
+									142
+								],
+								[
+									7,
+									143
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									7,
+									199
+								],
+								[
+									7,
+									200
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									7,
+									215
+								],
+								[
+									7,
+									216
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									7,
+									218
+								],
+								[
+									7,
+									218
+								],
+								" ",
+								null
+							],
+							[
+								[
+									7,
+									227
+								],
+								[
+									7,
+									228
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									7,
+									238
+								],
+								[
+									7,
+									239
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									7,
+									261
+								],
+								[
+									7,
+									262
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									7,
+									268
+								],
+								[
+									7,
+									269
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									7,
+									280
+								],
+								[
+									7,
+									281
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									7,
+									289
+								],
+								[
+									7,
+									290
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									7,
+									299
+								],
+								[
+									7,
+									300
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									7,
+									301
+								],
+								[
+									7,
+									302
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									7,
+									312
+								],
+								[
+									7,
+									313
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									7,
+									321
+								],
+								[
+									7,
+									322
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									7,
+									344
+								],
+								[
+									7,
+									345
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									7,
+									351
+								],
+								[
+									7,
+									352
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									7,
+									362
+								],
+								[
+									7,
+									363
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									7,
+									371
+								],
+								[
+									7,
+									372
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									7,
+									381
+								],
+								[
+									7,
+									382
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									7,
+									383
+								],
+								[
+									7,
+									384
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									7,
+									385
+								],
+								[
+									7,
+									386
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									7,
+									396
+								],
+								[
+									7,
+									397
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									8,
+									14
+								],
+								[
+									8,
+									15
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									8,
+									48
+								],
+								[
+									8,
+									49
+								],
+								"",
+								null
+							],
+							[
+								[
+									8,
+									52
+								],
+								[
+									8,
+									52
+								],
+								" ",
+								null
+							],
+							[
+								[
+									8,
+									90
+								],
+								[
+									8,
+									91
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									8,
+									100
+								],
+								[
+									8,
+									101
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									8,
+									112
+								],
+								[
+									8,
+									113
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									9,
+									30
+								],
+								[
+									9,
+									31
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									9,
+									104
+								],
+								[
+									9,
+									105
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									9,
+									138
+								],
+								[
+									9,
+									139
+								],
+								"",
+								null
+							],
+							[
+								[
+									9,
+									142
+								],
+								[
+									9,
+									142
+								],
+								" ",
+								null
+							],
+							[
+								[
+									9,
+									147
+								],
+								[
+									9,
+									148
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									9,
+									193
+								],
+								[
+									9,
+									194
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									9,
+									211
+								],
+								[
+									9,
+									212
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									9,
+									224
+								],
+								[
+									9,
+									225
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									10,
+									66
+								],
+								[
+									10,
+									67
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									10,
+									101
+								],
+								[
+									10,
+									102
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									10,
+									103
+								],
+								[
+									10,
+									104
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									10,
+									137
+								],
+								[
+									10,
+									138
+								],
+								"",
+								null
+							],
+							[
+								[
+									10,
+									141
+								],
+								[
+									10,
+									141
+								],
+								" ",
+								null
+							],
+							[
+								[
+									10,
+									146
+								],
+								[
+									10,
+									147
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									10,
+									206
+								],
+								[
+									10,
+									207
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									10,
+									257
+								],
+								[
+									10,
+									258
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									10,
+									295
+								],
+								[
+									10,
+									296
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									10,
+									300
+								],
+								[
+									10,
+									301
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									10,
+									345
+								],
+								[
+									10,
+									346
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									10,
+									350
+								],
+								[
+									10,
+									351
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									10,
+									388
+								],
+								[
+									10,
+									389
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									10,
+									437
+								],
+								[
+									10,
+									438
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									10,
+									499
+								],
+								[
+									10,
+									500
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									10,
+									506
+								],
+								[
+									10,
+									507
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									10,
+									508
+								],
+								[
+									10,
+									509
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									10,
+									510
+								],
+								[
+									10,
+									511
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									11,
+									52
+								],
+								[
+									11,
+									53
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									11,
+									61
+								],
+								[
+									11,
+									61
+								],
+								" ",
+								null
+							],
+							[
+								[
+									11,
+									62
+								],
+								[
+									11,
+									63
+								],
+								"",
+								null
+							],
+							[
+								[
+									11,
+									84
+								],
+								[
+									11,
+									85
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									11,
+									87
+								],
+								[
+									11,
+									87
+								],
+								" ",
+								null
+							],
+							[
+								[
+									11,
+									94
+								],
+								[
+									11,
+									95
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									11,
+									101
+								],
+								[
+									11,
+									102
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									11,
+									136
+								],
+								[
+									11,
+									137
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									11,
+									151
+								],
+								[
+									11,
+									152
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									11,
+									153
+								],
+								[
+									11,
+									154
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									11,
+									163
+								],
+								[
+									11,
+									164
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									11,
+									165
+								],
+								[
+									11,
+									166
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									11,
+									218
+								],
+								[
+									11,
+									219
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									11,
+									227
+								],
+								[
+									11,
+									227
+								],
+								" ",
+								null
+							],
+							[
+								[
+									11,
+									228
+								],
+								[
+									11,
+									229
+								],
+								"",
+								null
+							],
+							[
+								[
+									11,
+									250
+								],
+								[
+									11,
+									251
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									11,
+									253
+								],
+								[
+									11,
+									253
+								],
+								" ",
+								null
+							],
+							[
+								[
+									11,
+									260
+								],
+								[
+									11,
+									261
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									11,
+									267
+								],
+								[
+									11,
+									268
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									11,
+									302
+								],
+								[
+									11,
+									303
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									11,
+									317
+								],
+								[
+									11,
+									318
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									11,
+									319
+								],
+								[
+									11,
+									320
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									11,
+									329
+								],
+								[
+									11,
+									330
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									21,
+									14
+								],
+								[
+									22,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									22,
+									10
+								],
+								[
+									23,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									23,
+									12
+								],
+								[
+									24,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									24,
+									21
+								],
+								[
+									25,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									28,
+									15
+								],
+								[
+									29,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									29,
+									28
+								],
+								[
+									30,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									30,
+									15
+								],
+								[
+									31,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									31,
+									16
+								],
+								[
+									32,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									32,
+									14
+								],
+								[
+									33,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									33,
+									13
+								],
+								[
+									34,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									34,
+									37
+								],
+								[
+									35,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									35,
+									16
+								],
+								[
+									36,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									36,
+									5
+								],
+								[
+									37,
+									4
+								],
+								"\n  ",
+								null
+							]
+						]
+					},
+					"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AAAAAGUDAAAAAAAAAQAAACBHAwAAAAAAAEwDAAAAAAAAAQAAACA8AwAAAAAAAEEDAAAAAAAAAQAAACAzAwAAAAAAADQDAAAAAAAAAAAAADADAAAAAAAAMwMAAAAAAAABAAAAICADAAAAAAAAIwMAAAAAAAABAAAAIOcCAAAAAAAA6AIAAAAAAAABAAAAIL4CAAAAAAAA4wIAAAAAAAABAAAAIJkCAAAAAAAAvgIAAAAAAAAAAAAAVgIAAAAAAABXAgAAAAAAAAEAAAAgSwIAAAAAAABOAgAAAAAAAAEAAAAgQgIAAAAAAABHAgAAAAAAAAEAAAAgMwIAAAAAAAA2AgAAAAAAAAEAAAAgAAIAAAAAAAABAgAAAAAAAAEAAAAg1wEAAAAAAAD8AQAAAAAAAAEAAAAgsgEAAAAAAADXAQAAAAAAAAAAAABvAQAAAAAAAHABAAAAAAAAAQAAACBLAQAAAAAAAFsBAAAAAAAAAQAAACAMAQAAAAAAAA8BAAAAAAAAAQAAACDdAAAAAAAAAN0AAAAAAAAAAQAAACDcAAAAAAAAAN0AAAAAAAAAAAAAANQAAAAAAAAA1QAAAAAAAAABAAAAILAAAAAAAAAAsQAAAAAAAAABAAAAII4AAAAAAAAAkQAAAAAAAAABAAAAIGUAAAAAAAAAZQAAAAAAAAABAAAAIGQAAAAAAAAAZQAAAAAAAAAAAAAAXAAAAAAAAABdAAAAAAAAAAEAAAAg",
+					"AQAAAAAAAAABAAAAZwUAAAAAAABnBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					30,
+					1,
+					"left_delete",
+					null,
+					"AQAAAH8FAAAAAAAAfwUAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAgAUAAAAAAACABQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					32,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAH8FAAAAAAAAgAUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfwUAAAAAAAB/BQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					38,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAEkGAAAAAAAASgYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASQYAAAAAAABJBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					40,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAEoGAAAAAAAASwYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASgYAAAAAAABKBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					42,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAEsGAAAAAAAATAYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASwYAAAAAAABLBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					45,
+					1,
+					"paste",
+					null,
+					"AQAAAEsGAAAAAAAAMQcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASwYAAAAAAABLBgAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					51,
+					1,
+					"insert",
+					{
+						"characters": "l"
+					},
+					"AQAAAG0FAAAAAAAAbgUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbQUAAAAAAABtBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					53,
+					1,
+					"insert",
+					{
+						"characters": "n"
+					},
+					"AQAAAG4FAAAAAAAAbwUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbgUAAAAAAABuBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					58,
+					1,
+					"insert",
+					{
+						"characters": "l"
+					},
+					"AQAAAKcFAAAAAAAAqAUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApwUAAAAAAACnBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					60,
+					1,
+					"insert",
+					{
+						"characters": "n"
+					},
+					"AQAAAKgFAAAAAAAAqQUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqAUAAAAAAACoBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					71,
+					1,
+					"insert",
+					{
+						"characters": "l"
+					},
+					"AQAAAEQGAAAAAAAARQYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARAYAAAAAAABEBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					73,
+					1,
+					"insert",
+					{
+						"characters": "n"
+					},
+					"AQAAAEUGAAAAAAAARgYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARQYAAAAAAABFBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					77,
+					1,
+					"insert",
+					{
+						"characters": "l"
+					},
+					"AQAAAAUGAAAAAAAABgYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABQYAAAAAAAAFBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					79,
+					1,
+					"insert",
+					{
+						"characters": "n"
+					},
+					"AQAAAAYGAAAAAAAABwYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABgYAAAAAAAAGBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					94,
+					1,
+					"insert",
+					{
+						"characters": "«"
+					},
+					"AQAAAHAGAAAAAAAAcQYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcAYAAAAAAABwBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					96,
+					1,
+					"insert",
+					{
+						"characters": "‘"
+					},
+					"AQAAAHEGAAAAAAAAcgYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcQYAAAAAAABxBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					98,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAAHAGAAAAAAAAcAYAAAAAAAAFAAAAwqvigJg",
+					"AQAAAAAAAAABAAAAcgYAAAAAAAByBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					100,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAAG0GAAAAAAAAbQYAAAAAAAADAAAAIjsg",
+					"AQAAAAAAAAABAAAAcAYAAAAAAABwBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					102,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAAGwGAAAAAAAAbAYAAAAAAAABAAAAbg",
+					"AQAAAAAAAAABAAAAbQYAAAAAAABtBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					104,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAAGoGAAAAAAAAagYAAAAAAAACAAAAIlw",
+					"AQAAAAAAAAABAAAAbAYAAAAAAABsBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					106,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAAGcGAAAAAAAAZwYAAAAAAAADAAAAPDwg",
+					"AQAAAAAAAAABAAAAagYAAAAAAABqBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					108,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAAGIGAAAAAAAAYgYAAAAAAAAFAAAAY291dCA",
+					"AQAAAAAAAAABAAAAZwYAAAAAAABnBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					110,
+					1,
+					"left_delete",
+					null,
+					"AQAAAGEGAAAAAAAAYQYAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAYgYAAAAAAABiBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					112,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAGEGAAAAAAAAYgYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAYQYAAAAAAABhBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					114,
+					1,
+					"left_delete",
+					null,
+					"AQAAAGEGAAAAAAAAYQYAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAYgYAAAAAAABiBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					122,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKgGAAAAAAAAqAYAAAAAAAABAAAAIg",
+					"AQAAAAAAAAABAAAAqQYAAAAAAACpBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					124,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKcGAAAAAAAApwYAAAAAAAABAAAAbg",
+					"AQAAAAAAAAABAAAAqAYAAAAAAACoBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					126,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKYGAAAAAAAApgYAAAAAAAABAAAAXA",
+					"AQAAAAAAAAABAAAApwYAAAAAAACnBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					128,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKUGAAAAAAAApQYAAAAAAAABAAAAIg",
+					"AQAAAAAAAAABAAAApgYAAAAAAACmBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					130,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKQGAAAAAAAApAYAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAApQYAAAAAAAClBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					132,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKMGAAAAAAAAowYAAAAAAAABAAAAPA",
+					"AQAAAAAAAAABAAAApAYAAAAAAACkBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					134,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKIGAAAAAAAAogYAAAAAAAABAAAAPA",
+					"AQAAAAAAAAABAAAAowYAAAAAAACjBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					136,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKEGAAAAAAAAoQYAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAogYAAAAAAACiBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					165,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAIAMAAAAAAAAgQwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgAwAAAAAAACADAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					167,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAIEMAAAAAAAAggwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgQwAAAAAAACBDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					169,
+					1,
+					"insert",
+					{
+						"characters": "f"
+					},
+					"AQAAAIIMAAAAAAAAgwwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggwAAAAAAACCDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					171,
+					1,
+					"insert",
+					{
+						"characters": "a"
+					},
+					"AQAAAIMMAAAAAAAAhAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgwwAAAAAAACDDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					173,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAIQMAAAAAAAAhQwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhAwAAAAAAACEDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					175,
+					1,
+					"insert",
+					{
+						"characters": "t"
+					},
+					"AQAAAIUMAAAAAAAAhgwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhQwAAAAAAACFDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					195,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"
+					},
+					"AQAAAIIMAAAAAAAAggwAAAAAAAAEAAAAZmFzdA",
+					"AQAAAAAAAAABAAAAhgwAAAAAAACGDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					197,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIEMAAAAAAAAgQwAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAggwAAAAAAACCDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					199,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIAMAAAAAAAAgAwAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAgQwAAAAAAACBDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					221,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAIAMAAAAAAAAgQwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgAwAAAAAAACADAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					223,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAIEMAAAAAAAAggwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgQwAAAAAAACBDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					225,
+					1,
+					"paste",
+					null,
+					"AQAAAIIMAAAAAAAAPhQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggwAAAAAAACCDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					237,
+					1,
+					"unindent",
+					null,
+					"BgAAAJwMAAAAAAAAnAwAAAAAAAACAAAAICDFDAAAAAAAAMUMAAAAAAAAAgAAACAg2QwAAAAAAADZDAAAAAAAAAIAAAAgIPAMAAAAAAAA8AwAAAAAAAACAAAAICAEDQAAAAAAAAQNAAAAAAAAAgAAACAgFg0AAAAAAAAWDQAAAAAAAAIAAAAgIA",
+					"AQAAAAAAAAABAAAAngwAAAAAAAAvDQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					239,
+					1,
+					"indent",
+					null,
+					"BgAAAJwMAAAAAAAAoAwAAAAAAAAAAAAAyQwAAAAAAADNDAAAAAAAAAAAAADhDAAAAAAAAOUMAAAAAAAAAAAAAPwMAAAAAAAAAA0AAAAAAAAAAAAAFA0AAAAAAAAYDQAAAAAAAAAAAAAqDQAAAAAAAC4NAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnAwAAAAAAAAjDQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					246,
+					1,
+					"unindent",
+					null,
+					"CAAAAD4NAAAAAAAAPg0AAAAAAAACAAAAICBXDQAAAAAAAFcNAAAAAAAABAAAACAgICB0DQAAAAAAAHQNAAAAAAAABAAAACAgICCgDQAAAAAAAKANAAAAAAAABAAAACAgICCvDQAAAAAAAK8NAAAAAAAABAAAACAgICDbDQAAAAAAANsNAAAAAAAABAAAACAgICDdDQAAAAAAAN0NAAAAAAAABAAAACAgICD6DQAAAAAAAPoNAAAAAAAAAgAAACAg",
+					"AQAAAAAAAAABAAAAQA0AAAAAAAAXDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					248,
+					1,
+					"indent",
+					null,
+					"CAAAAD4NAAAAAAAAQg0AAAAAAAAAAAAAWw0AAAAAAABfDQAAAAAAAAAAAAB8DQAAAAAAAIANAAAAAAAAAAAAAKwNAAAAAAAAsA0AAAAAAAAAAAAAvw0AAAAAAADDDQAAAAAAAAAAAADvDQAAAAAAAPMNAAAAAAAAAAAAAPUNAAAAAAAA+Q0AAAAAAAAAAAAAFg4AAAAAAAAaDgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPg0AAAAAAAD7DQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					253,
+					1,
+					"unindent",
+					null,
+					"BgAAAFsNAAAAAAAAWw0AAAAAAAAEAAAAICAgIHgNAAAAAAAAeA0AAAAAAAAEAAAAICAgIKQNAAAAAAAApA0AAAAAAAAEAAAAICAgILMNAAAAAAAAsw0AAAAAAAAEAAAAICAgIN8NAAAAAAAA3w0AAAAAAAAEAAAAICAgIOENAAAAAAAA4Q0AAAAAAAAEAAAAICAgIA",
+					"AQAAAAAAAAABAAAAXg0AAAAAAAAVDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					255,
+					1,
+					"unindent",
+					null,
+					"AwAAAHgNAAAAAAAAeA0AAAAAAAACAAAAICCiDQAAAAAAAKINAAAAAAAAAgAAACAgrw0AAAAAAACvDQAAAAAAAAIAAAAgIA",
+					"AQAAAAAAAAABAAAAWw0AAAAAAAD9DQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					257,
+					1,
+					"indent",
+					null,
+					"BgAAAFsNAAAAAAAAXw0AAAAAAAAAAAAAfA0AAAAAAACADQAAAAAAAAAAAACqDQAAAAAAAK4NAAAAAAAAAAAAALsNAAAAAAAAvw0AAAAAAAAAAAAA6Q0AAAAAAADtDQAAAAAAAAAAAADvDQAAAAAAAPMNAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAWw0AAAAAAAD3DQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					259,
+					1,
+					"indent",
+					null,
+					"BgAAAFsNAAAAAAAAXw0AAAAAAAAAAAAAgA0AAAAAAACEDQAAAAAAAAAAAACyDQAAAAAAALYNAAAAAAAAAAAAAMcNAAAAAAAAyw0AAAAAAAAAAAAA+Q0AAAAAAAD9DQAAAAAAAAAAAAADDgAAAAAAAAcOAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXw0AAAAAAAAPDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					264,
+					1,
+					"indent",
+					null,
+					"AwAAAIANAAAAAAAAhA0AAAAAAAAAAAAAtg0AAAAAAAC6DQAAAAAAAAAAAADPDQAAAAAAANMNAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhw0AAAAAAAD4DQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					269,
+					1,
+					"unindent",
+					null,
+					"AQAAADwOAAAAAAAAPA4AAAAAAAACAAAAICA",
+					"AQAAAAAAAAABAAAAVQ4AAAAAAABVDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					271,
+					1,
+					"indent",
+					null,
+					"AQAAADwOAAAAAAAAQA4AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUw4AAAAAAABTDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					275,
+					1,
+					"unindent",
+					null,
+					"AwAAAFoOAAAAAAAAWg4AAAAAAAACAAAAICB8DgAAAAAAAHwOAAAAAAAABAAAACAgICCODgAAAAAAAI4OAAAAAAAAAgAAACAg",
+					"AQAAAAAAAAABAAAAXA4AAAAAAACXDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					277,
+					1,
+					"indent",
+					null,
+					"AwAAAFoOAAAAAAAAXg4AAAAAAAAAAAAAgA4AAAAAAACEDgAAAAAAAAAAAACWDgAAAAAAAJoOAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAWg4AAAAAAACPDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					283,
+					1,
+					"unindent",
+					null,
+					"AwAAAJ4OAAAAAAAAng4AAAAAAAACAAAAICDEDgAAAAAAAMQOAAAAAAAABAAAACAgICDVDgAAAAAAANUOAAAAAAAAAgAAACAg",
+					"AQAAAAAAAAABAAAAoA4AAAAAAADeDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					285,
+					1,
+					"indent",
+					null,
+					"AwAAAJ4OAAAAAAAAog4AAAAAAAAAAAAAyA4AAAAAAADMDgAAAAAAAAAAAADdDgAAAAAAAOEOAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAng4AAAAAAADWDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					290,
+					1,
+					"indent",
+					null,
+					"AQAAAIAOAAAAAAAAhA4AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlQ4AAAAAAACVDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					294,
+					1,
+					"indent",
+					null,
+					"AQAAAMwOAAAAAAAA0A4AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA4A4AAAAAAADgDgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					298,
+					1,
+					"unindent",
+					null,
+					"BgAAAO0OAAAAAAAA7Q4AAAAAAAACAAAAICAJDwAAAAAAAAkPAAAAAAAABAAAACAgICAuDwAAAAAAAC4PAAAAAAAABAAAACAgICA8DwAAAAAAADwPAAAAAAAABAAAACAgICA+DwAAAAAAAD4PAAAAAAAABAAAACAgICBQDwAAAAAAAFAPAAAAAAAAAgAAACAg",
+					"AQAAAAAAAAABAAAA7w4AAAAAAABlDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					300,
+					1,
+					"indent",
+					null,
+					"BgAAAO0OAAAAAAAA8Q4AAAAAAAAAAAAADQ8AAAAAAAARDwAAAAAAAAAAAAA2DwAAAAAAADoPAAAAAAAAAAAAAEgPAAAAAAAATA8AAAAAAAAAAAAATg8AAAAAAABSDwAAAAAAAAAAAABkDwAAAAAAAGgPAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7Q4AAAAAAABRDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					305,
+					1,
+					"indent",
+					null,
+					"BAAAAA0PAAAAAAAAEQ8AAAAAAAAAAAAAOg8AAAAAAAA+DwAAAAAAAAAAAABQDwAAAAAAAFQPAAAAAAAAAAAAAFoPAAAAAAAAXg8AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEQ8AAAAAAABjDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					310,
+					1,
+					"unindent",
+					null,
+					"AQAAADoPAAAAAAAAOg8AAAAAAAAEAAAAICAgIA",
+					"AQAAAAAAAAABAAAATw8AAAAAAABPDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					312,
+					1,
+					"indent",
+					null,
+					"AQAAADoPAAAAAAAAPg8AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASw8AAAAAAABLDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					314,
+					1,
+					"unindent",
+					null,
+					"AQAAADoPAAAAAAAAOg8AAAAAAAAEAAAAICAgIA",
+					"AQAAAAAAAAABAAAATw8AAAAAAABPDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					316,
+					1,
+					"unindent",
+					null,
+					"AQAAADoPAAAAAAAAOg8AAAAAAAAEAAAAICAgIA",
+					"AQAAAAAAAAABAAAASw8AAAAAAABLDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					318,
+					1,
+					"unindent",
+					null,
+					"AQAAADoPAAAAAAAAOg8AAAAAAAACAAAAICA",
+					"AQAAAAAAAAABAAAARw8AAAAAAABHDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					320,
+					1,
+					"indent",
+					null,
+					"AQAAADoPAAAAAAAAPg8AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARQ8AAAAAAABFDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					322,
+					1,
+					"indent",
+					null,
+					"AQAAADoPAAAAAAAAPg8AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASQ8AAAAAAABJDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					324,
+					1,
+					"indent",
+					null,
+					"AQAAADoPAAAAAAAAPg8AAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATQ8AAAAAAABNDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					330,
+					1,
+					"unindent",
+					null,
+					"BQAAAH4PAAAAAAAAfg8AAAAAAAACAAAAICCmDwAAAAAAAKYPAAAAAAAABAAAACAgICC1DwAAAAAAALUPAAAAAAAABAAAACAgICC+DwAAAAAAAL4PAAAAAAAABAAAACAgICDMDwAAAAAAAMwPAAAAAAAAAgAAACAg",
+					"AQAAAAAAAAABAAAAgA8AAAAAAADdDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					332,
+					1,
+					"indent",
+					null,
+					"BQAAAH4PAAAAAAAAgg8AAAAAAAAAAAAAqg8AAAAAAACuDwAAAAAAAAAAAAC9DwAAAAAAAMEPAAAAAAAAAAAAAMoPAAAAAAAAzg8AAAAAAAAAAAAA3A8AAAAAAADgDwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfg8AAAAAAADNDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					337,
+					1,
+					"indent",
+					null,
+					"AwAAAKoPAAAAAAAArg8AAAAAAAAAAAAAwQ8AAAAAAADFDwAAAAAAAAAAAADSDwAAAAAAANYPAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvA8AAAAAAADbDwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					342,
+					1,
+					"unindent",
+					null,
+					"CQAAAPEPAAAAAAAA8Q8AAAAAAAACAAAAICAbEAAAAAAAABsQAAAAAAAABAAAACAgICAwEAAAAAAAADAQAAAAAAAABAAAACAgICA9EAAAAAAAAD0QAAAAAAAABAAAACAgICBEEAAAAAAAAEQQAAAAAAAABAAAACAgICBSEAAAAAAAAFIQAAAAAAAABAAAACAgICB1EAAAAAAAAHUQAAAAAAAABAAAACAgICB3EAAAAAAAAHcQAAAAAAAABAAAACAgICCFEAAAAAAAAIUQAAAAAAAAAgAAACAg",
+					"AQAAAAAAAAABAAAA8w8AAAAAAACmEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					344,
+					1,
+					"indent",
+					null,
+					"CQAAAPEPAAAAAAAA9Q8AAAAAAAAAAAAAHxAAAAAAAAAjEAAAAAAAAAAAAAA4EAAAAAAAADwQAAAAAAAAAAAAAEkQAAAAAAAATRAAAAAAAAAAAAAAVBAAAAAAAABYEAAAAAAAAAAAAABmEAAAAAAAAGoQAAAAAAAAAAAAAI0QAAAAAAAAkRAAAAAAAAAAAAAAkxAAAAAAAACXEAAAAAAAAAAAAAClEAAAAAAAAKkQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8Q8AAAAAAACGEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					349,
+					1,
+					"unindent",
+					null,
+					"BwAAAB8QAAAAAAAAHxAAAAAAAAAEAAAAICAgIDQQAAAAAAAANBAAAAAAAAAEAAAAICAgIEEQAAAAAAAAQRAAAAAAAAAEAAAAICAgIEgQAAAAAAAASBAAAAAAAAAEAAAAICAgIFYQAAAAAAAAVhAAAAAAAAAEAAAAICAgIHkQAAAAAAAAeRAAAAAAAAAEAAAAICAgIHsQAAAAAAAAexAAAAAAAAAEAAAAICAgIA",
+					"AQAAAAAAAAABAAAAJBAAAAAAAACkEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					351,
+					1,
+					"unindent",
+					null,
+					"BAAAADQQAAAAAAAANBAAAAAAAAACAAAAICA/EAAAAAAAAD8QAAAAAAAAAgAAACAgRBAAAAAAAABEEAAAAAAAAAQAAAAgICAgThAAAAAAAABOEAAAAAAAAAIAAAAgIA",
+					"AQAAAAAAAAABAAAAIBAAAAAAAACIEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					353,
+					1,
+					"indent",
+					null,
+					"BwAAAB8QAAAAAAAAIxAAAAAAAAAAAAAAOBAAAAAAAAA8EAAAAAAAAAAAAABHEAAAAAAAAEsQAAAAAAAAAAAAAFAQAAAAAAAAVBAAAAAAAAAAAAAAXhAAAAAAAABiEAAAAAAAAAAAAACDEAAAAAAAAIcQAAAAAAAAAAAAAIkQAAAAAAAAjRAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIBAAAAAAAAB+EAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					355,
+					1,
+					"indent",
+					null,
+					"BwAAAB8QAAAAAAAAIxAAAAAAAAAAAAAAPBAAAAAAAABAEAAAAAAAAAAAAABPEAAAAAAAAFMQAAAAAAAAAAAAAFwQAAAAAAAAYBAAAAAAAAAAAAAAbhAAAAAAAAByEAAAAAAAAAAAAACXEAAAAAAAAJsQAAAAAAAAAAAAAKEQAAAAAAAApRAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJBAAAAAAAACaEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					360,
+					1,
+					"indent",
+					null,
+					"AQAAADwQAAAAAAAAQBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARBAAAAAAAABOEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					363,
+					1,
+					"indent",
+					null,
+					"AQAAAGAQAAAAAAAAZBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbBAAAAAAAABsEAAAAAAAAAAAAAAAAFhA"
+				],
+				[
+					372,
+					1,
+					"indent",
+					null,
+					"AwAAAFMQAAAAAAAAVxAAAAAAAAAAAAAAZBAAAAAAAABoEAAAAAAAAAAAAAB+EAAAAAAAAIIQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUxAAAAAAAACfEAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					380,
+					1,
+					"unindent",
+					null,
+					"EQAAANMQAAAAAAAA0xAAAAAAAAACAAAAICDpEAAAAAAAAOkQAAAAAAAAAgAAACAgEBEAAAAAAAAQEQAAAAAAAAQAAAAgICAgTREAAAAAAABNEQAAAAAAAAQAAAAgICAgVBEAAAAAAABUEQAAAAAAAAQAAAAgICAgaREAAAAAAABpEQAAAAAAAAQAAAAgICAgehEAAAAAAAB6EQAAAAAAAAQAAAAgICAgjhEAAAAAAACOEQAAAAAAAAQAAAAgICAgnREAAAAAAACdEQAAAAAAAAQAAAAgICAgrREAAAAAAACtEQAAAAAAAAQAAAAgICAgsREAAAAAAACxEQAAAAAAAAQAAAAgICAguBEAAAAAAAC4EQAAAAAAAAQAAAAgICAg2xEAAAAAAADbEQAAAAAAAAQAAAAgICAg/hEAAAAAAAD+EQAAAAAAAAQAAAAgICAgCxIAAAAAAAALEgAAAAAAAAQAAAAgICAgDRIAAAAAAAANEgAAAAAAAAQAAAAgICAgGxIAAAAAAAAbEgAAAAAAAAIAAAAgIA",
+					"AQAAAAAAAAABAAAA1RAAAAAAAABaEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					382,
+					1,
+					"indent",
+					null,
+					"EQAAANMQAAAAAAAA1xAAAAAAAAAAAAAA7RAAAAAAAADxEAAAAAAAAAAAAAAYEQAAAAAAABwRAAAAAAAAAAAAAFkRAAAAAAAAXREAAAAAAAAAAAAAZBEAAAAAAABoEQAAAAAAAAAAAAB9EQAAAAAAAIERAAAAAAAAAAAAAJIRAAAAAAAAlhEAAAAAAAAAAAAAqhEAAAAAAACuEQAAAAAAAAAAAAC9EQAAAAAAAMERAAAAAAAAAAAAANERAAAAAAAA1REAAAAAAAAAAAAA2REAAAAAAADdEQAAAAAAAAAAAADkEQAAAAAAAOgRAAAAAAAAAAAAAAsSAAAAAAAADxIAAAAAAAAAAAAAMhIAAAAAAAA2EgAAAAAAAAAAAABDEgAAAAAAAEcSAAAAAAAAAAAAAEkSAAAAAAAATRIAAAAAAAAAAAAAWxIAAAAAAABfEgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0xAAAAAAAAAcEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					390,
+					1,
+					"indent",
+					null,
+					"DAAAAFkRAAAAAAAAXREAAAAAAAAAAAAAaBEAAAAAAABsEQAAAAAAAAAAAACFEQAAAAAAAIkRAAAAAAAAAAAAAJ4RAAAAAAAAohEAAAAAAAAAAAAAuhEAAAAAAAC+EQAAAAAAAAAAAADREQAAAAAAANURAAAAAAAAAAAAAOkRAAAAAAAA7REAAAAAAAAAAAAA9REAAAAAAAD5EQAAAAAAAAAAAAAEEgAAAAAAAAgSAAAAAAAAAAAAAC8SAAAAAAAAMxIAAAAAAAAAAAAAWhIAAAAAAABeEgAAAAAAAAAAAABvEgAAAAAAAHMSAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXREAAAAAAABIEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					399,
+					1,
+					"indent",
+					null,
+					"AQAAABgRAAAAAAAAHBEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJBEAAAAAAAAkEQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					405,
+					1,
+					"unindent",
+					null,
+					"CQAAAIkRAAAAAAAAiREAAAAAAAAEAAAAICAgIJ4RAAAAAAAAnhEAAAAAAAAEAAAAICAgILYRAAAAAAAAthEAAAAAAAAEAAAAICAgIMkRAAAAAAAAyREAAAAAAAAEAAAAICAgIN0RAAAAAAAA3REAAAAAAAAEAAAAICAgIOURAAAAAAAA5REAAAAAAAAEAAAAICAgIPARAAAAAAAA8BEAAAAAAAAEAAAAICAgIBcSAAAAAAAAFxIAAAAAAAAEAAAAICAgID4SAAAAAAAAPhIAAAAAAAAEAAAAICAgIA",
+					"AQAAAAAAAAABAAAAkxEAAAAAAAByEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					407,
+					1,
+					"unindent",
+					null,
+					"CQAAAIkRAAAAAAAAiREAAAAAAAAEAAAAICAgIJoRAAAAAAAAmhEAAAAAAAAEAAAAICAgIK4RAAAAAAAArhEAAAAAAAAEAAAAICAgIL0RAAAAAAAAvREAAAAAAAAEAAAAICAgIM0RAAAAAAAAzREAAAAAAAAEAAAAICAgINERAAAAAAAA0REAAAAAAAAEAAAAICAgINgRAAAAAAAA2BEAAAAAAAAEAAAAICAgIPsRAAAAAAAA+xEAAAAAAAAEAAAAICAgIB4SAAAAAAAAHhIAAAAAAAAEAAAAICAgIA",
+					"AQAAAAAAAAABAAAAjxEAAAAAAABOEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					409,
+					1,
+					"unindent",
+					null,
+					"CQAAAIkRAAAAAAAAiREAAAAAAAACAAAAICCYEQAAAAAAAJgRAAAAAAAAAgAAACAgqhEAAAAAAACqEQAAAAAAAAQAAAAgICAgtREAAAAAAAC1EQAAAAAAAAQAAAAgICAgwREAAAAAAADBEQAAAAAAAAIAAAAgIMMRAAAAAAAAwxEAAAAAAAACAAAAICDIEQAAAAAAAMgRAAAAAAAABAAAACAgICDnEQAAAAAAAOcRAAAAAAAAAgAAACAgCBIAAAAAAAAIEgAAAAAAAAIAAAAgIA",
+					"AQAAAAAAAAABAAAAixEAAAAAAAAqEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					411,
+					1,
+					"indent",
+					null,
+					"CQAAAIkRAAAAAAAAjREAAAAAAAAAAAAAnBEAAAAAAACgEQAAAAAAAAAAAACyEQAAAAAAALYRAAAAAAAAAAAAAMERAAAAAAAAxREAAAAAAAAAAAAA0REAAAAAAADVEQAAAAAAAAAAAADXEQAAAAAAANsRAAAAAAAAAAAAAOARAAAAAAAA5BEAAAAAAAAAAAAAAxIAAAAAAAAHEgAAAAAAAAAAAAAoEgAAAAAAACwSAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiREAAAAAAAASEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					413,
+					1,
+					"indent",
+					null,
+					"CQAAAIkRAAAAAAAAjREAAAAAAAAAAAAAoBEAAAAAAACkEQAAAAAAAAAAAAC6EQAAAAAAAL4RAAAAAAAAAAAAAM0RAAAAAAAA0REAAAAAAAAAAAAA4REAAAAAAADlEQAAAAAAAAAAAADrEQAAAAAAAO8RAAAAAAAAAAAAAPgRAAAAAAAA/BEAAAAAAAAAAAAAHxIAAAAAAAAjEgAAAAAAAAAAAABIEgAAAAAAAEwSAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjREAAAAAAAA2EgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					415,
+					1,
+					"indent",
+					null,
+					"CQAAAIkRAAAAAAAAjREAAAAAAAAAAAAApBEAAAAAAACoEQAAAAAAAAAAAADCEQAAAAAAAMYRAAAAAAAAAAAAANkRAAAAAAAA3REAAAAAAAAAAAAA8REAAAAAAAD1EQAAAAAAAAAAAAD/EQAAAAAAAAMSAAAAAAAAAAAAABASAAAAAAAAFBIAAAAAAAAAAAAAOxIAAAAAAAA/EgAAAAAAAAAAAABoEgAAAAAAAGwSAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkREAAAAAAABaEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					420,
+					1,
+					"indent",
+					null,
+					"AQAAAMIRAAAAAAAAxhEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2BEAAAAAAADYEQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					423,
+					1,
+					"indent",
+					null,
+					"AQAAAN0RAAAAAAAA4REAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9BEAAAAAAAD0EQAAAAAAAAAAAAAAAGpA"
+				],
+				[
+					426,
+					1,
+					"indent",
+					null,
+					"AQAAABgSAAAAAAAAHBIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMxIAAAAAAAAzEgAAAAAAAAAAAAAAAGtA"
+				],
+				[
+					433,
+					1,
+					"indent",
+					null,
+					"AQAAAJUSAAAAAAAAmRIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAphIAAAAAAACmEgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					439,
+					1,
+					"unindent",
+					null,
+					"BAAAALMSAAAAAAAAsxIAAAAAAAACAAAAICDJEgAAAAAAAMkSAAAAAAAAAgAAACAgHxMAAAAAAAAfEwAAAAAAAAQAAAAgICAgNxMAAAAAAAA3EwAAAAAAAAIAAAAgIA",
+					"AQAAAAAAAAABAAAAtRIAAAAAAABCEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					441,
+					1,
+					"indent",
+					null,
+					"BAAAALMSAAAAAAAAtxIAAAAAAAAAAAAAzRIAAAAAAADREgAAAAAAAAAAAAAnEwAAAAAAACsTAAAAAAAAAAAAAEMTAAAAAAAARxMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAsxIAAAAAAAA4EwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					449,
+					1,
+					"indent",
+					null,
+					"AQAAACcTAAAAAAAAKxMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQhMAAAAAAABCEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					458,
+					1,
+					"unindent",
+					null,
+					"BQAAAFATAAAAAAAAUBMAAAAAAAACAAAAICB4EwAAAAAAAHgTAAAAAAAAAgAAACAgpBMAAAAAAACkEwAAAAAAAAQAAAAgICAgvBMAAAAAAAC8EwAAAAAAAAIAAAAgIL4TAAAAAAAAvhMAAAAAAAACAAAAICA",
+					"AQAAAAAAAAABAAAAUhMAAAAAAADQEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					460,
+					1,
+					"indent",
+					null,
+					"BQAAAFATAAAAAAAAVBMAAAAAAAAAAAAAfBMAAAAAAACAEwAAAAAAAAAAAACsEwAAAAAAALATAAAAAAAAAAAAAMgTAAAAAAAAzBMAAAAAAAAAAAAAzhMAAAAAAADSEwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUBMAAAAAAADEEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					465,
+					1,
+					"indent",
+					null,
+					"AwAAAHwTAAAAAAAAgBMAAAAAAAAAAAAAsBMAAAAAAAC0EwAAAAAAAAAAAADQEwAAAAAAANQTAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgBMAAAAAAADNEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					469,
+					1,
+					"indent",
+					null,
+					"AQAAALATAAAAAAAAtBMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuBMAAAAAAAC4EwAAAAAAAAAAAAAAAFBA"
+				],
+				[
+					475,
+					1,
+					"unindent",
+					null,
+					"AQAAAHwTAAAAAAAAfBMAAAAAAAAEAAAAICAgIA",
+					"AQAAAAAAAAABAAAAhBMAAAAAAACEEwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					478,
+					1,
+					"unindent",
+					null,
+					"AQAAANATAAAAAAAA0BMAAAAAAAAEAAAAICAgIA",
+					"AQAAAAAAAAABAAAA1BMAAAAAAADUEwAAAAAAAAAAAAAAAEBA"
+				],
+				[
+					486,
+					1,
+					"unindent",
+					null,
+					"CwAAAOMTAAAAAAAA4xMAAAAAAAACAAAAICD5EwAAAAAAAPkTAAAAAAAAAgAAACAgVRQAAAAAAABVFAAAAAAAAAQAAAAgICAgiBQAAAAAAACIFAAAAAAAAAQAAAAgICAgjxQAAAAAAACPFAAAAAAAAAQAAAAgICAgpBQAAAAAAACkFAAAAAAAAAQAAAAgICAgsBQAAAAAAACwFAAAAAAAAAQAAAAgICAgwBQAAAAAAADAFAAAAAAAAAQAAAAgICAg4BQAAAAAAADgFAAAAAAAAAQAAAAgICAg4hQAAAAAAADiFAAAAAAAAAQAAAAgICAg8BQAAAAAAADwFAAAAAAAAAIAAAAgIA",
+					"AQAAAAAAAAABAAAA5RMAAAAAAAAXFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					488,
+					1,
+					"indent",
+					null,
+					"CwAAAOMTAAAAAAAA5xMAAAAAAAAAAAAA/RMAAAAAAAABFAAAAAAAAAAAAABdFAAAAAAAAGEUAAAAAAAAAAAAAJQUAAAAAAAAmBQAAAAAAAAAAAAAnxQAAAAAAACjFAAAAAAAAAAAAAC4FAAAAAAAALwUAAAAAAAAAAAAAMgUAAAAAAAAzBQAAAAAAAAAAAAA3BQAAAAAAADgFAAAAAAAAAAAAAAAFQAAAAAAAAQVAAAAAAAAAAAAAAYVAAAAAAAAChUAAAAAAAAAAAAAGBUAAAAAAAAcFQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA4xMAAAAAAADxFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					493,
+					1,
+					"indent",
+					null,
+					"BwAAAJQUAAAAAAAAmBQAAAAAAAAAAAAAoxQAAAAAAACnFAAAAAAAAAAAAADAFAAAAAAAAMQUAAAAAAAAAAAAANQUAAAAAAAA2BQAAAAAAAAAAAAA7BQAAAAAAADwFAAAAAAAAAAAAAAUFQAAAAAAABgVAAAAAAAAAAAAAB4VAAAAAAAAIhUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmBQAAAAAAAAXFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					498,
+					1,
+					"left_delete",
+					null,
+					"AQAAAMgUAAAAAAAAyBQAAAAAAAACAAAAICA",
+					"AQAAAAAAAAABAAAAyhQAAAAAAADKFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					500,
+					1,
+					"insert",
+					{
+						"characters": "\t"
+					},
+					"AQAAAMgUAAAAAAAAzBQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyBQAAAAAAADIFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					504,
+					1,
+					"left_delete",
+					null,
+					"AQAAAN4UAAAAAAAA3hQAAAAAAAACAAAAICA",
+					"AQAAAAAAAAABAAAA4BQAAAAAAADgFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					506,
+					1,
+					"insert",
+					{
+						"characters": "\t"
+					},
+					"AQAAAN4UAAAAAAAA4hQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3hQAAAAAAADeFAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					510,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPgUAAAAAAAA+BQAAAAAAAACAAAAICA",
+					"AQAAAAAAAAABAAAA+hQAAAAAAAD6FAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					512,
+					1,
+					"insert",
+					{
+						"characters": "\t"
+					},
+					"AQAAAPgUAAAAAAAA/BQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+BQAAAAAAAD4FAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					519,
+					1,
+					"left_delete",
+					null,
+					"AQAAALQTAAAAAAAAtBMAAAAAAAAEAAAAICAgIA",
+					"AQAAAAAAAAABAAAAuBMAAAAAAAC4EwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					547,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIIMAAAAAAAAggwAAAAAAADgCAAAc3RhdGljIHN0cnVjdCBGYXN0SW5wdXQgewogICAgc3RhdGljIGNvbnN0ZXhwciBpbnQgQlVGX1NJWkUgPSAxIDw8IDIwOwogICAgY2hhciBidWZbQlVGX1NJWkVdOwogICAgc2l6ZV90IGNoYXJzX3JlYWQgPSAwOwogICAgc2l6ZV90IGJ1Zl9wb3MgPSAwOwogICAgRklMRSAqaW4gPSBzdGRpbjsKICAgIGNoYXIgY3VyID0gMDsKIAogICAgaW5saW5lIGNoYXIgZ2V0X2NoYXIoKSB7CiAgICAgICAgaWYgKGJ1Zl9wb3MgPj0gY2hhcnNfcmVhZCkgewogICAgICAgICAgICBjaGFyc19yZWFkID0gZnJlYWQoYnVmLCAxLCBCVUZfU0laRSwgaW4pOwogICAgICAgICAgICBidWZfcG9zID0gMDsKICAgICAgICAgICAgYnVmWzBdID0gKGNoYXJzX3JlYWQgPT0gMCA/IC0xIDogYnVmWzBdKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIGN1ciA9IGJ1ZltidWZfcG9zKytdOwogICAgfQogCiAgICBpbmxpbmUgdm9pZCB0aWUoaW50KSB7fQogCiAgICBpbmxpbmUgZXhwbGljaXQgb3BlcmF0b3IgYm9vbCgpIHsKICAgICAgICByZXR1cm4gY3VyICE9IC0xOwogICAgfQogCiAgICBpbmxpbmUgc3RhdGljIGJvb2wgaXNfYmxhbmsoY2hhciBjKSB7CiAgICAgICAgcmV0dXJuIGMgPD0gJyAnOwogICAgfQogCiAgICBpbmxpbmUgYm9vbCBza2lwX2JsYW5rcygpIHsKICAgICAgICB3aGlsZSAoaXNfYmxhbmsoY3VyKSAmJiBjdXIgIT0gLTEpIHsKICAgICAgICAgICAgZ2V0X2NoYXIoKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIGN1ciAhPSAtMTsKICAgIH0KIAogICAgaW5saW5lIEZhc3RJbnB1dCYgb3BlcmF0b3I+PihjaGFyJiBjKSB7CiAgICAgICAgc2tpcF9ibGFua3MoKTsKICAgICAgICBjID0gY3VyOwogICAgICAgIHJldHVybiAqdGhpczsKICAgIH0KICAKICAgIGlubGluZSBGYXN0SW5wdXQmIG9wZXJhdG9yPj4oc3RyaW5nJiBzKSB7CiAgICAgICAgaWYgKHNraXBfYmxhbmtzKCkpIHsKICAgICAgICAgICAgcy5jbGVhcigpOwogICAgICAgICAgICBkbyB7CiAgICAgICAgICAgICAgICBzICs9IGN1cjsKICAgICAgICAgICAgfSB3aGlsZSAoIWlzX2JsYW5rKGdldF9jaGFyKCkpKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuICp0aGlzOwogICAgfQogCiAgICB0ZW1wbGF0ZSA8dHlwZW5hbWUgVD4KICAgIGlubGluZSBGYXN0SW5wdXQmIHJlYWRfaW50ZWdlcihUJiBuKSB7CiAgICAgICAgLy8gdW5zYWZlLCBkb2Vzbid0IGNoZWNrIHRoYXQgY2hhcmFjdGVycyBhcmUgYWN0dWFsbHkgZGlnaXRzCiAgICAgICAgbiA9IDA7CiAgICAgICAgaWYgKHNraXBfYmxhbmtzKCkpIHsKICAgICAgICAgICAgaW50IHNpZ24gPSArMTsKICAgICAgICAgICAgaWYgKGN1ciA9PSAnLScpIHsKICAgICAgICAgICAgICAgIHNpZ24gPSAtMTsKICAgICAgICAgICAgICAgIGdldF9jaGFyKCk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZG8gewogICAgICAgICAgICAgICAgbiArPSBuICsgKG4gPDwgMykgKyBjdXIgLSAnMCc7CiAgICAgICAgICAgIH0gd2hpbGUgKCFpc19ibGFuayhnZXRfY2hhcigpKSk7CiAgICAgICAgICAgIG4gKj0gc2lnbjsKICAgICAgICB9CiAgICAgICAgcmV0dXJuICp0aGlzOwogICAgfQogCiAgICB0ZW1wbGF0ZSA8dHlwZW5hbWUgVD4KICAgIGlubGluZSB0eXBlbmFtZSBlbmFibGVfaWY8aXNfaW50ZWdyYWw8VD46OnZhbHVlLCBGYXN0SW5wdXQmPjo6dHlwZSBvcGVyYXRvcj4+KFQmIG4pIHsKICAgICAgICByZXR1cm4gcmVhZF9pbnRlZ2VyKG4pOwogICAgfQogIAogICAgI2lmICFkZWZpbmVkKF9XSU4zMikgfHwgZGVmaW5lZChfV0lONjQpCiAgICBpbmxpbmUgRmFzdElucHV0JiBvcGVyYXRvcj4+KF9faW50MTI4JiBuKSB7CiAgICAgICAgcmV0dXJuIHJlYWRfaW50ZWdlcihuKTsKICAgIH0KICAgICNlbmRpZgogCiAgICB0ZW1wbGF0ZSA8dHlwZW5hbWUgVD4KICAgIGlubGluZSB0eXBlbmFtZSBlbmFibGVfaWY8aXNfZmxvYXRpbmdfcG9pbnQ8VD46OnZhbHVlLCBGYXN0SW5wdXQmPjo6dHlwZSBvcGVyYXRvcj4+KFQmIG4pIHsKICAgIC8vIG5vdCBzdXJlIGlmIHJlYWxseSBmYXN0LCBmb3IgY29tcGF0aWJpbGl0eSBvbmx5CiAgICAgICAgbiA9IDA7CiAgICAgICAgaWYgKHNraXBfYmxhbmtzKCkpIHsKICAgICAgICAgICAgc3RyaW5nIHM7CiAgICAgICAgICAgICgqdGhpcykgPj4gczsKICAgICAgICAgICAgc3NjYW5mKHMuY19zdHIoKSwgIiVsZiIsICZuKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuICp0aGlzOwogICAgfQp9IGZhc3RfaW5wdXQ7CiAKI2RlZmluZSBjaW4gZmFzdF9pbnB1dA",
+					"AQAAAAAAAAABAAAAggwAAAAAAABiFQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					549,
+					1,
+					"insert",
+					{
+						"characters": "f"
+					},
+					"AQAAAIIMAAAAAAAAgwwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggwAAAAAAACCDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					551,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAIMMAAAAAAAAhAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgwwAAAAAAACDDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					553,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIMMAAAAAAAAgwwAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAhAwAAAAAAACEDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					555,
+					1,
+					"insert",
+					{
+						"characters": "a"
+					},
+					"AQAAAIMMAAAAAAAAhAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgwwAAAAAAACDDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					557,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAIQMAAAAAAAAhQwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhAwAAAAAAACEDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					559,
+					1,
+					"insert",
+					{
+						"characters": "t"
+					},
+					"AQAAAIUMAAAAAAAAhgwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhQwAAAAAAACFDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					561,
+					1,
+					"insert",
+					{
+						"characters": "_"
+					},
+					"AQAAAIYMAAAAAAAAhwwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhgwAAAAAAACGDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					563,
+					1,
+					"insert",
+					{
+						"characters": "i"
+					},
+					"AQAAAIcMAAAAAAAAiAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhwwAAAAAAACHDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					565,
+					1,
+					"insert",
+					{
+						"characters": "n"
+					},
+					"AQAAAIgMAAAAAAAAiQwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiAwAAAAAAACIDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					567,
+					1,
+					"insert",
+					{
+						"characters": "p"
+					},
+					"AQAAAIkMAAAAAAAAigwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiQwAAAAAAACJDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					569,
+					1,
+					"insert",
+					{
+						"characters": "u"
+					},
+					"AQAAAIoMAAAAAAAAiwwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAigwAAAAAAACKDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					571,
+					1,
+					"insert",
+					{
+						"characters": "t"
+					},
+					"AQAAAIsMAAAAAAAAjAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiwwAAAAAAACLDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					577,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"
+					},
+					"AQAAAIIMAAAAAAAAggwAAAAAAAAKAAAAZmFzdF9pbnB1dA",
+					"AQAAAAAAAAABAAAAjAwAAAAAAACMDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					579,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIEMAAAAAAAAgQwAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAggwAAAAAAACCDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					581,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIAMAAAAAAAAgAwAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAgQwAAAAAAACBDAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					609,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							[
+								[
+									5,
+									49
+								],
+								[
+									6,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									9,
+									55
+								],
+								[
+									10,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									10,
+									64
+								],
+								[
+									11,
+									15
+								],
+								"\n                 ",
+								null
+							],
+							[
+								[
+									16,
+									50
+								],
+								[
+									17,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									17,
+									16
+								],
+								[
+									18,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									18,
+									12
+								],
+								[
+									19,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									24,
+									56
+								],
+								[
+									25,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									25,
+									17
+								],
+								[
+									26,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									26,
+									14
+								],
+								[
+									27,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									27,
+									14
+								],
+								[
+									28,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									28,
+									26
+								],
+								[
+									29,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									29,
+									12
+								],
+								[
+									30,
+									8
+								],
+								"\n                ",
+								null
+							],
+							[
+								[
+									30,
+									19
+								],
+								[
+									31,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									31,
+									14
+								],
+								[
+									32,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									32,
+									15
+								],
+								[
+									33,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									33,
+									5
+								],
+								[
+									34,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									34,
+									14
+								],
+								[
+									35,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									35,
+									10
+								],
+								[
+									36,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									36,
+									26
+								],
+								[
+									37,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									37,
+									12
+								],
+								[
+									38,
+									8
+								],
+								"\n                ",
+								null
+							],
+							[
+								[
+									38,
+									18
+								],
+								[
+									39,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									39,
+									14
+								],
+								[
+									40,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									40,
+									15
+								],
+								[
+									41,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									41,
+									5
+								],
+								[
+									42,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									42,
+									3
+								],
+								[
+									43,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									46,
+									75
+								],
+								[
+									47,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									47,
+									11
+								],
+								[
+									48,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									53,
+									47
+								],
+								[
+									54,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									54,
+									19
+								],
+								[
+									55,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									61,
+									45
+								],
+								[
+									62,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									62,
+									19
+								],
+								[
+									63,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									66,
+									66
+								],
+								[
+									67,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									70,
+									59
+								],
+								[
+									71,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									71,
+									52
+								],
+								[
+									72,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									72,
+									41
+								],
+								[
+									73,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									73,
+									10
+								],
+								[
+									74,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									74,
+									48
+								],
+								[
+									75,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									75,
+									10
+								],
+								[
+									76,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									76,
+									41
+								],
+								[
+									77,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									77,
+									54
+								],
+								[
+									78,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									78,
+									67
+								],
+								[
+									79,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									79,
+									12
+								],
+								[
+									80,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									80,
+									5
+								],
+								[
+									81,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									84,
+									31
+								],
+								[
+									85,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									85,
+									12
+								],
+								[
+									86,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									86,
+									10
+								],
+								[
+									87,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									87,
+									36
+								],
+								[
+									88,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									88,
+									18
+								],
+								[
+									89,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									89,
+									3
+								],
+								[
+									90,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									93,
+									31
+								],
+								[
+									94,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									94,
+									12
+								],
+								[
+									95,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									95,
+									10
+								],
+								[
+									96,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									96,
+									36
+								],
+								[
+									97,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									97,
+									18
+								],
+								[
+									98,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									98,
+									3
+								],
+								[
+									99,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									110,
+									14
+								],
+								[
+									111,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									111,
+									8
+								],
+								[
+									112,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									112,
+									10
+								],
+								[
+									113,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									113,
+									19
+								],
+								[
+									114,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									117,
+									15
+								],
+								[
+									118,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									118,
+									26
+								],
+								[
+									119,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									119,
+									13
+								],
+								[
+									120,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									120,
+									14
+								],
+								[
+									121,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									121,
+									12
+								],
+								[
+									122,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									122,
+									11
+								],
+								[
+									123,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									123,
+									35
+								],
+								[
+									124,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									124,
+									12
+								],
+								[
+									125,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									125,
+									3
+								],
+								[
+									126,
+									2
+								],
+								"\n    ",
+								null
+							]
+						]
+					},
+					"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"
+				],
+				[
+					632,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							[
+								[
+									17,
+									18
+								],
+								[
+									18,
+									8
+								],
+								" ",
+								null
+							],
+							[
+								[
+									29,
+									18
+								],
+								[
+									30,
+									16
+								],
+								" ",
+								null
+							],
+							[
+								[
+									37,
+									18
+								],
+								[
+									38,
+									16
+								],
+								" ",
+								null
+							],
+							[
+								[
+									45,
+									13
+								],
+								[
+									45,
+									13
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									50,
+									16
+								],
+								[
+									50,
+									17
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									50,
+									30
+								],
+								[
+									50,
+									31
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									51,
+									54
+								],
+								[
+									51,
+									55
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									51,
+									73
+								],
+								[
+									51,
+									74
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									58,
+									14
+								],
+								[
+									58,
+									14
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									59,
+									52
+								],
+								[
+									59,
+									53
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									59,
+									63
+								],
+								[
+									59,
+									64
+								],
+								"\n",
+								null
+							],
+							[
+								[
+									85,
+									14
+								],
+								[
+									86,
+									8
+								],
+								" ",
+								null
+							],
+							[
+								[
+									94,
+									14
+								],
+								[
+									95,
+									8
+								],
+								" ",
+								null
+							]
+						]
+					},
+					"DQAAACcLAAAAAAAAKAsAAAAAAAAJAAAACiAgICAgICAgYAoAAAAAAABhCgAAAAAAAAkAAAAKICAgICAgICAOBwAAAAAAAA8HAAAAAAAAAQAAACADBwAAAAAAAAgHAAAAAAAAAQAAACDNBgAAAAAAAM4GAAAAAAAAAAAAADUGAAAAAAAANgYAAAAAAAABAAAAICIGAAAAAAAAJwYAAAAAAAABAAAAIOkFAAAAAAAA6gUAAAAAAAABAAAAINsFAAAAAAAA4AUAAAAAAAABAAAAIF0FAAAAAAAAXgUAAAAAAAAAAAAA6AQAAAAAAADpBAAAAAAAABEAAAAKICAgICAgICAgICAgICAgIEUEAAAAAAAARgQAAAAAAAARAAAACiAgICAgICAgICAgICAgICCoAgAAAAAAAKkCAAAAAAAACQAAAAogICAgICAgIA",
+					"AQAAAAAAAAABAAAAtgQAAAAAAAC2BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					647,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							[
+								[
+									42,
+									13
+								],
+								[
+									43,
+									0
+								],
+								"",
+								null
+							],
+							[
+								[
+									48,
+									16
+								],
+								[
+									49,
+									4
+								],
+								" ",
+								null
+							],
+							[
+								[
+									49,
+									17
+								],
+								[
+									50,
+									0
+								],
+								" ",
+								null
+							],
+							[
+								[
+									51,
+									54
+								],
+								[
+									52,
+									4
+								],
+								" ",
+								null
+							],
+							[
+								[
+									52,
+									22
+								],
+								[
+									53,
+									0
+								],
+								" ",
+								null
+							],
+							[
+								[
+									60,
+									14
+								],
+								[
+									61,
+									0
+								],
+								"",
+								null
+							],
+							[
+								[
+									62,
+									52
+								],
+								[
+									63,
+									4
+								],
+								" ",
+								null
+							],
+							[
+								[
+									63,
+									14
+								],
+								[
+									64,
+									0
+								],
+								" ",
+								null
+							]
+						]
+					},
+					"CAAAAPQGAAAAAAAA9QYAAAAAAAABAAAACuUGAAAAAAAA5gYAAAAAAAAFAAAACiAgICCuBgAAAAAAAK4GAAAAAAAAAQAAAAoWBgAAAAAAABcGAAAAAAAAAQAAAAr/BQAAAAAAAAAGAAAAAAAABQAAAAogICAgxgUAAAAAAADHBQAAAAAAAAEAAAAKtAUAAAAAAAC1BQAAAAAAAAUAAAAKICAgIDUFAAAAAAAANQUAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAkQQAAAAAAACRBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					654,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							[
+								[
+									5,
+									49
+								],
+								[
+									6,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									9,
+									55
+								],
+								[
+									10,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									10,
+									66
+								],
+								[
+									11,
+									17
+								],
+								"\n               ",
+								null
+							],
+							[
+								[
+									16,
+									50
+								],
+								[
+									17,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									17,
+									18
+								],
+								[
+									17,
+									19
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									17,
+									27
+								],
+								[
+									18,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									23,
+									56
+								],
+								[
+									24,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									24,
+									19
+								],
+								[
+									25,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									25,
+									16
+								],
+								[
+									26,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									26,
+									18
+								],
+								[
+									27,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									27,
+									30
+								],
+								[
+									28,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									28,
+									18
+								],
+								[
+									28,
+									19
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									28,
+									30
+								],
+								[
+									29,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									29,
+									20
+								],
+								[
+									30,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									30,
+									21
+								],
+								[
+									31,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									31,
+									9
+								],
+								[
+									32,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									32,
+									18
+								],
+								[
+									33,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									33,
+									12
+								],
+								[
+									34,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									34,
+									30
+								],
+								[
+									35,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									35,
+									18
+								],
+								[
+									35,
+									19
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									35,
+									29
+								],
+								[
+									36,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									36,
+									20
+								],
+								[
+									37,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									37,
+									21
+								],
+								[
+									38,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									38,
+									9
+								],
+								[
+									39,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									39,
+									5
+								],
+								[
+									40,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									43,
+									75
+								],
+								[
+									44,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									44,
+									13
+								],
+								[
+									45,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									50,
+									47
+								],
+								[
+									51,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									51,
+									21
+								],
+								[
+									52,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									58,
+									45
+								],
+								[
+									59,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									59,
+									21
+								],
+								[
+									60,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									63,
+									66
+								],
+								[
+									64,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									67,
+									59
+								],
+								[
+									68,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									68,
+									54
+								],
+								[
+									69,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									69,
+									45
+								],
+								[
+									70,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									70,
+									16
+								],
+								[
+									71,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									71,
+									52
+								],
+								[
+									72,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									72,
+									16
+								],
+								[
+									73,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									73,
+									45
+								],
+								[
+									74,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									74,
+									60
+								],
+								[
+									75,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									75,
+									73
+								],
+								[
+									76,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									76,
+									18
+								],
+								[
+									77,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									77,
+									9
+								],
+								[
+									78,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									81,
+									31
+								],
+								[
+									82,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									82,
+									14
+								],
+								[
+									82,
+									15
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									82,
+									21
+								],
+								[
+									83,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									83,
+									38
+								],
+								[
+									84,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									84,
+									22
+								],
+								[
+									85,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									85,
+									5
+								],
+								[
+									86,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									89,
+									31
+								],
+								[
+									90,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									90,
+									14
+								],
+								[
+									90,
+									15
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									90,
+									21
+								],
+								[
+									91,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									91,
+									38
+								],
+								[
+									92,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									92,
+									22
+								],
+								[
+									93,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									93,
+									5
+								],
+								[
+									94,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									105,
+									14
+								],
+								[
+									106,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									106,
+									10
+								],
+								[
+									107,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									107,
+									12
+								],
+								[
+									108,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									108,
+									21
+								],
+								[
+									109,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									112,
+									15
+								],
+								[
+									113,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									113,
+									28
+								],
+								[
+									114,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									114,
+									15
+								],
+								[
+									115,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									115,
+									16
+								],
+								[
+									116,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									116,
+									14
+								],
+								[
+									117,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									117,
+									13
+								],
+								[
+									118,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									118,
+									37
+								],
+								[
+									119,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									119,
+									16
+								],
+								[
+									120,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									120,
+									5
+								],
+								[
+									121,
+									4
+								],
+								"\n  ",
+								null
+							]
+						]
+					},
+					"RAAAABgNAAAAAAAAGw0AAAAAAAAFAAAACiAgICASDQAAAAAAABUNAAAAAAAABQAAAAogICAgAQ0AAAAAAAAGDQAAAAAAAAkAAAAKICAgICAgICDbDAAAAAAAAN4MAAAAAAAABQAAAAogICAgzQwAAAAAAADQDAAAAAAAAAUAAAAKICAgIL4MAAAAAAAAwQwAAAAAAAAFAAAACiAgICCtDAAAAAAAALAMAAAAAAAABQAAAAogICAgnQwAAAAAAACgDAAAAAAAAAUAAAAKICAgIIAMAAAAAAAAgwwAAAAAAAAFAAAACiAgICBgDAAAAAAAAGMMAAAAAAAABQAAAAogICAgSgwAAAAAAABNDAAAAAAAAAUAAAAKICAgID0MAAAAAAAAQAwAAAAAAAAFAAAACiAgICAyDAAAAAAAADUMAAAAAAAABQAAAAogICAgQgsAAAAAAABFCwAAAAAAAAUAAAAKICAgIDwLAAAAAAAAPwsAAAAAAAAFAAAACiAgICAlCwAAAAAAACoLAAAAAAAACQAAAAogICAgICAgIP4KAAAAAAAAAQsAAAAAAAAFAAAACiAgICD3CgAAAAAAAPwKAAAAAAAAAQAAACDoCgAAAAAAAOsKAAAAAAAABQAAAAogICAggwoAAAAAAACGCgAAAAAAAAUAAAAKICAgIH0KAAAAAAAAgAoAAAAAAAAFAAAACiAgICBmCgAAAAAAAGsKAAAAAAAACQAAAAogICAgICAgID8KAAAAAAAAQgoAAAAAAAAFAAAACiAgICA4CgAAAAAAAD0KAAAAAAAAAQAAACApCgAAAAAAACwKAAAAAAAABQAAAAogICAgzAkAAAAAAADPCQAAAAAAAAUAAAAKICAgIMIJAAAAAAAAxwkAAAAAAAAJAAAACiAgICAgICAgrwkAAAAAAAC2CQAAAAAAAA0AAAAKICAgICAgICAgICAgZQkAAAAAAABsCQAAAAAAAA0AAAAKICAgICAgICAgICAgKAkAAAAAAAAvCQAAAAAAAA0AAAAKICAgICAgICAgICAg+ggAAAAAAAD/CAAAAAAAAAkAAAAKICAgICAgICDpCAAAAAAAAPAIAAAAAAAADQAAAAogICAgICAgICAgICC0CAAAAAAAALkIAAAAAAAACQAAAAogICAgICAgIKMIAAAAAAAAqggAAAAAAAANAAAACiAgICAgICAgICAgIHUIAAAAAAAAeggAAAAAAAAJAAAACiAgICAgICAgPggAAAAAAABBCAAAAAAAAAUAAAAKICAgIK4HAAAAAAAAsQcAAAAAAAAFAAAACiAgICBXBwAAAAAAAFoHAAAAAAAABQAAAAogICAgQQcAAAAAAABEBwAAAAAAAAUAAAAKICAgIIAGAAAAAAAAgwYAAAAAAAAFAAAACiAgICBqBgAAAAAAAG0GAAAAAAAABQAAAAogICAgkAUAAAAAAACTBQAAAAAAAAUAAAAKICAgIIIFAAAAAAAAhQUAAAAAAAAFAAAACiAgICAWBQAAAAAAABkFAAAAAAAABQAAAAogICAgEAUAAAAAAAATBQAAAAAAAAUAAAAKICAgIAYFAAAAAAAACwUAAAAAAAAJAAAACiAgICAgICAg8AQAAAAAAAD3BAAAAAAAAA0AAAAKICAgICAgICAgICAg2wQAAAAAAADiBAAAAAAAAA0AAAAKICAgICAgICAgICAg0AQAAAAAAADZBAAAAAAAAAEAAAAgvQQAAAAAAADEBAAAAAAAAA0AAAAKICAgICAgICAgICAgngQAAAAAAACjBAAAAAAAAAkAAAAKICAgICAgICCRBAAAAAAAAJQEAAAAAAAABQAAAAogICAgfgQAAAAAAACDBAAAAAAAAAkAAAAKICAgICAgICB0BAAAAAAAAHkEAAAAAAAACQAAAAogICAgICAgIF4EAAAAAAAAZQQAAAAAAAANAAAACiAgICAgICAgICAgIEkEAAAAAAAAUAQAAAAAAAANAAAACiAgICAgICAgICAgID0EAAAAAAAARgQAAAAAAAABAAAAICoEAAAAAAAAMQQAAAAAAAANAAAACiAgICAgICAgICAgIAsEAAAAAAAAEAQAAAAAAAAJAAAACiAgICAgICAg+AMAAAAAAAD9AwAAAAAAAAkAAAAKICAgICAgICDnAwAAAAAAAOoDAAAAAAAABQAAAAogICAg0wMAAAAAAADWAwAAAAAAAAUAAAAKICAgILECAAAAAAAAtAIAAAAAAAAFAAAACiAgICCoAgAAAAAAAK0CAAAAAAAAAQAAACCVAgAAAAAAAJgCAAAAAAAABQAAAAogICAgUwEAAAAAAABjAQAAAAAAABIAAAAKICAgICAgICAgICAgICAgICAQAQAAAAAAABMBAAAAAAAABQAAAAogICAgjgAAAAAAAACRAAAAAAAAAAUAAAAKICAgIA",
+					"AQAAAAAAAAABAAAAkQQAAAAAAACRBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					666,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							[
+								[
+									5,
+									49
+								],
+								[
+									6,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									9,
+									55
+								],
+								[
+									10,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									10,
+									64
+								],
+								[
+									11,
+									15
+								],
+								"\n                 ",
+								null
+							],
+							[
+								[
+									16,
+									50
+								],
+								[
+									17,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									17,
+									16
+								],
+								[
+									18,
+									4
+								],
+								" ",
+								null
+							],
+							[
+								[
+									18,
+									12
+								],
+								[
+									19,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									24,
+									56
+								],
+								[
+									25,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									25,
+									17
+								],
+								[
+									26,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									26,
+									14
+								],
+								[
+									27,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									27,
+									14
+								],
+								[
+									28,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									28,
+									26
+								],
+								[
+									29,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									29,
+									12
+								],
+								[
+									30,
+									8
+								],
+								" ",
+								null
+							],
+							[
+								[
+									30,
+									19
+								],
+								[
+									31,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									31,
+									14
+								],
+								[
+									32,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									32,
+									15
+								],
+								[
+									33,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									33,
+									5
+								],
+								[
+									34,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									34,
+									14
+								],
+								[
+									35,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									35,
+									10
+								],
+								[
+									36,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									36,
+									26
+								],
+								[
+									37,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									37,
+									12
+								],
+								[
+									38,
+									8
+								],
+								" ",
+								null
+							],
+							[
+								[
+									38,
+									18
+								],
+								[
+									39,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									39,
+									14
+								],
+								[
+									40,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									40,
+									15
+								],
+								[
+									41,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									41,
+									5
+								],
+								[
+									42,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									42,
+									3
+								],
+								[
+									43,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									46,
+									75
+								],
+								[
+									47,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									47,
+									11
+								],
+								[
+									48,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									53,
+									47
+								],
+								[
+									54,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									54,
+									19
+								],
+								[
+									55,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									61,
+									45
+								],
+								[
+									62,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									62,
+									19
+								],
+								[
+									63,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									66,
+									66
+								],
+								[
+									67,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									70,
+									59
+								],
+								[
+									71,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									71,
+									52
+								],
+								[
+									72,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									72,
+									41
+								],
+								[
+									73,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									73,
+									10
+								],
+								[
+									74,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									74,
+									48
+								],
+								[
+									75,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									75,
+									10
+								],
+								[
+									76,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									76,
+									41
+								],
+								[
+									77,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									77,
+									54
+								],
+								[
+									78,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									78,
+									67
+								],
+								[
+									79,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									79,
+									12
+								],
+								[
+									80,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									80,
+									5
+								],
+								[
+									81,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									84,
+									31
+								],
+								[
+									85,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									85,
+									12
+								],
+								[
+									86,
+									4
+								],
+								" ",
+								null
+							],
+							[
+								[
+									86,
+									10
+								],
+								[
+									87,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									87,
+									36
+								],
+								[
+									88,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									88,
+									18
+								],
+								[
+									89,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									89,
+									3
+								],
+								[
+									90,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									93,
+									31
+								],
+								[
+									94,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									94,
+									12
+								],
+								[
+									95,
+									4
+								],
+								" ",
+								null
+							],
+							[
+								[
+									95,
+									10
+								],
+								[
+									96,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									96,
+									36
+								],
+								[
+									97,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									97,
+									18
+								],
+								[
+									98,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									98,
+									3
+								],
+								[
+									99,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									110,
+									14
+								],
+								[
+									111,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									111,
+									8
+								],
+								[
+									112,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									112,
+									10
+								],
+								[
+									113,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									113,
+									19
+								],
+								[
+									114,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									117,
+									15
+								],
+								[
+									118,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									118,
+									26
+								],
+								[
+									119,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									119,
+									13
+								],
+								[
+									120,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									120,
+									14
+								],
+								[
+									121,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									121,
+									12
+								],
+								[
+									122,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									122,
+									11
+								],
+								[
+									123,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									123,
+									35
+								],
+								[
+									124,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									124,
+									12
+								],
+								[
+									125,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									125,
+									3
+								],
+								[
+									126,
+									2
+								],
+								"\n    ",
+								null
+							]
+						]
+					},
+					"RAAAAHIMAAAAAAAAdwwAAAAAAAADAAAACiAgbgwAAAAAAABzDAAAAAAAAAMAAAAKICBhDAAAAAAAAGoMAAAAAAAABQAAAAogICAgPQwAAAAAAABCDAAAAAAAAAMAAAAKICAxDAAAAAAAADYMAAAAAAAAAwAAAAogICQMAAAAAAAAKQwAAAAAAAADAAAACiAgFQwAAAAAAAAaDAAAAAAAAAMAAAAKICAHDAAAAAAAAAwMAAAAAAAAAwAAAAogIOwLAAAAAAAA8QsAAAAAAAADAAAACiAgzgsAAAAAAADTCwAAAAAAAAMAAAAKICC6CwAAAAAAAL8LAAAAAAAAAwAAAAogIK8LAAAAAAAAtAsAAAAAAAADAAAACiAgpgsAAAAAAACrCwAAAAAAAAMAAAAKICC4CgAAAAAAAL0KAAAAAAAAAwAAAAogILQKAAAAAAAAuQoAAAAAAAADAAAACiAgoQoAAAAAAACqCgAAAAAAAAUAAAAKICAgIHwKAAAAAAAAgQoAAAAAAAADAAAACiAgcQoAAAAAAAByCgAAAAAAAAUAAAAKICAgIGQKAAAAAAAAaQoAAAAAAAADAAAACiAgAQoAAAAAAAAGCgAAAAAAAAMAAAAKICD9CQAAAAAAAAIKAAAAAAAAAwAAAAogIOoJAAAAAAAA8wkAAAAAAAAFAAAACiAgICDFCQAAAAAAAMoJAAAAAAAAAwAAAAogILoJAAAAAAAAuwkAAAAAAAAFAAAACiAgICCtCQAAAAAAALIJAAAAAAAAAwAAAAogIFIJAAAAAAAAVwkAAAAAAAADAAAACiAgTAkAAAAAAABVCQAAAAAAAAUAAAAKICAgID8JAAAAAAAATAkAAAAAAAAHAAAACiAgICAgIPsIAAAAAAAACAkAAAAAAAAHAAAACiAgICAgIMQIAAAAAAAA0QgAAAAAAAAHAAAACiAgICAgIJoIAAAAAAAAowgAAAAAAAAFAAAACiAgICCPCAAAAAAAAJwIAAAAAAAABwAAAAogICAgICBeCAAAAAAAAGcIAAAAAAAABQAAAAogICAgUwgAAAAAAABgCAAAAAAAAAcAAAAKICAgICAgKQgAAAAAAAAyCAAAAAAAAAUAAAAKICAgIPQHAAAAAAAA+QcAAAAAAAADAAAACiAgZgcAAAAAAABrBwAAAAAAAAMAAAAKICARBwAAAAAAABYHAAAAAAAAAwAAAAogIP0GAAAAAAAAAgcAAAAAAAADAAAACiAgPgYAAAAAAABDBgAAAAAAAAMAAAAKICAqBgAAAAAAAC8GAAAAAAAAAwAAAAogIFIFAAAAAAAAVwUAAAAAAAADAAAACiAgRgUAAAAAAABLBQAAAAAAAAMAAAAKICDcBAAAAAAAAOEEAAAAAAAAAwAAAAogINgEAAAAAAAA3QQAAAAAAAADAAAACiAg0gQAAAAAAADbBAAAAAAAAAUAAAAKICAgIMIEAAAAAAAAzwQAAAAAAAAHAAAACiAgICAgILMEAAAAAAAAwAQAAAAAAAAHAAAACiAgICAgIKAEAAAAAAAAoQQAAAAAAAAJAAAACiAgICAgICAgkwQAAAAAAACgBAAAAAAAAAcAAAAKICAgICAgeAQAAAAAAACBBAAAAAAAAAUAAAAKICAgIG0EAAAAAAAAcgQAAAAAAAADAAAACiAgXgQAAAAAAABnBAAAAAAAAAUAAAAKICAgIFgEAAAAAAAAYQQAAAAAAAAFAAAACiAgICBIBAAAAAAAAFUEAAAAAAAABwAAAAogICAgICA5BAAAAAAAAEYEAAAAAAAABwAAAAogICAgICAlBAAAAAAAACYEAAAAAAAACQAAAAogICAgICAgIBgEAAAAAAAAJQQAAAAAAAAHAAAACiAgICAgIP0DAAAAAAAABgQAAAAAAAAFAAAACiAgICDuAwAAAAAAAPcDAAAAAAAABQAAAAogICAg3wMAAAAAAADkAwAAAAAAAAMAAAAKICDNAwAAAAAAANIDAAAAAAAAAwAAAAogIK0CAAAAAAAAsgIAAAAAAAADAAAACiAgoAIAAAAAAAChAgAAAAAAAAUAAAAKICAgII8CAAAAAAAAlAIAAAAAAAADAAAACiAgTwEAAAAAAABhAQAAAAAAABAAAAAKICAgICAgICAgICAgICAgDgEAAAAAAAATAQAAAAAAAAMAAAAKICCOAAAAAAAAAJMAAAAAAAAAAwAAAAogIA",
+					"AQAAAAAAAAABAAAAbQQAAAAAAABtBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					673,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							[
+								[
+									5,
+									49
+								],
+								[
+									6,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									9,
+									55
+								],
+								[
+									10,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									10,
+									66
+								],
+								[
+									11,
+									17
+								],
+								"\n               ",
+								null
+							],
+							[
+								[
+									16,
+									50
+								],
+								[
+									17,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									17,
+									18
+								],
+								[
+									17,
+									19
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									17,
+									27
+								],
+								[
+									18,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									23,
+									56
+								],
+								[
+									24,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									24,
+									19
+								],
+								[
+									25,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									25,
+									16
+								],
+								[
+									26,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									26,
+									18
+								],
+								[
+									27,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									27,
+									30
+								],
+								[
+									28,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									28,
+									18
+								],
+								[
+									28,
+									19
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									28,
+									30
+								],
+								[
+									29,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									29,
+									20
+								],
+								[
+									30,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									30,
+									21
+								],
+								[
+									31,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									31,
+									9
+								],
+								[
+									32,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									32,
+									18
+								],
+								[
+									33,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									33,
+									12
+								],
+								[
+									34,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									34,
+									30
+								],
+								[
+									35,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									35,
+									18
+								],
+								[
+									35,
+									19
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									35,
+									29
+								],
+								[
+									36,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									36,
+									20
+								],
+								[
+									37,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									37,
+									21
+								],
+								[
+									38,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									38,
+									9
+								],
+								[
+									39,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									39,
+									5
+								],
+								[
+									40,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									43,
+									75
+								],
+								[
+									44,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									44,
+									13
+								],
+								[
+									45,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									50,
+									47
+								],
+								[
+									51,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									51,
+									21
+								],
+								[
+									52,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									58,
+									45
+								],
+								[
+									59,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									59,
+									21
+								],
+								[
+									60,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									63,
+									66
+								],
+								[
+									64,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									67,
+									59
+								],
+								[
+									68,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									68,
+									54
+								],
+								[
+									69,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									69,
+									45
+								],
+								[
+									70,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									70,
+									16
+								],
+								[
+									71,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									71,
+									52
+								],
+								[
+									72,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									72,
+									16
+								],
+								[
+									73,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									73,
+									45
+								],
+								[
+									74,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									74,
+									60
+								],
+								[
+									75,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									75,
+									73
+								],
+								[
+									76,
+									12
+								],
+								"\n      ",
+								null
+							],
+							[
+								[
+									76,
+									18
+								],
+								[
+									77,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									77,
+									9
+								],
+								[
+									78,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									81,
+									31
+								],
+								[
+									82,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									82,
+									14
+								],
+								[
+									82,
+									15
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									82,
+									21
+								],
+								[
+									83,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									83,
+									38
+								],
+								[
+									84,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									84,
+									22
+								],
+								[
+									85,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									85,
+									5
+								],
+								[
+									86,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									89,
+									31
+								],
+								[
+									90,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									90,
+									14
+								],
+								[
+									90,
+									15
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									90,
+									21
+								],
+								[
+									91,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									91,
+									38
+								],
+								[
+									92,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									92,
+									22
+								],
+								[
+									93,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									93,
+									5
+								],
+								[
+									94,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									105,
+									14
+								],
+								[
+									106,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									106,
+									10
+								],
+								[
+									107,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									107,
+									12
+								],
+								[
+									108,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									108,
+									21
+								],
+								[
+									109,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									112,
+									15
+								],
+								[
+									113,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									113,
+									28
+								],
+								[
+									114,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									114,
+									15
+								],
+								[
+									115,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									115,
+									16
+								],
+								[
+									116,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									116,
+									14
+								],
+								[
+									117,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									117,
+									13
+								],
+								[
+									118,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									118,
+									37
+								],
+								[
+									119,
+									8
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									119,
+									16
+								],
+								[
+									120,
+									4
+								],
+								"\n  ",
+								null
+							],
+							[
+								[
+									120,
+									5
+								],
+								[
+									121,
+									4
+								],
+								"\n  ",
+								null
+							]
+						]
+					},
+					"RAAAABgNAAAAAAAAGw0AAAAAAAAFAAAACiAgICASDQAAAAAAABUNAAAAAAAABQAAAAogICAgAQ0AAAAAAAAGDQAAAAAAAAkAAAAKICAgICAgICDbDAAAAAAAAN4MAAAAAAAABQAAAAogICAgzQwAAAAAAADQDAAAAAAAAAUAAAAKICAgIL4MAAAAAAAAwQwAAAAAAAAFAAAACiAgICCtDAAAAAAAALAMAAAAAAAABQAAAAogICAgnQwAAAAAAACgDAAAAAAAAAUAAAAKICAgIIAMAAAAAAAAgwwAAAAAAAAFAAAACiAgICBgDAAAAAAAAGMMAAAAAAAABQAAAAogICAgSgwAAAAAAABNDAAAAAAAAAUAAAAKICAgID0MAAAAAAAAQAwAAAAAAAAFAAAACiAgICAyDAAAAAAAADUMAAAAAAAABQAAAAogICAgQgsAAAAAAABFCwAAAAAAAAUAAAAKICAgIDwLAAAAAAAAPwsAAAAAAAAFAAAACiAgICAlCwAAAAAAACoLAAAAAAAACQAAAAogICAgICAgIP4KAAAAAAAAAQsAAAAAAAAFAAAACiAgICD3CgAAAAAAAPwKAAAAAAAAAQAAACDoCgAAAAAAAOsKAAAAAAAABQAAAAogICAggwoAAAAAAACGCgAAAAAAAAUAAAAKICAgIH0KAAAAAAAAgAoAAAAAAAAFAAAACiAgICBmCgAAAAAAAGsKAAAAAAAACQAAAAogICAgICAgID8KAAAAAAAAQgoAAAAAAAAFAAAACiAgICA4CgAAAAAAAD0KAAAAAAAAAQAAACApCgAAAAAAACwKAAAAAAAABQAAAAogICAgzAkAAAAAAADPCQAAAAAAAAUAAAAKICAgIMIJAAAAAAAAxwkAAAAAAAAJAAAACiAgICAgICAgrwkAAAAAAAC2CQAAAAAAAA0AAAAKICAgICAgICAgICAgZQkAAAAAAABsCQAAAAAAAA0AAAAKICAgICAgICAgICAgKAkAAAAAAAAvCQAAAAAAAA0AAAAKICAgICAgICAgICAg+ggAAAAAAAD/CAAAAAAAAAkAAAAKICAgICAgICDpCAAAAAAAAPAIAAAAAAAADQAAAAogICAgICAgICAgICC0CAAAAAAAALkIAAAAAAAACQAAAAogICAgICAgIKMIAAAAAAAAqggAAAAAAAANAAAACiAgICAgICAgICAgIHUIAAAAAAAAeggAAAAAAAAJAAAACiAgICAgICAgPggAAAAAAABBCAAAAAAAAAUAAAAKICAgIK4HAAAAAAAAsQcAAAAAAAAFAAAACiAgICBXBwAAAAAAAFoHAAAAAAAABQAAAAogICAgQQcAAAAAAABEBwAAAAAAAAUAAAAKICAgIIAGAAAAAAAAgwYAAAAAAAAFAAAACiAgICBqBgAAAAAAAG0GAAAAAAAABQAAAAogICAgkAUAAAAAAACTBQAAAAAAAAUAAAAKICAgIIIFAAAAAAAAhQUAAAAAAAAFAAAACiAgICAWBQAAAAAAABkFAAAAAAAABQAAAAogICAgEAUAAAAAAAATBQAAAAAAAAUAAAAKICAgIAYFAAAAAAAACwUAAAAAAAAJAAAACiAgICAgICAg8AQAAAAAAAD3BAAAAAAAAA0AAAAKICAgICAgICAgICAg2wQAAAAAAADiBAAAAAAAAA0AAAAKICAgICAgICAgICAg0AQAAAAAAADZBAAAAAAAAAEAAAAgvQQAAAAAAADEBAAAAAAAAA0AAAAKICAgICAgICAgICAgngQAAAAAAACjBAAAAAAAAAkAAAAKICAgICAgICCRBAAAAAAAAJQEAAAAAAAABQAAAAogICAgfgQAAAAAAACDBAAAAAAAAAkAAAAKICAgICAgICB0BAAAAAAAAHkEAAAAAAAACQAAAAogICAgICAgIF4EAAAAAAAAZQQAAAAAAAANAAAACiAgICAgICAgICAgIEkEAAAAAAAAUAQAAAAAAAANAAAACiAgICAgICAgICAgID0EAAAAAAAARgQAAAAAAAABAAAAICoEAAAAAAAAMQQAAAAAAAANAAAACiAgICAgICAgICAgIAsEAAAAAAAAEAQAAAAAAAAJAAAACiAgICAgICAg+AMAAAAAAAD9AwAAAAAAAAkAAAAKICAgICAgICDnAwAAAAAAAOoDAAAAAAAABQAAAAogICAg0wMAAAAAAADWAwAAAAAAAAUAAAAKICAgILECAAAAAAAAtAIAAAAAAAAFAAAACiAgICCoAgAAAAAAAK0CAAAAAAAAAQAAACCVAgAAAAAAAJgCAAAAAAAABQAAAAogICAgUwEAAAAAAABjAQAAAAAAABIAAAAKICAgICAgICAgICAgICAgICAQAQAAAAAAABMBAAAAAAAABQAAAAogICAgjgAAAAAAAACRAAAAAAAAAAUAAAAKICAgIA",
+					"AQAAAAAAAAABAAAAkwQAAAAAAACTBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					690,
+					1,
+					"lsp_apply_document_edit",
+					{
+						"changes":
+						[
+							[
+								[
+									5,
+									49
+								],
+								[
+									6,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									9,
+									55
+								],
+								[
+									10,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									10,
+									64
+								],
+								[
+									11,
+									15
+								],
+								"\n                 ",
+								null
+							],
+							[
+								[
+									16,
+									50
+								],
+								[
+									17,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									17,
+									16
+								],
+								[
+									18,
+									4
+								],
+								" ",
+								null
+							],
+							[
+								[
+									18,
+									12
+								],
+								[
+									19,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									24,
+									56
+								],
+								[
+									25,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									25,
+									17
+								],
+								[
+									26,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									26,
+									14
+								],
+								[
+									27,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									27,
+									14
+								],
+								[
+									28,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									28,
+									26
+								],
+								[
+									29,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									29,
+									12
+								],
+								[
+									30,
+									8
+								],
+								" ",
+								null
+							],
+							[
+								[
+									30,
+									19
+								],
+								[
+									31,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									31,
+									14
+								],
+								[
+									32,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									32,
+									15
+								],
+								[
+									33,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									33,
+									5
+								],
+								[
+									34,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									34,
+									14
+								],
+								[
+									35,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									35,
+									10
+								],
+								[
+									36,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									36,
+									26
+								],
+								[
+									37,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									37,
+									12
+								],
+								[
+									38,
+									8
+								],
+								" ",
+								null
+							],
+							[
+								[
+									38,
+									18
+								],
+								[
+									39,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									39,
+									14
+								],
+								[
+									40,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									40,
+									15
+								],
+								[
+									41,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									41,
+									5
+								],
+								[
+									42,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									42,
+									3
+								],
+								[
+									43,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									46,
+									75
+								],
+								[
+									47,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									47,
+									11
+								],
+								[
+									48,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									53,
+									47
+								],
+								[
+									54,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									54,
+									19
+								],
+								[
+									55,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									61,
+									45
+								],
+								[
+									62,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									62,
+									19
+								],
+								[
+									63,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									66,
+									66
+								],
+								[
+									67,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									70,
+									59
+								],
+								[
+									71,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									71,
+									52
+								],
+								[
+									72,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									72,
+									41
+								],
+								[
+									73,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									73,
+									10
+								],
+								[
+									74,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									74,
+									48
+								],
+								[
+									75,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									75,
+									10
+								],
+								[
+									76,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									76,
+									41
+								],
+								[
+									77,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									77,
+									54
+								],
+								[
+									78,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									78,
+									67
+								],
+								[
+									79,
+									6
+								],
+								"\n            ",
+								null
+							],
+							[
+								[
+									79,
+									12
+								],
+								[
+									80,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									80,
+									5
+								],
+								[
+									81,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									84,
+									31
+								],
+								[
+									85,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									85,
+									12
+								],
+								[
+									86,
+									4
+								],
+								" ",
+								null
+							],
+							[
+								[
+									86,
+									10
+								],
+								[
+									87,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									87,
+									36
+								],
+								[
+									88,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									88,
+									18
+								],
+								[
+									89,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									89,
+									3
+								],
+								[
+									90,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									93,
+									31
+								],
+								[
+									94,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									94,
+									12
+								],
+								[
+									95,
+									4
+								],
+								" ",
+								null
+							],
+							[
+								[
+									95,
+									10
+								],
+								[
+									96,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									96,
+									36
+								],
+								[
+									97,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									97,
+									18
+								],
+								[
+									98,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									98,
+									3
+								],
+								[
+									99,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									110,
+									14
+								],
+								[
+									111,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									111,
+									8
+								],
+								[
+									112,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									112,
+									10
+								],
+								[
+									113,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									113,
+									19
+								],
+								[
+									114,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									117,
+									15
+								],
+								[
+									118,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									118,
+									26
+								],
+								[
+									119,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									119,
+									13
+								],
+								[
+									120,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									120,
+									14
+								],
+								[
+									121,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									121,
+									12
+								],
+								[
+									122,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									122,
+									11
+								],
+								[
+									123,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									123,
+									35
+								],
+								[
+									124,
+									4
+								],
+								"\n        ",
+								null
+							],
+							[
+								[
+									124,
+									12
+								],
+								[
+									125,
+									2
+								],
+								"\n    ",
+								null
+							],
+							[
+								[
+									125,
+									3
+								],
+								[
+									126,
+									2
+								],
+								"\n    ",
+								null
+							]
+						]
+					},
+					"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"
+				],
+				[
+					730,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAAAAAAAAAAAAAAAAAAAAAAoDQAAI2luY2x1ZGUgImJpdHMvc3RkYysrLmgiCnVzaW5nIG5hbWVzcGFjZSBzdGQ7Cgpib29sIGRlYnVnOwp0ZW1wbGF0ZSA8dHlwZW5hbWUgVCwgdHlwZW5hbWUgVT4KaXN0cmVhbSAmb3BlcmF0b3I+Pihpc3RyZWFtICZpcywgcGFpcjxULCBVPiAmcCkgewogICAgcmV0dXJuIGlzID4+IHAuZmlyc3QgPj4gcC5zZWNvbmQ7Cn0KdGVtcGxhdGUgPHR5cGVuYW1lIFQsIHR5cGVuYW1lIFU+Cm9zdHJlYW0gJm9wZXJhdG9yPDwob3N0cmVhbSAmb3MsIGNvbnN0IHBhaXI8VCwgVT4gJnApIHsKICAgIHJldHVybiBkZWJ1ZyA/IG9zIDw8ICIoIiA8PCBwLmZpcnN0IDw8ICIsICIgPDwgcC5zZWNvbmQgPDwgIikiCiAgICAgICAgICAgICAgICAgOiBvcyA8PCBwLmZpcnN0IDw8ICIgIiA8PCBwLnNlY29uZDsKfQp0ZW1wbGF0ZSA8dHlwZW5hbWUgVF9jb250YWluZXIsIHR5cGVuYW1lIFQgPSB0eXBlbmFtZSBlbmFibGVfaWY8CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICFpc19zYW1lPFRfY29udGFpbmVyLCBzdHJpbmc+Ojp2YWx1ZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZW5hbWUgVF9jb250YWluZXI6OnZhbHVlX3R5cGU+Ojp0eXBlPgppc3RyZWFtICZvcGVyYXRvcj4+KGlzdHJlYW0gJmlzLCBUX2NvbnRhaW5lciAmdikgewogICAgZm9yIChUICZ4IDogdikgaXMgPj4geDsKICAgIHJldHVybiBpczsKfQp0ZW1wbGF0ZSA8dHlwZW5hbWUgVF9jb250YWluZXIsIHR5cGVuYW1lIFQgPSB0eXBlbmFtZSBlbmFibGVfaWY8CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICFpc19zYW1lPFRfY29udGFpbmVyLCBzdHJpbmc+Ojp2YWx1ZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdHlwZW5hbWUgVF9jb250YWluZXI6OnZhbHVlX3R5cGU+Ojp0eXBlPgpvc3RyZWFtICZvcGVyYXRvcjw8KG9zdHJlYW0gJm9zLCBjb25zdCBUX2NvbnRhaW5lciAmdikgewogICAgYm9vbCBmID0gZmFsc2U7CiAgICBpZiAoZGVidWcpIHsKICAgICAgICBvcyA8PCAiWyI7CiAgICAgICAgZm9yIChjb25zdCBUICZ4IDogdikgewogICAgICAgICAgICBpZiAoZikgb3MgPDwgIiwgIjsKICAgICAgICAgICAgb3MgPDwgeDsKICAgICAgICAgICAgZiA9IHRydWU7CiAgICAgICAgfQogICAgICAgIG9zIDw8ICJdIjsKICAgIH0gZWxzZSB7CiAgICAgICAgZm9yIChjb25zdCBUICZ4IDogdikgewogICAgICAgICAgICBpZiAoZikgb3MgPDwgIiAiOwogICAgICAgICAgICBvcyA8PCB4OwogICAgICAgICAgICBmID0gdHJ1ZTsKICAgICAgICB9CiAgICB9CiAgICByZXR1cm4gb3M7Cn0Kdm9pZCBzY2FuKCkge30KdGVtcGxhdGUgPHR5cGVuYW1lIEhlYWQsIHR5cGVuYW1lLi4uIFRhaWw+IHZvaWQgc2NhbihIZWFkICZILCBUYWlsICYuLi5UKSB7CiAgICBjaW4gPj4gSDsKICAgIHNjYW4oVC4uLik7Cn0Kdm9pZCBwcmludGxuKCkgeyBjb3V0IDw8ICJcbiI7IH0KdGVtcGxhdGUgPHR5cGVuYW1lIEhlYWQ+IHZvaWQgcHJpbnRsbihjb25zdCBIZWFkICZIKSB7IGNvdXQgPDwgSCA8PCAiXG4iOyB9CnRlbXBsYXRlIDx0eXBlbmFtZSBIZWFkLCB0eXBlbmFtZS4uLiBUYWlsPgp2b2lkIHByaW50bG4oY29uc3QgSGVhZCAmSCwgY29uc3QgVGFpbCAmLi4uVCkgewogICAgY291dCA8PCBIIDw8ICIgIjsKICAgIHByaW50bG4oVC4uLik7Cn0KCnZvaWQgcHJpbnQoKSB7fQp0ZW1wbGF0ZSA8dHlwZW5hbWUgSGVhZD4gdm9pZCBwcmludChjb25zdCBIZWFkICZIKSB7IGNvdXQgPDwgSDsgfQp0ZW1wbGF0ZSA8dHlwZW5hbWUgSGVhZCwgdHlwZW5hbWUuLi4gVGFpbD4Kdm9pZCBwcmludChjb25zdCBIZWFkICZILCBjb25zdCBUYWlsICYuLi5UKSB7CiAgICBjb3V0IDw8IEggPDwgIiAiOwogICAgcHJpbnQoVC4uLik7Cn0KCnRlbXBsYXRlIDx0eXBlbmFtZSBIZWFkPiB2b2lkIGRiZ19vdXQoc3RyaW5nIHZhciwgY29uc3QgSGVhZCAmSCkgewogICAgY2VyciA8PCB2YXIgPDwgIiA9ICIgPDwgSCA8PCBlbmRsOwp9CnRlbXBsYXRlIDx0eXBlbmFtZSBIZWFkLCB0eXBlbmFtZS4uLiBUYWlsPgp2b2lkIGRiZ19vdXQoc3RyaW5nIHZhciwgY29uc3QgSGVhZCAmSCwgY29uc3QgVGFpbCAmLi4uVCkgewogICAgZm9yIChpbnQgaSA9IDAsIGIgPSAwOyBpIDwgaW50KHZhci5zaXplKCkpOyBpKyspIHsKICAgICAgICBpZiAodmFyW2ldID09ICcoJyB8fCB2YXJbaV0gPT0gJ3snKSB7CiAgICAgICAgICAgIGIrKzsKICAgICAgICB9IGVsc2UgaWYgKHZhcltpXSA9PSAnKScgfHwgdmFyW2ldID09ICd9JykgewogICAgICAgICAgICBiLS07CiAgICAgICAgfSBlbHNlIGlmICh2YXJbaV0gPT0gJywnICYmIGIgPT0gMCkgewogICAgICAgICAgICBjZXJyIDw8IHZhci5zdWJzdHIoMCwgaSkgPDwgIiA9ICIgPDwgSCA8PCAiIHwgIjsKICAgICAgICAgICAgZGJnX291dCh2YXIuc3Vic3RyKHZhci5maW5kX2ZpcnN0X25vdF9vZignICcsIGkgKyAxKSksIFQuLi4pOwogICAgICAgICAgICBicmVhazsKICAgICAgICB9CiAgICB9Cn0KdGVtcGxhdGUgPHR5cGVuYW1lIFQsIHR5cGVuYW1lIFQxLCB0eXBlbmFtZS4uLiBUYWlsPgpUIGFtaW4oVCAmYSwgVDEgYiwgVGFpbC4uLiBjKSB7CiAgICBpZiAoYiA8IGEpIGEgPSBiOwogICAgaWYgY29uc3RleHByIChzaXplb2YuLi4oYykgIT0gMCkgewogICAgICAgIGFtaW4oYSwgYy4uLik7CiAgICB9CiAgICByZXR1cm4gYTsKfQp0ZW1wbGF0ZSA8dHlwZW5hbWUgVCwgdHlwZW5hbWUgVDEsIHR5cGVuYW1lLi4uIFRhaWw+ClQgYW1heChUICZhLCBUMSBiLCBUYWlsLi4uIGMpIHsKICAgIGlmIChiID4gYSkgYSA9IGI7CiAgICBpZiBjb25zdGV4cHIgKHNpemVvZi4uLihjKSAhPSAwKSB7CiAgICAgICAgYW1heChhLCBjLi4uKTsKICAgIH0KICAgIHJldHVybiBhOwp9CiNpZm5kZWYgT05MSU5FX0pVREdFCiNkZWZpbmUgZGJnKC4uLikgZGVidWcgPSB0cnVlLCBkYmdfb3V0KCNfX1ZBX0FSR1NfXywgX19WQV9BUkdTX18pLCBkZWJ1ZyA9IGZhbHNlCiNlbHNlCiNkZWZpbmUgZGJnKC4uLikKI2VuZGlmCgojZGVmaW5lIGludCBpbnQ2NF90CmNvbnN0IGludCBpbmYgPSAxZTE4TCArIDUsIG1vZCA9IDFlOSArIDcsIE4gPSAyZTUgKyA1OwoKdm9pZCBzb2x2ZSgpIHsKICAgIGludCBuOwogICAgc2NhbihuKTsKICAgIHZlY3RvcjxpbnQ+IGEobik7CiAgICBzY2FuKGEpOwp9CgpzaWduZWQgbWFpbigpIHsKICAgIGlvczo6c3luY193aXRoX3N0ZGlvKDApOwogICAgY2luLnRpZSgwKTsKICAgIGNvdXQudGllKDApOwogICAgaW50IHQgPSAxOwogICAgY2luID4+IHQ7CiAgICBmb3IgKGludCB0dCA9IDE7IHR0IDw9IHQ7IHR0KyspIHsKICAgICAgICBzb2x2ZSgpOwogICAgfQogICAgcmV0dXJuIDA7Cn0",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAoDQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "Packages/User/Builds/C++ Fast Olympic Coding.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/User/Builds/C++ (Fast Olympic Coding).sublime-build",
+					""
+				],
+				[
+					"Packages/User/Builds/C++ (Fast Olympic Coding).sublime-build",
+					"Fast Compile And Run"
+				]
+			],
+			[
+				"Packages/User/Builds/C++ (Fast Olympic Coding).sublime-build",
+				"Fast Compile And Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Builds/C++ Fast Olympic Coding.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Builds/C++ Fast Olympic Coding.sublime-build",
+					"Fast Compile And Run"
+				]
+			],
+			[
+				"Packages/User/Builds/C++ Fast Olympic Coding.sublime-build",
+				"Fast Compile And Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Builds/C++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Builds/C++.sublime-build",
+					"Fast Compile And Run"
+				]
+			],
+			[
+				"Packages/User/Builds/C++.sublime-build",
+				"Fast Compile And Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/TestMultiExec.sublime-build",
+					""
+				],
+				[
+					"Packages/User/TestMultiExec.sublime-build",
+					"Fast Compile And Run"
+				]
+			],
+			[
+				"Packages/User/TestMultiExec.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"rename",
+				"Rename File"
+			],
+			[
+				"sbc++",
+				"Scratch Buffer: C++"
+			],
+			[
+				"make ",
+				"FastOlympicCoding: Make Stress"
+			],
+			[
+				"make stress",
+				"FastOlympicCoding: Make Stress"
+			],
+			[
+				"vpf",
+				"View Package File"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"ter",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"de",
+				"DeleteCurrentFile: Delete File"
+			],
+			[
+				"lsp",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"llsp",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"lsp ena",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"hyo",
+				"HyperHelp: Help on Help"
+			],
+			[
+				"hyper",
+				"HyperHelp: Browse Available Help"
+			],
+			[
+				"hyperhelp",
+				"HyperHelp: Browse Available Help"
+			],
+			[
+				"package con",
+				"Package Control: Remove Repository"
+			],
+			[
+				"Snippet: cpp",
+				"Snippet: cpp_basic"
+			],
+			[
+				"vpf ",
+				"View Package File"
+			],
+			[
+				"terminus",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"sbc",
+				"Scratch Buffer: C++"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 272.0,
+		"history":
+		[
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"view.run_command(\"view_tester\", {\"action\": \"make_opd\", \"use_debugger\": False})",
+			"view.run_command(\"view_tester\", {\"action\": \"make_opd\", \"use_debugger\": false})",
+			"view.run_command(\"view_tester\", {\"action\": \"make_opd\", \"use_debugger\": false)})",
+			"view.run(\"command\": \"view_tester\", \"args\": {\"action\": \"make_opd\", \"use_debugger\": false)})",
+			"view.run_command(\"command\": \"view_tester\", \"args\": {\"action\": \"make_opd\", \"use_debugger\": false)})",
+			"view.run(            \"command\": \"view_tester\",\n            \"args\": {\n                \"action\": \"make_opd\",\n                \"use_debugger\": false\n            },        \n)",
+			"a",
+			"a = sublime.expand_variables(a, window.extract_variables())",
+			"a = {\"x\" : \"${file_base_name}\"}",
+			"a",
+			"a = sublime.expand_variables(a, window.extract_variables())",
+			"a = {\"x\" : \"file_base_name\"}",
+			"sublime.expand_variables(\"${file_base_name}\", window.extract_variables())",
+			"\"dbrun sublime.expand_variables(\"${file_base_name}\", window.extract_variables())\"",
+			"\"shell_cmd\": \"dbrun sublime.expand_variables(\"${file_base_name}\", window.extract_variables())\"",
+			"sublime.expand_variables(\"${file_base_name}\", window.extract_variables())",
+			"sublime.expand_variables(\\\"${file_base_name}\\\", window.extract_variables())",
+			"sublime.expand_variables(\"dbrun \\\"${file_base_name}\\\"\", window.extract_variables())",
+			"sublime.expand_variables(\"shell_cmd\": \"dbrun \\\"${file_base_name}\\\"\", window.extract_variables())",
+			"sublime.expand_variables(\"${file_base_name}\", window.extract_variables())",
+			"window.extract_variables()",
+			"sublime.expand_variables(\"${file_base_name}\", window.extract_variables())",
+			"sublime.expand_variables(\"${file_base_name}\", self.window.extract_variables())",
+			"sublime.expand_variables(\"${file_base_name}\", self.window.extract_variables()})",
+			"sublime.expand_variables(\"${file_base_name}\", {\"file_base_name\": file_base_name})",
+			"sublime.expand_variables(\"Hello, ${name}\", {\"name\": \"Foo\"})",
+			"sublime.expand_variables(\"${file_base_name}\", {})",
+			"sublime.expand_variables(\"${ile_base_name}\", {})",
+			"sublime.expand_variables(x, 'file_base_name')",
+			"sublime.expand_variables('file_base_name')",
+			"sublime.expand_variables(file_base_name)",
+			"window.extract_variables()",
+			"window.active_view().file_base_name()",
+			"window.active_view().file_name()",
+			"active_view().file_name()",
+			"view.file_base_name()",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sys.platform",
+			"sys.platform()",
+			"import sys",
+			"os.platform()",
+			"sys.platform()"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/Users/aatrey/.clang-format",
+		"/Users/aatrey/llvmDefaultFormatSettings",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/User/Snippets/fast_input.sublime-snippet",
+		"/Users/aatrey/demo",
+		"/Users/aatrey/Contests/CC/C.O.D.E.R.S Division 1 (Unrated)/S03E02.cpp",
+		"/Users/aatrey/Contests/CC/C.O.D.E.R.S Division 1 (Unrated)/S08E12.cpp",
+		"/Users/aatrey/Contests/CC/C.O.D.E.R.S Division 1 (Unrated)/S06E06.cpp",
+		"/Users/aatrey/Contests/CC/C.O.D.E.R.S Division 1 (Unrated)/S08E12_brute.cpp",
+		"/Users/aatrey/Contests/CC/C.O.D.E.R.S Division 1 (Unrated)/S08E12_gen.cpp",
+		"/Users/aatrey/Contests/CC/C.O.D.E.R.S Division 1 (Unrated)/S07E09.cpp",
+		"/Users/aatrey/Contests/CC/C.O.D.E.R.S Division 1 (Unrated)/S04E23.cpp",
+		"/Users/aatrey/Contests/CC/November Lunchtime 2021 Division 1/PERPAIR.cpp",
+		"/Users/aatrey/Contests/CC/November Lunchtime 2021 Division 1/SUBJUMP_brute.cpp",
+		"/Users/aatrey/Contests/CC/November Lunchtime 2021 Division 1/SUBJUMP_gen.cpp",
+		"/Users/aatrey/Contests/CC/November Lunchtime 2021 Division 1/SUBJUMP.cpp",
+		"/Users/aatrey/Movies/Batman/order",
+		"/Users/aatrey/Contests/CC/November Lunchtime 2021 Division 1/STRGMNZ.cpp",
+		"/Users/aatrey/Contests/CC/November Lunchtime 2021 Division 1/RPDRDNG.cpp",
+		"/Users/aatrey/Contests/CC/November Lunchtime 2021 Division 1/STRGMNZ.cpp__tests",
+		"/Users/aatrey/Contests/CC/November Lunchtime 2021 Division 1/CSTOCK.cpp",
+		"/Users/aatrey/Contests/CC/November Lunchtime 2021 Division 1/MINPIZZAS.cpp",
+		"/Users/aatrey/Contests/CC/November Lunchtime 2021 Division 1/EXPWEI.cpp",
+		"/Users/aatrey/Contests/CC/November Lunchtime 2021 Division 1/CHASE.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/SnackDown 2021 - Online Pre-Elimination/PRDTPAIN.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/SnackDown 2021 - Online Pre-Elimination/SLIPPERS.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/SnackDown 2021 - Online Pre-Elimination/DECSUBK.cpp",
+		"/Users/aatrey/imp.txt",
+		"/Users/aatrey/Contests/CC/CodeChef Starters 17 Division 2 (Rated)/CHEFVACATION.cpp",
+		"/Users/aatrey/Contests/CC/CodeChef Starters 17 Division 2 (Rated)/check.java",
+		"/Users/aatrey/Contests/CC/CodeChef Starters 17 Division 2 (Rated)/STRADJ.cpp",
+		"/Users/aatrey/Contests/CC/CodeChef Starters 17 Division 2 (Rated)/PARPERM.cpp",
+		"/Users/aatrey/Contests/CC/CodeChef Starters 17 Division 2 (Rated)/NEWPIECE.cpp",
+		"/Users/aatrey/Contests/CC/CodeChef Starters 17 Division 2 (Rated)/GCDPRF.cpp",
+		"/Users/aatrey/Contests/CC/CodeChef Starters 17 Division 2 (Rated)/SPCNODE.cpp",
+		"/Users/aatrey/Contests/CC/CodeChef Starters 17 Division 2 (Rated)/STRADJ_brute.cpp",
+		"/Users/aatrey/Contests/CC/CodeChef Starters 17 Division 2 (Rated)/STRADJ_gen.cpp",
+		"/Users/aatrey/Contests/CC/CodeChef Starters 17 Division 2 (Rated)/BININV.cpp",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/CHEAPFUEL.cpp",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/FUNARR.cpp",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/CONHULK.cpp",
+		"/Users/aatrey/Library/Mobile Documents/com~apple~CloudDocs/bin/stress",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/FUNARR__Generator.cpp",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/in",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/out",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/ok",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/FUNARR_brute.cpp",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/FUNARR_gen.cpp",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/EQUALCOIN.cpp",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/FLIPCOMP.cpp",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/sol.py",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/MAKEPAL.cpp",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/HILLSEQ.cpp",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/MAXBRIDGE.cpp",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/WLDRPL.cpp",
+		"/Users/aatrey/Contests/CC/November Challenge 2021 Division 1 (Unrated)/XOREQN.cpp",
+		"/Users/aatrey/.zprofile",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/SnackDown 2021 - Online Round 1B/HLPNISHANT.cpp",
+		"/Users/aatrey/Contests/.git/MERGE_MSG",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/SnackDown 2021 - Online Round 1B/INSIDER.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/SnackDown 2021 - Online Round 1B/HLPNISHANT_gen.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/SnackDown 2021 - Online Round 1B/HLPNISHANT_brute.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/SnackDown 2021 - Online Round 1B/LARGESTLADDU.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/SnackDown 2021 - Online Round 1B/QPLACE.cpp",
+		"/Users/aatrey/Contests/CC/October Lunchtime 2021 Division 1/TREUPS_gen.cpp",
+		"/Users/aatrey/Contests/CC/October Lunchtime 2021 Division 1/TREUPS.cpp",
+		"/Users/aatrey/Contests/CC/October Lunchtime 2021 Division 1/TREUPS_brute.cpp",
+		"/Users/aatrey/Contests/CC/October Lunchtime 2021 Division 1/N1VALUES.cpp",
+		"/Users/aatrey/Contests/CC/October Lunchtime 2021 Division 1/CHEFCAR.cpp",
+		"/Users/aatrey/Contests/CC/October Lunchtime 2021 Division 1/MEDMAX.cpp",
+		"/Users/aatrey/Contests/CC/October Lunchtime 2021 Division 1/PROBCAT.cpp",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/CHEF7UP.cpp",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/SRTGAME_gen.cpp",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/in",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/SRTGAME.cpp__tests",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/SRTGAME_brute.cpp",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/SRTGAME.cpp",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/User/Snippets/notes.sublime-snippet",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/User/completions.sublime-completions",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/SRTGAME._brute.cpp",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/SRTGAME._gen.cpp",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/PERMUTINVS.cpp",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/RECHEND.cpp",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/FINDMOD.cpp",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/ZEROONE.cpp",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/ODDSUM.cpp",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/CHEFSLP.cpp",
+		"/Users/aatrey/Contests/CC/October Cook-Off 2021 Division 3/AVGFLEX.cpp",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/CompetitiveProgrammingParser/parser.py",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/LAZYMACHINE.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/BINFLIP.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Qualifiers/SSTRPREF2.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/RRR.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/DANCEMOVES.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/EQBEAUTY.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/MINLCM1.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/EQBEAUTY_brute.cpp",
+		"/usr/local/bin/gen",
+		"/usr/local/bin/clean_all",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/EQBEAUTY.cpp_gen.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/EQBEAUTY.cpp_brute.cpp",
+		"/opt/homebrew/bin/trash-rm",
+		"/opt/homebrew/bin/trash-empty",
+		"/opt/homebrew/bin/trash-put",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/EQBEAUTY_gen.cpp",
+		"/usr/local/bin/clean",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/out",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/submit.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/checker.cpp",
+		"/usr/local/bin/stress",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/in",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/ok",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/EQBEAUTY._gen.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Round 1A/EQBEAUTY._brute.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/DANCEMOVES.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Qualifiers/MINDIFF1.cpp",
+		"/Users/aatrey/Contests/CC/Snackdown/2021/Online Qualifiers/MAXDISTKT.cpp",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/User/Terminus/Terminus.hidden-color-scheme",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/User/.gitignore",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/User/Snippets/z_function.sublime-snippet",
+		"/Users/aatrey/Contests/CC/Online Qualifiers/SSTRPREF2.cpp",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/User/Snippets/KMP.sublime-snippet",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/User/Snippets/cpp_basic.sublime-snippet",
+		"/Users/aatrey/Contests/CC/Online Qualifiers/SSTRPREF2.cpp__tests",
+		"/opt/homebrew/Cellar/gcc/11.2.0/include/c++/11.1.0/aarch64-apple-darwin20/bits/stdc++.h",
+		"/opt/homebrew/Cellar/llvm/13.0.0_1/include/c++/v1/bits/stdc++.h",
+		"/usr/local/bin/dbcompile",
+		"/usr/local/bin/compile"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Indentwidt",
+			"Indent",
+			"a",
+			"s =",
+			"S",
+			"s",
+			"10",
+			"t",
+			"i",
+			"s = ",
+			"pref",
+			"i < cnt[ch].size()",
+			"i",
+			"Shivam",
+			"t",
+			"j",
+			"k",
+			"nx",
+			"k + x",
+			"Yes",
+			"n",
+			"erased",
+			"dfs",
+			"int",
+			"cc",
+			"last",
+			"int",
+			"10000",
+			"10",
+			"% P",
+			"i",
+			"j - 1",
+			"sum",
+			"sz",
+			"children",
+			"mn",
+			"-",
+			"i",
+			"int",
+			"[1]",
+			"[0]",
+			"    while (j < n && a[i] ^ a[j] ^ 1)\n        ans++, j++;\n",
+			"a",
+			"cur",
+			"hi",
+			"ntarget",
+			"cur - k",
+			"k - cur",
+			"-",
+			"cur",
+			"hi + sign * cur",
+			"dq",
+			"deque",
+			"a",
+			"n",
+			"a",
+			"b",
+			"x",
+			"d",
+			"x",
+			"string",
+			"next_i",
+			"p",
+			"k"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/aatrey/Contests/CC/November Lunchtime 2021 Division 1"
+		},
+		{
+			"path": "/Users/aatrey/Contests/CC"
+		},
+		{
+			"path": "/Users/aatrey/Contests/CC/C.O.D.E.R.S Division 1 (Unrated)"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "November Lunchtime 2021 Division 1/CHASE.cpp",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".<>:\"/",
+									"selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
+									"server": "clangd"
+								}
+							],
+							"lsp_active": true,
+							"lsp_hover_provider_count": 1,
+							"lsp_uri": "file:///Users/aatrey/Contests/CC/November%20Lunchtime%202021%20Division%201/CHASE.cpp",
+							"show_definitions": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 70.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.Terminus":
+	{
+		"height": 162.0
+	},
+	"output.Terminus Build Results":
+	{
+		"height": 162.0
+	},
+	"output.diagnostics":
+	{
+		"height": 162.0
+	},
+	"output.exec":
+	{
+		"height": 162.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.language servers":
+	{
+		"height": 162.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/Builds/C++ Fast Olympic Coding.sublime-build",
+	"project": "",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"prep",
+				"November Lunchtime 2021 Division 1/PERPAIR.cpp"
+			],
+			[
+				"ubj",
+				"November Lunchtime 2021 Division 1/SUBJUMP.cpp"
+			],
+			[
+				"strn",
+				"November Lunchtime 2021 Division 1/STRGMNZ.cpp"
+			],
+			[
+				"ST",
+				"November Lunchtime 2021 Division 1/STRGMNZ.cpp__tests"
+			],
+			[
+				"RPD",
+				"November Lunchtime 2021 Division 1/RPDRDNG.cpp"
+			],
+			[
+				"EX",
+				"November Lunchtime 2021 Division 1/EXPWEI.cpp"
+			],
+			[
+				"CST",
+				"November Lunchtime 2021 Division 1/CSTOCK.cpp"
+			],
+			[
+				"MIN",
+				"November Lunchtime 2021 Division 1/MINPIZZAS.cpp"
+			],
+			[
+				"log",
+				"Login Shell"
+			],
+			[
+				"",
+				"Login Shell"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Contests/CF/CF.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 167.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 574.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 219.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

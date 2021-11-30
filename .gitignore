@@ -1,6 +1,6 @@
 .vscode
 .clang-format
-*.sublime-workspace
+# *.sublime-workspace
 *.exe
 *.out*
 out

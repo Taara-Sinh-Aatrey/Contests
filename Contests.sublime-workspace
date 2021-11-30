@@ -1,0 +1,515 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tree_",
+				"snippet_tree_input"
+			],
+			[
+				"lca",
+				"snippet_lca"
+			],
+			[
+				"mod",
+				"snippet_mod"
+			],
+			[
+				"read",
+				"readInt"
+			],
+			[
+				"s",
+				"sublime_plugin"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "kickstart/2021/H/C.cpp",
+			"settings":
+			{
+				"buffer_size": 4182,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/User/Builds/C++ (Fast Olympic Coding).sublime-build",
+					""
+				],
+				[
+					"Packages/User/Builds/C++ (Fast Olympic Coding).sublime-build",
+					"Fast Compile And Run"
+				]
+			],
+			[
+				"Packages/User/Builds/C++ (Fast Olympic Coding).sublime-build",
+				"Fast Compile And Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Builds/C++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Builds/C++.sublime-build",
+					"Fast Compile And Run"
+				]
+			],
+			[
+				"Packages/User/Builds/C++.sublime-build",
+				"Fast Compile And Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/TestMultiExec.sublime-build",
+					""
+				],
+				[
+					"Packages/User/TestMultiExec.sublime-build",
+					"Fast Compile And Run"
+				]
+			],
+			[
+				"Packages/User/TestMultiExec.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"de",
+				"DeleteCurrentFile: Delete File"
+			],
+			[
+				"lsp",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"llsp",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"vpf",
+				"View Package File"
+			],
+			[
+				"lsp ena",
+				"LSP: Enable Language Server Globally"
+			],
+			[
+				"hyo",
+				"HyperHelp: Help on Help"
+			],
+			[
+				"hyper",
+				"HyperHelp: Browse Available Help"
+			],
+			[
+				"hyperhelp",
+				"HyperHelp: Browse Available Help"
+			],
+			[
+				"package con",
+				"Package Control: Remove Repository"
+			],
+			[
+				"Snippet: cpp",
+				"Snippet: cpp_basic"
+			],
+			[
+				"vpf ",
+				"View Package File"
+			],
+			[
+				"ter",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"terminus",
+				"Terminus Utilities: Select Theme"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"sbc",
+				"Scratch Buffer: C++"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 439.0,
+		"history":
+		[
+			"view.run_command(\"view_tester\", {\"action\": \"make_opd\", \"use_debugger\": False})",
+			"view.run_command(\"view_tester\", {\"action\": \"make_opd\", \"use_debugger\": false})",
+			"view.run_command(\"view_tester\", {\"action\": \"make_opd\", \"use_debugger\": false)})",
+			"view.run(\"command\": \"view_tester\", \"args\": {\"action\": \"make_opd\", \"use_debugger\": false)})",
+			"view.run_command(\"command\": \"view_tester\", \"args\": {\"action\": \"make_opd\", \"use_debugger\": false)})",
+			"view.run(            \"command\": \"view_tester\",\n            \"args\": {\n                \"action\": \"make_opd\",\n                \"use_debugger\": false\n            },        \n)",
+			"a",
+			"a = sublime.expand_variables(a, window.extract_variables())",
+			"a = {\"x\" : \"${file_base_name}\"}",
+			"a",
+			"a = sublime.expand_variables(a, window.extract_variables())",
+			"a = {\"x\" : \"file_base_name\"}",
+			"sublime.expand_variables(\"${file_base_name}\", window.extract_variables())",
+			"\"dbrun sublime.expand_variables(\"${file_base_name}\", window.extract_variables())\"",
+			"\"shell_cmd\": \"dbrun sublime.expand_variables(\"${file_base_name}\", window.extract_variables())\"",
+			"sublime.expand_variables(\"${file_base_name}\", window.extract_variables())",
+			"sublime.expand_variables(\\\"${file_base_name}\\\", window.extract_variables())",
+			"sublime.expand_variables(\"dbrun \\\"${file_base_name}\\\"\", window.extract_variables())",
+			"sublime.expand_variables(\"shell_cmd\": \"dbrun \\\"${file_base_name}\\\"\", window.extract_variables())",
+			"sublime.expand_variables(\"${file_base_name}\", window.extract_variables())",
+			"window.extract_variables()",
+			"sublime.expand_variables(\"${file_base_name}\", window.extract_variables())",
+			"sublime.expand_variables(\"${file_base_name}\", self.window.extract_variables())",
+			"sublime.expand_variables(\"${file_base_name}\", self.window.extract_variables()})",
+			"sublime.expand_variables(\"${file_base_name}\", {\"file_base_name\": file_base_name})",
+			"sublime.expand_variables(\"Hello, ${name}\", {\"name\": \"Foo\"})",
+			"sublime.expand_variables(\"${file_base_name}\", {})",
+			"sublime.expand_variables(\"${ile_base_name}\", {})",
+			"sublime.expand_variables(x, 'file_base_name')",
+			"sublime.expand_variables('file_base_name')",
+			"sublime.expand_variables(file_base_name)",
+			"window.extract_variables()",
+			"window.active_view().file_base_name()",
+			"window.active_view().file_name()",
+			"active_view().file_name()",
+			"view.file_base_name()",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sys.platform",
+			"sys.platform()",
+			"import sys",
+			"os.platform()",
+			"sys.platform()"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/aatrey/Contests/kickstart/2021/H"
+	],
+	"file_history":
+	[
+		"/Users/aatrey/Contests/Miscellaneous/CodeKaze/B.cpp",
+		"/Users/aatrey/Contests/Miscellaneous/CodeKaze/C.cpp",
+		"/Users/aatrey/Contests/Miscellaneous/CodeKaze/D.cpp",
+		"/Users/aatrey/Contests/Miscellaneous/CodeKaze/E.cpp",
+		"/Users/aatrey/Contests/AC/ABC222/F.cpp",
+		"/Users/aatrey/Contests/Miscellaneous/CodeKaze/A.cpp",
+		"/Users/aatrey/Contests/Miscellaneous/CodeKaze/2020/C.cpp",
+		"/Users/aatrey/Contests/Miscellaneous/CodeKaze/2020/B.cpp",
+		"/Users/aatrey/Contests/Miscellaneous/CodeKaze/2020/A.cpp",
+		"/Users/aatrey/Contests/kickstart/2021/H/B.cpp",
+		"/Users/aatrey/Contests/kickstart/2021/H/C.cpp",
+		"/Users/aatrey/Contests/kickstart/2021/H/D.cpp",
+		"/Users/aatrey/Contests/kickstart/2021/H/A.cpp",
+		"/Users/aatrey/Contests/kickstart/2021/H/C_gen.cpp__tests",
+		"/Users/aatrey/Contests/kickstart/2021/H/C_brute.cpp",
+		"/Users/aatrey/Contests/kickstart/2021/H/C_gen.cpp",
+		"/Users/aatrey/Contests/Leetcode/Biweekly-contest-64/D.cpp",
+		"/Users/aatrey/Contests/Leetcode/Biweekly-contest-64/A.cpp",
+		"/Users/aatrey/Contests/Leetcode/Biweekly-contest-64/B.cpp",
+		"/Users/aatrey/Contests/.git/MERGE_MSG",
+		"/Users/aatrey/Contests/Leetcode/Biweekly-contest-64/C.cpp",
+		"/Users/aatrey/Contests/.gitignore",
+		"/Users/aatrey/Contests/AC/ABC223/A.cpp",
+		"/Users/aatrey/Library/Application Support/Sublime Text 3/Packages/User/Snippets/leetcode.sublime-snippet",
+		"/Users/aatrey/Contests/Leetcode/Biweekly-contest-57/D.cpp",
+		"/Users/aatrey/Contests/Leetcode/Biweekly-contest-57/C.cpp",
+		"/Users/aatrey/Contests/Leetcode/Biweekly-contest-57/B.cpp",
+		"/Users/aatrey/Contests/Leetcode/Biweekly-contest-57/A.cpp",
+		"/opt/homebrew/Cellar/gcc/11.2.0/include/c++/11.1.0/aarch64-apple-darwin20/bits/stdc++.h",
+		"/opt/homebrew/Cellar/llvm/13.0.0_1/include/c++/v1/bits/stdc++.h",
+		"/usr/local/bin/dbcompile",
+		"/usr/local/bin/compile"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"/Users/aatrey/Contests,<project filters>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"+",
+			"upd",
+			"ar",
+			"//",
+			"dbg",
+			"f",
+			"i",
+			"r",
+			"c",
+			"amin",
+			"b",
+			"a",
+			"0",
+			"1000000",
+			"p",
+			"par",
+			"10",
+			"i",
+			"st",
+			"\"",
+			"Red",
+			"mxd"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/aatrey/Contests"
+		},
+		{
+			"path": "/Users/aatrey/Contests/kickstart/2021/H"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "kickstart/2021/H/C.cpp",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2621,
+								2621
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".<>:\"/",
+									"selector": "punctuation.accessor | (meta.preprocessor.include string - punctuation.definition.string.end)",
+									"server": "clangd"
+								}
+							],
+							"lsp_active": true,
+							"lsp_hover_provider_count": 2,
+							"lsp_uri": "file:///Users/aatrey/Contests/kickstart/2021/H/C.cpp",
+							"show_definitions": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 689.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 70.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.Terminus":
+	{
+		"height": 162.0
+	},
+	"output.Terminus Build Results":
+	{
+		"height": 162.0
+	},
+	"output.diagnostics":
+	{
+		"height": 162.0
+	},
+	"output.exec":
+	{
+		"height": 162.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.language servers":
+	{
+		"height": 162.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/Builds/C++ Fast Olympic Coding.sublime-build",
+	"project": "",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Contests/Placement/Placement.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 167.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 574.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 311.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
