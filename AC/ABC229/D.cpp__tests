@@ -1,0 +1,16 @@
+[
+	{
+		"correct_answers":
+		[
+			"5"
+		],
+		"test": "XX...X.X.X.\n2\n"
+	},
+	{
+		"correct_answers":
+		[
+			"4"
+		],
+		"test": "XXXX\n200000\n"
+	}
+]

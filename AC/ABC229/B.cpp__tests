@@ -1,0 +1,16 @@
+[
+	{
+		"correct_answers":
+		[
+			"Hard"
+		],
+		"test": "229 390\n"
+	},
+	{
+		"correct_answers":
+		[
+			"Easy"
+		],
+		"test": "123456789 9876543210\n"
+	}
+]

@@ -1,0 +1,1 @@
+[{"correct_answers": ["Takahashi"], "test": "3\nBB.\n.B.\n...\n"}, {"correct_answers": ["Snuke"], "test": "2\n..\nWW\n"}, {"correct_answers": ["Snuke"], "test": "4\nWWBW\nWWWW\nBWB.\nBBBB\n"}]
