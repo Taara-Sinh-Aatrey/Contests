@@ -19,70 +19,28 @@ void dbg_out() { cerr << "\n"; } template <typename Head, typename ...Tail> void
 const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 
 void solve() {
-    int n, k;
-    scan(n, k);
-    auto read = [&]() {
-        vector<int> vec(k);
-        scan(vec);
-        int w, x, y, z;
-        scan(w, x, y, z);
-        for(int i = k; i < n; i++) {
-            vec.emplace_back((vec[i - 2] * w + vec[i - 1] * x + y) % z);
-        }
-        return vec;
-    };
-    auto s = read(), x = read(), y = read();
-    for (int i = 0; i < n; i++) {
-        y[i] += x[i];
+    int n, m, k;
+    scan(n, m, k);
+    vector<int> x(k), y(k);
+    int a, b;
+    scan(a, b);
+    bool ok = true;
+    for (int i = 0; i < k; i++) {
+        scan(x[i], y[i]);
+        if ((x[i] + y[i]) % 2 != (a + b) % 2) ok = false;
     }
-    pair<int, int> take{0, 0}, give{0, 0};
-    pair<int, int> extra{0, 0};
-    for(int i = 0; i < n; i++) {
-        x[i] -= s[i];
-        y[i] -= s[i];
-        if(x[i] <= 0 && y[i] >= 0) {
-            extra.first -= min<int>(x[i], 0);
-            extra.second += max<int>(y[i], 0);
-        }
-        else {
-            if(y[i] < 0) {
-                give.first -= y[i];
-                give.second -= x[i];
-            }
-            else {
-                take.first += x[i];
-                take.second += y[i];
-            }
-        }
-    }
-    if(take.first > give.second) {
-        give.second += extra.first;
-    }
-    else if(take.second < give.first) {
-        take.second += extra.second;
-    }
-    
-    if(take.first > give.second || take.second < give.first) {
-        print(-1);
-    }
-    else {
-        print(max(take.first, give.first));
-    }
+    print(k == 2 && ok ? 'Y' : 'N');
 }
 
 signed main() {
-
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-
     int t = 1;
     cin >> t;
-
     for (int tt = 1; tt <= t; tt++) {
         cout << "Case #" << tt << ": ";
         solve();
     }
-
     return 0;
 }

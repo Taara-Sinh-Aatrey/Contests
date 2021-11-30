@@ -16,73 +16,75 @@ void dbg_out() { cerr << "\n"; } template <typename Head, typename ...Tail> void
 #endif
 
 #define int int64_t
-const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
+const int inf = 1e18L + 5, mod = 1e9 + 7, N = 4e3 + 5;
 
 void solve() {
-    int n, k;
-    scan(n, k);
-    auto read = [&]() {
-        vector<int> vec(k);
-        scan(vec);
-        int w, x, y, z;
-        scan(w, x, y, z);
-        for(int i = k; i < n; i++) {
-            vec.emplace_back((vec[i - 2] * w + vec[i - 1] * x + y) % z);
+    int n, m;
+    scan(n, m);
+    vector<vector<int>> g(n);
+    for (int i = 0; i < m; i++) {
+        int x, y;
+        scan(x, y);
+        --x, --y;
+        while(x < y) {
+            g[x].emplace_back(y);
+            g[y].emplace_back(x);
+            x++, y--;
         }
-        return vec;
+    }
+    vector<vector<int>> ccs;
+    vector<bool> vis(n);
+    function<void(int)> dfs = [&](int u) {
+        vis[u] = true;
+        ccs.back().emplace_back(u);
+        for(auto& v : g[u]) {
+            if(vis[v]) continue;
+            dfs(v);
+        }    
     };
-    auto s = read(), x = read(), y = read();
     for (int i = 0; i < n; i++) {
-        y[i] += x[i];
+        if(vis[i]) continue;
+        ccs.push_back({});
+        dfs(i);
     }
-    pair<int, int> take{0, 0}, give{0, 0};
-    pair<int, int> extra{0, 0};
-    for(int i = 0; i < n; i++) {
-        x[i] -= s[i];
-        y[i] -= s[i];
-        if(x[i] <= 0 && y[i] >= 0) {
-            extra.first -= min<int>(x[i], 0);
-            extra.second += max<int>(y[i], 0);
-        }
-        else {
-            if(y[i] < 0) {
-                give.first -= y[i];
-                give.second -= x[i];
-            }
-            else {
-                take.first += x[i];
-                take.second += y[i];
+    vector<int> dp(n + 1, -1);
+    dp[0] = 0;
+    for (int it = 0; it < ccs.size(); it++) {
+        int x = ccs[it].size();
+        for (int i = n; i >= x; i--) {
+            if(dp[i] != -1) continue;
+            if(dp[i - x] != -1) {
+                dp[i] = it;
             }
         }
     }
-    if(take.first > give.second) {
-        give.second += extra.first;
+    int best_sz = 0;
+    for (int i = 0; i <= n; i++) {
+        if(dp[i] == -1) continue;
+        if(abs(n - 2 * i) < abs(n - 2 * best_sz)) {
+            best_sz = i;
+        }
     }
-    else if(take.second < give.first) {
-        take.second += extra.second;
+    string s(n, '0');
+    while(best_sz > 0) {
+        auto &cc = ccs[dp[best_sz]];
+        for(auto& i : cc) {
+            s[i] = '1';
+        }
+        best_sz -= cc.size();
     }
-    
-    if(take.first > give.second || take.second < give.first) {
-        print(-1);
-    }
-    else {
-        print(max(take.first, give.first));
-    }
+    cout << s << '\n';
 }
 
 signed main() {
-
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-
     int t = 1;
     cin >> t;
-
     for (int tt = 1; tt <= t; tt++) {
         cout << "Case #" << tt << ": ";
         solve();
     }
-
     return 0;
 }
