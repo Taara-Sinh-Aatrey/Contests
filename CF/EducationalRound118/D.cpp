@@ -199,41 +199,48 @@ Mint C(int n, int k) {
     }
     return fact[n] * inv_fact[k] * inv_fact[n - k];
 }
-vector<Mint> dp(N), sp(N);
 
 void solve() {
     int n;
     scan(n);
     vector<int> a(n);
     scan(a);
+    vector<Mint> dp(n + 3), sp(n + 3);
+    // dp[i] = no of (0 ....... i)
+    // sp[i] = no of (0 ....... i-2  i)
+    
     Mint ans = 0;
     for (auto &x : a) {
-        ans += dp[x] + sp[x] + sp[x + 2];
+        // 0 ..... x
         dp[x] += dp[x];
+        
+        // 0 .... x-2  x 
         sp[x] += sp[x];
+        
+        // 0 ......x  x+2
         sp[x + 2] += sp[x + 2];
+
+        // 0 .... x-1         
         if (x > 0) {
-            ans += dp[x - 1];
             dp[x] += dp[x - 1];
         }
+        // 0 .... x-2
         if (x > 1) {
-            ans += dp[x - 2];
             sp[x] += dp[x - 2];
         }
+        // start a new seq with 1
         if (x == 1) {
             sp[1]++;
-            ans++;
         }
+        // start a new seq with 0
         if (x == 0) {
             dp[0]++;
-            ans++;
         }
     }
-    print(ans);
-    for (auto &x : a) {
-        dp[x] = 0;
-        sp[x] = 0;
+    for (int i = 0; i <= n; i++) {
+        ans += dp[i] + sp[i];
     }
+    print(ans);
 }
 
 signed main() {
