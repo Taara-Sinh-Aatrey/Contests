@@ -211,8 +211,6 @@ void solve() {
     
     Mint ans = 0;
     for (auto &x : a) {
-        // 0 ..... x
-        dp[x] += dp[x];
         
         // 0 .... x-2  x 
         sp[x] += sp[x];
@@ -220,26 +218,34 @@ void solve() {
         // 0 ......x  x+2
         sp[x + 2] += sp[x + 2];
 
+        // 0 ..... x
+        dp[x] += dp[x];
+        
         // 0 .... x-1         
         if (x > 0) {
             dp[x] += dp[x - 1];
         }
+        
         // 0 .... x-2
         if (x > 1) {
             sp[x] += dp[x - 2];
         }
-        // start a new seq with 1
-        if (x == 1) {
-            sp[1]++;
-        }
+        
         // start a new seq with 0
         if (x == 0) {
             dp[0]++;
         }
+        
+        // start a new seq with 1
+        if (x == 1) {
+            sp[1]++;
+        }
     }
+    
     for (int i = 0; i <= n; i++) {
         ans += dp[i] + sp[i];
     }
+    
     print(ans);
 }
 
