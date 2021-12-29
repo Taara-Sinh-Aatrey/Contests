@@ -1,147 +1,72 @@
-#include<bits/stdc++.h>
+#include <algorithm>
+#include <array>
+#include <bitset>
+#include <cassert>
+#include <chrono>
+#include <cmath>
+#include <cstring>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <set>
+#include <vector>
 using namespace std;
-		
-template <typename A, typename B>
-string to_string(pair<A, B> p);
 
-template <typename A, typename B, typename C>
-string to_string(tuple<A, B, C> p);
+template <typename T, typename U> istream& operator>>(istream &is, pair<T, U> &p) { return is >> p.first >> p.second; }
+template <typename T, typename U> ostream& operator<<(ostream &os, const pair<T, U> &p) { return os << p.first << " " << p.second; }
+template <typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> istream &operator>>(istream &is, T_container &v) { for (T &x : v) is >> x; return is; }
+template <typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream &operator<<(ostream &os, const T_container &v) { bool f = false; for (const T &x : v) { if (f) os << " "; os << x; f = true; } return os; }
+void scan() {} template <typename Head, typename ...Tail> void scan(Head &H, Tail &...T) { cin >> H; scan(T...); }
+void print() { cout << "\n"; } template <typename Head> void print(const Head &H) { cout << H << "\n"; } template <typename Head, typename ...Tail> void print(const Head &H, const Tail &...T) { cout << H << " "; print(T...); }
+template <typename T, typename T1, typename... Tail> T amin(T& a, T1 b, Tail... c) { if(b < a) a = b; if constexpr (sizeof...(c) != 0) { amin(a, c...); } return a; } template <typename T, typename T1, typename... Tail> T amax(T& a, T1 b, Tail... c) { if(b > a) a = b; if constexpr (sizeof...(c) != 0) { amax(a, c...); } return a; }
 
-template <typename A, typename B, typename C, typename D>
-string to_string(tuple<A, B, C, D> p);
-
-string to_string(const string& s) {
-	return '"' + s + '"';
-}
-
-string to_string(const char* s) {
-	return to_string((string) s);
-}
-
-string to_string(bool b) {
-	return (b ? "true" : "false");
-}
-
-string to_string(vector<bool> v) {
-	bool first = true;
-	string res = "{";
-	for (int i = 0; i < static_cast<int>(v.size()); i++) {
-		if (!first) {
-			res += ", ";
-		}
-		first = false;
-		res += to_string(v[i]);
-	}
-	res += "}";
-	return res;
-}
-
-template <size_t N>
-string to_string(bitset<N> v) {
-	string res = "";
-	for (size_t i = 0; i < N; i++) {
-		res += static_cast<char>('0' + v[i]);
-	}
-	return res;
-}
-
-template <typename A>
-string to_string(A v) {
-	bool first = true;
-	string res = "{";
-	for (const auto &x : v) {
-		if (!first) {
-			res += ", ";
-		}
-		first = false;
-		res += to_string(x);
-	}
-	res += "}";
-	return res;
-}
-
-template <typename A, typename B>
-string to_string(pair<A, B> p) {
-	return "(" + to_string(p.first) + ", " + to_string(p.second) + ")";
-}
-
-template <typename A, typename B, typename C>
-string to_string(tuple<A, B, C> p) {
-	return "(" + to_string(get<0>(p)) + ", " + to_string(get<1>(p)) + ", " + to_string(get<2>(p)) + ")";
-}
-
-template <typename A, typename B, typename C, typename D>
-string to_string(tuple<A, B, C, D> p) {
-	return "(" + to_string(get<0>(p)) + ", " + to_string(get<1>(p)) + ", " + to_string(get<2>(p)) + ", " + to_string(get<3>(p)) + ")";
-}
-
-#define CERR cout
-// #define CERR cerr
-
-void debug_out() { CERR << endl; }
-
-template <typename Head, typename... Tail>
-void debug_out(Head H, Tail... T) {
-	CERR << " " << to_string(H);
-	debug_out(T...);
-}
-
-#ifndef ONLINE_JUDGE
-#define dbg(...) CERR << "[" << #__VA_ARGS__ << "]:", debug_out(__VA_ARGS__)
+#ifdef LOCAL
+#include "debug.hpp"
 #else
-#define dbg(...) 42
+#define dbg(...)
 #endif
-#define ar array<ll, 2>
-#define ll long long
-#define in insert
-#define pb push_back
-#define vt vector
-#define P_Q(x) priority_queue<x>
-#define p_q(x) priority_queue<x, vector<x>, greater<x>>
-#define For(i, n) for(ll i = 0; i < n; i++)
-#define Rev(i, n) for(ll i = n-1; i >= 0; i--)
-#define FOR(i, n) for(ll i = 1; i <= n; i++)
-#define REV(i, n) for(ll i = n; i >= 1; i--)
-#define Rep(i,a,b) for(ll i = a; i <= b; i++)
-#define all(x) (x).begin(),(x).end()
-#define sz(x) (int) (x).size()
 
-const ll mod = 1e9L + 7;
-const ll INF = 1e18L + 5;
-const ll mxN = 2e5 + 1;
-ll n;
+#define int int64_t
+const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 
-void solve(){
-	cin >> n;
-	vt<ll> a(n);
-	For(i, n){
-		cin >> a[i];
-	}
-
-	bool ok = true;
-	ll fromlast = 0;
-	ll cur = a[0];
-	For(i, n){
-		if(a[i] < fromlast){
-			ok = false;
-			break;
-		}
-		if(cur >= a[i] - fromlast){
-			cur = a[i] - fromlast;
-		}else{
-			fromlast = a[i] - cur;
-		}
-	}
-
-	cout << (ok ? "YES\n": "NO\n");
-	
+void solve() {
+    int n;
+    scan(n);
+    vector<int> a(n);
+    scan(a);
+    vector<int> l(n), r(n);
+    l[0] = a[0], r[0] = 0;
+    for (int i = 1; i < n; i++) {
+    	// l[i] <= l[i - 1]
+    	
+    	// r[i] >= r[i - 1]
+    	// r[i] + l[i] >= r[i - 1] + l[i]
+    	// a[i] >= r[i - 1] + l[i]
+    	// l[i] <= a[i] - r[i - 1]
+    	
+    	l[i] = min(l[i - 1], a[i] - r[i - 1]);
+    	if (l[i] < 0) {
+    		print("NO");
+    		return;
+    	}
+    	r[i] = a[i] - l[i];
+    }
+    print("YES");
 }
 
-int main()
-{
-    ios::sync_with_stdio(0);  cin.tie(0);
-    ll t = 1;
+signed main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    int t = 1;
     cin >> t;
-    FOR(tt, t) solve();
+    for (int tt = 1; tt <= t; tt++) {
+        solve();
+    }
     return 0;
 }
+
