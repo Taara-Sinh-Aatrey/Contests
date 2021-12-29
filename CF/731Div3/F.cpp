@@ -2,9 +2,22 @@
  *    author:  Taara Sinh Aatrey
  *    created: 10.07.2021 20:55:14
 **/
-
 #include <algorithm>
-#include <bits/stdc++.h>
+#include <array>
+#include <bitset>
+#include <cassert>
+#include <chrono>
+#include <cmath>
+#include <cstring>
+#include <functional>
+#include <iomanip>
+#include <iostream>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <set>
+#include <vector>
 using namespace std;
 
 template<typename A, typename B> istream& operator>>(istream &is, pair<A, B> &p) { return is >> p.first >> p.second;} template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> istream& operator>>(istream &is, T_container &v) { for (T& x : v) is >> x; return is;} bool debug;
@@ -57,12 +70,12 @@ void solve() {
     
     int g = 0;
     for(int i = 0; i < n; i++) {
-        g = __gcd(g, a[i]);
+        g = gcd(g, a[i]);
         a.emplace_back(a[i]);
     }
         
     SparseTable st(a, [&](const int& i, const int& j) {
-        return __gcd(i, j);
+        return gcd(i, j);
     });
     
     int ans = 0;

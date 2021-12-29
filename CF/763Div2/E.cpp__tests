@@ -1,0 +1,1 @@
+[{"test": "4 3\nabab\n2 3\n0 0\n0 4\n0 0\n", "correct_answers": ["baaaab"]}, {"test": "8 2\nkadracyn\n2 5\n3 4\n0 0\n0 0\n6 8\n0 7\n0 0\n0 0\n", "correct_answers": ["daarkkcyan"]}, {"test": "8 3\nkdaracyn\n2 5\n0 3\n0 4\n0 0\n6 8\n0 7\n0 0\n0 0\n", "correct_answers": ["darkcyan"]}]
