@@ -34,39 +34,38 @@ template <typename T, typename T1, typename... Tail> T amin(T& a, T1 b, Tail... 
 const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 
 void solve() {
-    int n, m;
-    scan(n, m);
-    vector<int> a(n), b(m);
-    scan(a, b);
-    int g = 0;
-    for (auto &x : b)
-        g = gcd(g, x);
-    int ans = 0;
-    for (int flip = 0; flip < 2; flip++) {
-        int cur = 0;
-        for (int r = 0; r < g; r++) {
-            vector<int> c;
-            for (int i = r; i < n; i += g) {
-                c.emplace_back(a[i]);
-            }
-            if (flip && !c.empty()) {
-                c[0] *= -1;
-            }
-            int negs = 0;
-            int sum = 0;
-            int mn = inf;
-            for (int x : c) {
-                negs += (x < 0);
-                sum += abs(x);
-                amin(mn, abs(x));
-            }
-            if (negs % 2 == 1) {
-                sum -= 2 * mn;
-            }
-            cur += sum;
-        }
-        ans = max(ans, cur);
+    int n;
+    scan(n);
+    vector<int> a(n);
+    scan(a);
+    set<int> st;
+    for (int i = 0; i <= n; i++)
+        st.insert(i);
+    vector<int> limit(n);
+    for (int i = n - 1; i >= 0; i--) {
+        auto it = st.find(a[i]);
+        if (it != st.end())
+            st.erase(it);
+        limit[i] = *st.begin();
     }
+    for (int i = 0; i <= n; i++)
+        st.insert(i);
+    vector<int> ans;
+    int pvi = -1, pvj = -1;
+    for (int i = 0, j; i < n; i = j) {
+        for (int x = pvi; x < pvj; x++)
+            st.insert(a[x]);
+        j = i;
+        do {
+            auto it = st.find(a[j]);
+            if (it != st.end())
+                st.erase(it);
+            j++;
+        } while (*st.begin() != limit[i]);
+        ans.emplace_back(limit[i]);
+        pvi = i, pvj = j;
+    }
+    print(ans.size());
     print(ans);
 }
 

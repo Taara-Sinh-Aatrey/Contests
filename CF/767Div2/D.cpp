@@ -34,40 +34,28 @@ template <typename T, typename T1, typename... Tail> T amin(T& a, T1 b, Tail... 
 const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 
 void solve() {
-    int n, m;
-    scan(n, m);
-    vector<int> a(n), b(m);
-    scan(a, b);
-    int g = 0;
-    for (auto &x : b)
-        g = gcd(g, x);
-    int ans = 0;
-    for (int flip = 0; flip < 2; flip++) {
-        int cur = 0;
-        for (int r = 0; r < g; r++) {
-            vector<int> c;
-            for (int i = r; i < n; i += g) {
-                c.emplace_back(a[i]);
-            }
-            if (flip && !c.empty()) {
-                c[0] *= -1;
-            }
-            int negs = 0;
-            int sum = 0;
-            int mn = inf;
-            for (int x : c) {
-                negs += (x < 0);
-                sum += abs(x);
-                amin(mn, abs(x));
-            }
-            if (negs % 2 == 1) {
-                sum -= 2 * mn;
-            }
-            cur += sum;
+    int n;
+    scan(n);
+    set<string> st, st32;
+    bool ok = false;
+    for (int i = 0; i < n; i++) {
+        string s;
+        scan(s);
+        st.insert(s);
+        string t = s;
+        reverse(t.begin(), t.end());
+        ok = ok | st.count(t);
+        if (t.size() == 3) {
+            t.pop_back();
+            ok = ok | st.count(t);
+            s.pop_back();
+            st32.insert(s);
         }
-        ans = max(ans, cur);
+        else if (t.size() == 2) {
+            ok = ok | st32.count(t);
+        }
     }
-    print(ans);
+    print(ok ? "YES" : "NO");
 }
 
 signed main() {

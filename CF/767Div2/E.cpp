@@ -33,39 +33,33 @@ template <typename T, typename T1, typename... Tail> T amin(T& a, T1 b, Tail... 
 #define int int64_t
 const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 
+const int dx[] = {-1, 0, 1, 0};
+const int dy[] = {0, -1, 0, 1};
+
 void solve() {
-    int n, m;
-    scan(n, m);
-    vector<int> a(n), b(m);
-    scan(a, b);
-    int g = 0;
-    for (auto &x : b)
-        g = gcd(g, x);
+    int n;
+    scan(n);
+    vector<vector<int>> a(n, vector<int>(n));
+    vector<vector<bool>> taken(n, vector<bool>(n));
+    scan(a);
     int ans = 0;
-    for (int flip = 0; flip < 2; flip++) {
-        int cur = 0;
-        for (int r = 0; r < g; r++) {
-            vector<int> c;
-            for (int i = r; i < n; i += g) {
-                c.emplace_back(a[i]);
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            bool should_take = true;
+            for (int dir = 0; dir < 4; dir++) {
+                int ni = i + dx[dir], nj = j + dy[dir];
+                if (0 <= ni && ni < n && 0 <= nj && nj < n && taken[ni][nj])
+                    should_take = false;
             }
-            if (flip && !c.empty()) {
-                c[0] *= -1;
+            if (!should_take)
+                continue;
+            ans ^= a[i][j];
+            for (int dir = 0; dir < 4; dir++) {
+                int ni = i + dx[dir], nj = j + dy[dir];
+                if (0 <= ni && ni < n && 0 <= nj && nj < n)
+                    taken[ni][nj] = true;
             }
-            int negs = 0;
-            int sum = 0;
-            int mn = inf;
-            for (int x : c) {
-                negs += (x < 0);
-                sum += abs(x);
-                amin(mn, abs(x));
-            }
-            if (negs % 2 == 1) {
-                sum -= 2 * mn;
-            }
-            cur += sum;
         }
-        ans = max(ans, cur);
     }
     print(ans);
 }
