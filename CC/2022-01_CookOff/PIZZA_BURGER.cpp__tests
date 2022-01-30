@@ -1,0 +1,1 @@
+[{"test": "3\n50 40 60\n40 55 39\n30 42 37\n", "correct_answers": ["PIZZA\nBURGER\nNOTHING"]}]
