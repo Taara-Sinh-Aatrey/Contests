@@ -17,7 +17,9 @@ void solve() {
     sort(a.begin(), a.end());
     map<int, pair<int, int>> min_moves;
     min_moves[0] = {0, 0};
+    vector<int> cutoffs;
     for (int i = 0; i < n; i++) {
+        cutoffs.emplace_back(a[i]);
         if (i > 0)
             min_moves[a[i]].first = min_moves[a[i - 1]].first + (a[i] - a[i - 1]) * i;
         else
@@ -28,6 +30,7 @@ void solve() {
     map<int, pair<int, int>> max_moves;
     max_moves[1e9] = {0, 0};
     for (int i = 0; i < n; i++) {
+        cutoffs.emplace_back(b[i]);
         if (i > 0)
             max_moves[b[i]].first = max_moves[b[i - 1]].first + (b[i - 1] - b[i]) * i;
         else
@@ -35,7 +38,7 @@ void solve() {
         max_moves[b[i]].second = i + 1;
     }
     int ans = LLONG_MAX;
-    for (int x = 0; x <= 1e7; x++) {
+    for (auto &x : cutoffs) {
         auto it = prev(min_moves.upper_bound(x));
         int cur = it->second.first + (x - it->first) * it->second.second;
         it = max_moves.lower_bound(x);
