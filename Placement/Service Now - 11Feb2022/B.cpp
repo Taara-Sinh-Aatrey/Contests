@@ -36,19 +36,20 @@ void solve() {
         fact[i] = fact[i - 1] * i % mod;
     }
     function<pair<int, int>(int, int)> dfs = [&] (int node, int parent) -> pair<int, int> {
-        int ans = 1, sz = 0;
+        int ways = 1, sz = 0;
         for (auto &neighbor : g[node]) {
             if (neighbor == parent)
                 continue;
             pair<int, int> cur = dfs(neighbor, node);
-            ans = ans * cur.first % mod;
-            ans = ans * fact[sz + cur.second] % mod;
-            ans = ans * inverse(fact[sz], mod) % mod;
-            ans = ans * inverse(fact[cur.second], mod) % mod;
+            ways = ways * cur.first % mod;
+            int ncr = fact[sz + cur.second];
+            ncr = ncr * inverse(fact[sz], mod) % mod;
+            ncr = ncr * inverse(fact[cur.second], mod) % mod;
+            ways = ways * ncr % mod;
             sz += cur.second;
         }
         sz++;
-        return pair(ans, sz);
+        return pair(ways, sz);
     };
     cout << dfs(0, -1).first << '\n';
 }
