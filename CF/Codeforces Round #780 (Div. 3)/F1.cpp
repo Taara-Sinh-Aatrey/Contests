@@ -19,10 +19,8 @@ template <typename T, typename T1, typename... Tail> T amin(T& a, T1 b, Tail... 
 const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 
 // x+ y-
-
 // x+z == y-2*z
 // 3*z == y-x
-
 
 void solve() {
     int n;
@@ -40,9 +38,6 @@ void solve() {
                 y++;
             }
             int score = (y - x >= 0) && (y % 3 == x % 3);
-            if (score == 1) {
-                dbg(i, j);
-            }
             ans += score;
         }
     }
