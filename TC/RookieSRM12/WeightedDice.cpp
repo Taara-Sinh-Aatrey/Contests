@@ -23,26 +23,26 @@ const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 const ld eps = 1e-9;
 
 class WeightedDice {
-  public:
-  double winChance(vector <double> prob, int target) {
-  	vector<ld> dp(target + 1);
-  	dp[0] = 1.0;
-  	ld ans = 0;
-  	for (int _ = 0; _ < target; _++) {
-  		vector<ld> ndp(target + 1);
-  		for (int i = 0; i <= target; i++) {
-  			for (int j = 0; j < 6; j++) {
-  				if (i + j + 1 <= target)
-	  				ndp[i + j + 1] += dp[i] * prob[j];
-  			}
-  		}
-  		swap(dp, ndp);
-  		ans += dp[target];
-  		dp[target] = 0;
-  	}
-  	cout << fixed << setprecision(20);
-  	return ans;
-  }
+	public:
+	double winChance(vector <double> prob, int target) {
+	  	vector<ld> dp(target + 1);
+	  	dp[0] = 1.0;
+	  	ld ans = 0;
+	  	for (int _ = 0; _ < target; _++) {
+	  		vector<ld> ndp(target + 1);
+	  		for (int i = 0; i <= target; i++) {
+	  			for (int j = 0; j < 6; j++) {
+	  				if (i + j + 1 <= target)
+		  				ndp[i + j + 1] += dp[i] * prob[j];
+	  			}
+	  		}
+	  		swap(dp, ndp);
+	  		ans += dp[target];
+	  		dp[target] = 0;
+	  	}
+	  	cout << fixed << setprecision(20);
+	  	return ans;
+	}
 };
 #undef int
 // BEGIN CUT HERE

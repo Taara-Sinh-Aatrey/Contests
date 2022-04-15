@@ -22,17 +22,17 @@ const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 
 
 class EquateNumbers {
-  public:
-  string canMakeEqual(vector <int32_t> A) {
-  	if (*min_element(A.begin(), A.end()) == *max_element(A.begin(), A.end())) {
-  		return "yes";
-  	}
-    int g = 0;
-    for (auto &x : A) {
-    	g = __gcd(g, int(x));
-    }
-    return g > 1 ? "yes" : "no";
-  }
+	public:
+	string canMakeEqual(vector <int32_t> A) {
+	  	if (*min_element(A.begin(), A.end()) == *max_element(A.begin(), A.end())) {
+	  		return "yes";
+	  	}
+	    int g = 0;
+	    for (auto &x : A) {
+	    	g = __gcd(g, int(x));
+	    }
+	    return g > 1 ? "yes" : "no";
+	}
 };
 #undef int
 // BEGIN CUT HERE

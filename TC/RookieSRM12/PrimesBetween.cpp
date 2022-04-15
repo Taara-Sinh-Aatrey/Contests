@@ -19,23 +19,23 @@ template <typename T, typename T1> T amin(T& a, T1 b) { if(b < a) a = b; return 
 const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
 
 class PrimesBetween {
-  public:
-  int count(int start, int end) {
-  	int ans = 0;
-    for (int i = start; i <= end; i++) {
-    	bool ok = true;
-    	for (int j = 2; j < i; j++) {
-    		if (i % j == 0) {
-    			ok = false;
-    			break;
-    		}
-    	}
-    	if (ok) {
-    		ans++;
-    	}
-    }
-    return ans;
-  }
+ 	public:
+ 	int count(int start, int end) {
+	  	int ans = 0;
+	    for (int i = max<int>(2, start); i <= end; i++) {
+	    	bool ok = true;
+	    	for (int j = 2; j < i; j++) {
+	    		if (i % j == 0) {
+	    			ok = false;
+	    			break;
+	    		}
+	    	}
+	    	if (ok) {
+	    		ans++;
+	    	}
+	    }
+	    return ans;
+	}
 };
 #undef int
 // BEGIN CUT HERE
