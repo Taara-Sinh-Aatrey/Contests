@@ -1,5 +1,4 @@
 #include "bits/stdc++.h"
-#include <algorithm>
 using namespace std;
 
 template <typename T, typename U> istream& operator>>(istream &is, pair<T, U> &p) { return is >> p.first >> p.second; }
@@ -18,8 +17,6 @@ template <typename T, typename T1> T amin(T& a, T1 b) { if(b < a) a = b; return 
 
 #define int int64_t
 const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
-
-
 
 class EquateNumbers {
 	public:
