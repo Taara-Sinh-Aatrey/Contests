@@ -1,0 +1,40 @@
+/**
+ *    author:  Taara Sinh Aatrey
+ *    created: 27.08.2022 23:40:59
+**/
+
+#include "bits/stdc++.h"
+
+using namespace std;
+
+#ifdef AATREY_DEBUG
+#include "debug.hpp"
+#else
+#define dbg(...)
+#endif
+
+#define int int64_t
+
+signed main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int t;
+    cin >> t;
+    for (int tt = 1; tt <= t; tt++) {
+        int a, b, c;
+        cin >> a >> b >> c;
+        if (a < b) swap(a, b);
+        bool ok = a == c || b == c;
+        while (b != 0) {
+            assert(a >= b);
+            if (a >= c && (a - c) % b == 0) {
+                ok = true;
+                break;
+            }
+            a %= b;
+            swap(a, b);
+        }
+        cout << (ok ? "YES" : "NO") << '\n';
+    }
+    return 0;
+}

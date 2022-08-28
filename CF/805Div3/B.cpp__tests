@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"2\n4\n3\n4\n1\n1"
+		],
+		"test": "6\nlollipops\nstringology\nabracadabra\ncodeforces\ntest\nf\n"
+	}
+]

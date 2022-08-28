@@ -1,0 +1,16 @@
+[
+	{
+		"correct_answers":
+		[
+			"Solvable!"
+		],
+		"test": "2\n00\n10\n00\n"
+	},
+	{
+		"correct_answers":
+		[
+			"Unsolvable!"
+		],
+		"test": "2\n01\n10\n10\n"
+	}
+]

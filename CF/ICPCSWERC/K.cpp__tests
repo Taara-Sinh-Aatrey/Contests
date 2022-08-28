@@ -1,0 +1,1 @@
+[{"test": "0 0\n5 0\n3 3\n", "correct_answers": ["5.0686143166"]}, {"test": "-1 0\n0 0\n1 0\n", "correct_answers": ["2.0000000000"]}]

@@ -1,0 +1,1 @@
+[{"test": "AA\nGA\nMA\n", "correct_answers": ["2\nAG\nAM"]}, {"test": "TEDDY\nHEDWIG\nRACCOON\n", "correct_answers": ["8\nAT\nCH\nCY\nDG\nDO\nER\nIN\nOW"]}, {"test": "BDC\nCAA\nCE\n", "correct_answers": ["4\nAD\nAE\nBB\nCC"]}]

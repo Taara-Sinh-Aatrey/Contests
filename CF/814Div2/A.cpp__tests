@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"Tonya\nBurenka\nBurenka\nTonya\nBurenka\nBurenka"
+		],
+		"test": "6\n1 1\n1 4\n5 6\n2 2\n6 3\n999999999 1000000000\n"
+	}
+]

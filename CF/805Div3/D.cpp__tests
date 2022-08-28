@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"aa\nabc\n\ncdc\ncodeforces"
+		],
+		"test": "5\nabca\n2\nabca\n6\ncodeforces\n1\ncodeforces\n10\ncodeforces\n100\n"
+	}
+]

@@ -1,0 +1,16 @@
+[
+	{
+		"correct_answers":
+		[
+			"0 1 2 3\n1 2 3\n2 3 4 5 6 7\n1 1 1 1\n2\n0 0 0 0 0 0"
+		],
+		"test": "aba\n6\ncaba\naba\nbababa\naaaa\nb\nforces\n"
+	},
+	{
+		"correct_answers":
+		[
+			"2 2 3 1\n0 0 0 0\n2 2 0\n0 0 1 0 1"
+		],
+		"test": "aacba\n4\naaca\ncbbb\naab\nccaca\n"
+	}
+]

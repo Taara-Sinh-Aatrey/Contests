@@ -1,0 +1,16 @@
+[
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "3\nbronze\nsilver\ngold\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "4\nbronze\nbronze\nsilver\ngold\n"
+	}
+]

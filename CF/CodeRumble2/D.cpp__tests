@@ -1,0 +1,11 @@
+[
+	{
+		"test": "4\n8 3\n.XX.X.X.\n3 50\n...\n8 1\n...XX...\n10 4\n..XXXX.XX.\n"
+	},
+	{
+		"test": "1\n10 4\n..XXXX.XX.\n"
+	},
+	{
+		"test": "1\n10 4\n..XXXX.XX.\n"
+	}
+]

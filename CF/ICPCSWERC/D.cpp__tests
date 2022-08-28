@@ -1,0 +1,1 @@
+[{"test": "8\nA\nB\nB\nC\nC\nA\nAA\nBB\nBB\nCC\nCC\nAA\nABAB\nBCBC\nABC\nCBA\n", "correct_answers": ["NO\nNO\nNO\nYES\nYES\nYES\nYES\nNO"]}]
