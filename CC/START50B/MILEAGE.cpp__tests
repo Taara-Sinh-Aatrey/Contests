@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"DIESEL\nPETROL\nANY\nDIESEL"
+		],
+		"test": "4\n20 10 8 2 4\n50 12 12 4 3\n40 3 15 8 40\n21 9 9 2 9\n"
+	}
+]

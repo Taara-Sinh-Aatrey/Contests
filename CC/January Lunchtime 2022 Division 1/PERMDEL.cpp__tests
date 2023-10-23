@@ -1,0 +1,1 @@
+[{"test": "2\n4\n1 3 2 4\n4\n1 4 2 3\n", "correct_answers": ["12\n18"]}]

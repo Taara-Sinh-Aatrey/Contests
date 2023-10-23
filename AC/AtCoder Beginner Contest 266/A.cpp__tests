@@ -1,0 +1,16 @@
+[
+	{
+		"correct_answers":
+		[
+			"o"
+		],
+		"test": "atcoder\n"
+	},
+	{
+		"correct_answers":
+		[
+			"a"
+		],
+		"test": "a\n"
+	}
+]

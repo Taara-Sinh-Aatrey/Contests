@@ -1,0 +1,26 @@
+[
+	{
+		"correct_answers":
+		[
+			"5\n10 11 2 Alice Cacey\n11 12 3 Alice Bob Cacey\n12 14 3 Alice Cacey Deepak\n14 15 3 Cacey Deepak Emma\n15 16 2 Deepak Emma"
+		],
+		"test": "5\nAlice Bob Cacey Deepak Emma\n10 14\n11 12\n10 15\n12 16\n14 16\n\n"
+	},
+	{
+		"correct_answers":
+		[
+			"3\n1 7 1 Neil\n7 9 3 Alok Angel Neil\n9 10 2 Alok Neil"
+		],
+		"test": "3\nNeil Angel Alok\n1 10\n7 9\n7 10\n"
+	},
+	{
+		"correct_answers":
+		[
+			"3\n1 3 1 Alice\n3 5 0\n5 7 1 Bob"
+		],
+		"test": "2\nAlice Bob\n1 3\n5 7\n"
+	},
+	{
+		"test": "5\nA B C D E\n1 2\n2 3\n9 10\n1 3\n1 2\n"
+	}
+]

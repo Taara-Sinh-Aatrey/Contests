@@ -1,0 +1,16 @@
+[
+	{
+		"correct_answers":
+		[
+			"4"
+		],
+		"test": "3\nadb\ncab\n"
+	},
+	{
+		"correct_answers":
+		[
+			"56"
+		],
+		"test": "10\nwsiuhwijsl\npwqoketvun\n"
+	}
+]

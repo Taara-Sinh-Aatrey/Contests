@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"25\n0\n15"
+		],
+		"test": "3\n4\ncbac\n5 20 10 0\n5\nsadge\n-1 -1 -1 -1 -1\n5\nbcabc\n-10 8 4 15 0\n"
+	}
+]

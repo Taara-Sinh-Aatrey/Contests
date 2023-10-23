@@ -1,0 +1,15 @@
+[
+	{
+		"correct_answers":
+		[
+			"Case #1: 2\nCase #2: 333333338"
+		],
+		"test": "2\n2\nab\n3\naba\n"
+	},
+	{
+		"test": "1\n3 aba\n"
+	},
+	{
+		"test": "1\n6\ndcbbac\n"
+	}
+]

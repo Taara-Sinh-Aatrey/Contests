@@ -1,0 +1,1 @@
+[{"test": "ab\ncbca\n3\na b\nb ca\na efg\n", "correct_answers": ["4"]}, {"test": "a\naaaaa\n2\na aa\na aaa\n", "correct_answers": ["2"]}, {"test": "a\nz\n1\na abc\n", "correct_answers": ["-1"]}]

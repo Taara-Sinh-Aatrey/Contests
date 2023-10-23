@@ -1,0 +1,30 @@
+[
+	{
+		"correct_answers":
+		[
+			"Yes"
+		],
+		"test": "((a)ba)\n"
+	},
+	{
+		"correct_answers":
+		[
+			"No"
+		],
+		"test": "(a(ba))\n"
+	},
+	{
+		"correct_answers":
+		[
+			"Yes"
+		],
+		"test": "(((())))\n"
+	},
+	{
+		"correct_answers":
+		[
+			"No"
+		],
+		"test": "abca\n"
+	}
+]

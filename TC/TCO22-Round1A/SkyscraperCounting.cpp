@@ -1,0 +1,378 @@
+#include "bits/stdc++.h"
+
+using namespace std;
+
+template <typename T, typename U> istream& operator>>(istream &is, pair<T, U> &p) { return is >> p.first >> p.second; }
+template <typename T, typename U> ostream& operator<<(ostream &os, const pair<T, U> &p) { return os << p.first << " " << p.second; }
+template <typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> istream &operator>>(istream &is, T_container &v) { for (T &x : v) is >> x; return is; }
+template <typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream &operator<<(ostream &os, const T_container &v) { bool f = false; for (const T &x : v) { if (f) os << " "; os << x; f = true; } return os; }
+void scan() {} template <typename Head, typename ...Tail> void scan(Head &H, Tail &...T) { cin >> H; scan(T...); }
+void print() { cout << "\n"; } template <typename Head> void print(const Head &H) { cout << H << "\n"; } template <typename Head, typename ...Tail> void print(const Head &H, const Tail &...T) { cout << H << " "; print(T...); }
+template <typename T, typename T1> T amin(T& a, T1 b) { if(b < a) a = b; return a; } template <typename T, typename T1, typename... Tail> T amin(T& a, T1 b, Tail... c) { if(b < a) a = b; amin(a, c...); return a; } template <typename T, typename T1> T amax(T& a, T1 b) { if(b > a) a = b; return a; } template <typename T, typename T1, typename... Tail> T amax(T& a, T1 b, Tail... c) { if(b > a) a = b; amax(a, c...); return a; }
+
+#ifdef LOCAL
+#include "debug.hpp"
+#else
+#define dbg(...)
+#endif
+
+#define int int64_t
+const int inf = 1e18L + 5, mod = 1e9 + 7, N = 2e5 + 5;
+
+template <typename T>
+T inverse(T a, T m) {
+    T u = 0, v = 1;
+    while (a != 0) {
+        T t = m / a;
+        m -= t * a; swap(a, m);
+        u -= t * v; swap(u, v);
+    }
+    assert(m == 1);
+    return u;
+}
+
+template <typename T>
+class Modular {
+public:
+    using Type = typename decay<decltype(T::value)>::type;
+
+    constexpr Modular() : value() {}
+    template <typename U>
+    Modular(const U& x) {
+        value = normalize(x);
+    }
+
+    template <typename U>
+    static Type normalize(const U& x) {
+        Type v;
+        if (-mod() <= x && x < mod()) v = static_cast<Type>(x);
+        else v = static_cast<Type>(x % mod());
+        if (v < 0) v += mod();
+        return v;
+    }
+
+    const Type& operator()() const { return value; }
+    template <typename U>
+    explicit operator U() const { return static_cast<U>(value); }
+    constexpr static Type mod() { return T::value; }
+
+    Modular& operator+=(const Modular& other) { if ((value += other.value) >= mod()) value -= mod(); return *this; }
+    Modular& operator-=(const Modular& other) { if ((value -= other.value) < 0) value += mod(); return *this; }
+    template <typename U> Modular& operator+=(const U& other) { return *this += Modular(other); }
+    template <typename U> Modular& operator-=(const U& other) { return *this -= Modular(other); }
+    Modular& operator++() { return *this += 1; }
+    Modular& operator--() { return *this -= 1; }
+    Modular operator++(int32_t) { Modular result(*this); *this += 1; return result; }
+    Modular operator--(int32_t) { Modular result(*this); *this -= 1; return result; }
+    Modular operator-() const { return Modular(-value); }
+
+    template <typename U = T>
+    typename enable_if<is_same<typename Modular<U>::Type, int32_t>::value, Modular>::type & operator*=(const Modular& rhs) {
+#ifdef _WIN32
+        uint64_t x = static_cast<int64_t>(value) * static_cast<int64_t>(rhs.value);
+        uint32_t xh = static_cast<uint32_t>(x >> 32), xl = static_cast<uint32_t>(x), d, m;
+        asm(
+            "divl %4; \n\t"
+            : "=a" (d), "=d" (m)
+            : "d" (xh), "a" (xl), "r" (mod())
+        );
+        value = m;
+#else
+        value = normalize(static_cast<int64_t>(value) * static_cast<int64_t>(rhs.value));
+#endif
+        return *this;
+    }
+    template <typename U = T>
+    typename enable_if<is_same<typename Modular<U>::Type, int64_t>::value, Modular>::type & operator*=(const Modular& rhs) {
+        int64_t q = static_cast<int64_t>(static_cast<long double>(value) * rhs.value / mod());
+        value = normalize(value * rhs.value - q * mod());
+        return *this;
+    }
+    template <typename U = T>
+    typename enable_if < !is_integral<typename Modular<U>::Type>::value, Modular >::type & operator*=(const Modular& rhs) {
+        value = normalize(value * rhs.value);
+        return *this;
+    }
+
+    Modular& operator/=(const Modular& other) { return *this *= Modular(inverse(other.value, mod())); }
+
+    template <typename U>
+    friend const Modular<U>& abs(const Modular<U>& v) { return v; }
+
+    template <typename U>
+    friend bool operator==(const Modular<U>& lhs, const Modular<U>& rhs);
+
+    template <typename U>
+    friend bool operator<(const Modular<U>& lhs, const Modular<U>& rhs);
+
+    template <typename U>
+    friend std::istream& operator>>(std::istream& stream, Modular<U>& number);
+
+private:
+    Type value;
+};
+
+template <typename T> bool operator==(const Modular<T>& lhs, const Modular<T>& rhs) { return lhs.value == rhs.value; }
+template <typename T, typename U> bool operator==(const Modular<T>& lhs, U rhs) { return lhs == Modular<T>(rhs); }
+template <typename T, typename U> bool operator==(U lhs, const Modular<T>& rhs) { return Modular<T>(lhs) == rhs; }
+
+template <typename T> bool operator!=(const Modular<T>& lhs, const Modular<T>& rhs) { return !(lhs == rhs); }
+template <typename T, typename U> bool operator!=(const Modular<T>& lhs, U rhs) { return !(lhs == rhs); }
+template <typename T, typename U> bool operator!=(U lhs, const Modular<T>& rhs) { return !(lhs == rhs); }
+
+template <typename T> bool operator<(const Modular<T>& lhs, const Modular<T>& rhs) { return lhs.value < rhs.value; }
+
+template <typename T> Modular<T> operator+(const Modular<T>& lhs, const Modular<T>& rhs) { return Modular<T>(lhs) += rhs; }
+template <typename T, typename U> Modular<T> operator+(const Modular<T>& lhs, U rhs) { return Modular<T>(lhs) += rhs; }
+template <typename T, typename U> Modular<T> operator+(U lhs, const Modular<T>& rhs) { return Modular<T>(lhs) += rhs; }
+
+template <typename T> Modular<T> operator-(const Modular<T>& lhs, const Modular<T>& rhs) { return Modular<T>(lhs) -= rhs; }
+template <typename T, typename U> Modular<T> operator-(const Modular<T>& lhs, U rhs) { return Modular<T>(lhs) -= rhs; }
+template <typename T, typename U> Modular<T> operator-(U lhs, const Modular<T>& rhs) { return Modular<T>(lhs) -= rhs; }
+
+template <typename T> Modular<T> operator*(const Modular<T>& lhs, const Modular<T>& rhs) { return Modular<T>(lhs) *= rhs; }
+template <typename T, typename U> Modular<T> operator*(const Modular<T>& lhs, U rhs) { return Modular<T>(lhs) *= rhs; }
+template <typename T, typename U> Modular<T> operator*(U lhs, const Modular<T>& rhs) { return Modular<T>(lhs) *= rhs; }
+
+template <typename T> Modular<T> operator/(const Modular<T>& lhs, const Modular<T>& rhs) { return Modular<T>(lhs) /= rhs; }
+template <typename T, typename U> Modular<T> operator/(const Modular<T>& lhs, U rhs) { return Modular<T>(lhs) /= rhs; }
+template <typename T, typename U> Modular<T> operator/(U lhs, const Modular<T>& rhs) { return Modular<T>(lhs) /= rhs; }
+
+template<typename T, typename U>
+Modular<T> power(const Modular<T>& a, const U& b) {
+    assert(b >= 0);
+    Modular<T> x = a, res = 1;
+    U p = b;
+    while (p > 0) {
+        if (p & 1) res *= x;
+        x *= x;
+        p >>= 1;
+    }
+    return res;
+}
+
+template <typename T>
+bool IsZero(const Modular<T>& number) {
+    return number() == 0;
+}
+
+template <typename T>
+string to_string(const Modular<T>& number) {
+    return to_string(number());
+}
+
+template <typename T>
+std::ostream& operator<<(std::ostream& stream, const Modular<T>& number) {
+    return stream << number();
+}
+
+template <typename T>
+std::istream& operator>>(std::istream& stream, Modular<T>& number) {
+    typename common_type<typename Modular<T>::Type, int64_t>::type x;
+    stream >> x;
+    number.value = Modular<T>::normalize(x);
+    return stream;
+}
+
+/*
+using ModType = int32_t;
+
+struct VarMod { static ModType value; };
+ModType VarMod::value;
+ModType& md = VarMod::value;
+using Mint = Modular<VarMod>;
+*/
+
+constexpr int32_t md = 1e9 + 7;
+// constexpr int32_t md = 998244353;
+using Mint = Modular<std::integral_constant<decay<decltype(md)>::type, md>>;
+
+void dbg_print(const Mint &x) { cerr << x(); }
+
+vector<Mint> fact(1, 1);
+vector<Mint> inv_fact(1, 1);
+
+Mint C(int n, int k) {
+    if (k < 0 || k > n) {
+        return 0;
+    }
+    while ((int) fact.size() < n + 1) {
+        fact.push_back(fact.back() * (int) fact.size());
+        inv_fact.push_back(1 / fact.back());
+    }
+    return fact[n] * inv_fact[k] * inv_fact[n - k];
+}
+
+class SkyscraperCounting {
+    public:
+    int count(string s) {
+        if (s[0] == 'X')
+            return 0;
+        C(1000, 1);
+        Mint ans = 1;
+        reverse(s.begin(), s.end());
+        int n = s.size();
+        int pv = -1;
+        for (int i = 0; i < n; i++) {
+            if (s[i] == 'O') {
+                ans *= C(n - 1 - pv - 1, i - pv - 1) * fact[i - pv - 1];
+                pv = i;
+            }
+        }
+        ans *= fact[n - pv - 1];
+        return ans();
+    }
+};
+#undef int
+// BEGIN CUT HERE
+#include <cstdio>
+#include <ctime>
+#include <iostream>
+#include <string>
+#include <vector>
+namespace moj_harness {
+using std::string;
+using std::vector;
+int run_test_case(int);
+void run_test(int casenum = -1, bool quiet = false) {
+if (casenum != -1) {
+if (run_test_case(casenum) == -1 && !quiet) {
+std::cerr << "Illegal input! Test case " << casenum << " does not exist." << std::endl;
+}
+return;
+}
+
+int correct = 0, total = 0;
+for (int i=0;; ++i) {
+int x = run_test_case(i);
+if (x == -1) {
+if (i >= 100) break;
+continue;
+}
+correct += x;
+++total;
+}
+
+if (total == 0) {
+std::cerr << "No test cases run." << std::endl;
+} else if (correct < total) {
+std::cerr << "Some cases FAILED (passed " << correct << " of " << total << ")." << std::endl;
+} else {
+std::cerr << "All " << total << " tests passed!" << std::endl;
+}
+}
+
+int verify_case(int casenum, const int &expected, const int &received, std::clock_t elapsed) {
+std::cerr << "Example " << casenum << "... ";
+
+string verdict;
+vector<string> info;
+char buf[100];
+
+if (elapsed > CLOCKS_PER_SEC / 200) {
+std::sprintf(buf, "time %.2fs", elapsed * (1.0/CLOCKS_PER_SEC));
+info.push_back(buf);
+}
+
+if (expected == received) {
+verdict = "PASSED";
+} else {
+verdict = "FAILED";
+}
+
+std::cerr << verdict;
+if (!info.empty()) {
+std::cerr << " (";
+for (size_t i=0; i<info.size(); ++i) {
+if (i > 0) std::cerr << ", ";
+std::cerr << info[i];
+}
+std::cerr << ")";
+}
+std::cerr << std::endl;
+
+if (verdict == "FAILED") {
+std::cerr << "    Expected: " << expected << std::endl;
+std::cerr << "    Received: " << received << std::endl;
+}
+
+return verdict == "PASSED";
+}
+
+int run_test_case(int casenum__) {
+switch (casenum__) {
+case 0: {
+string visibility         = "OXXXX";
+int expected__            = 24;
+
+std::clock_t start__      = std::clock();
+int received__            = SkyscraperCounting().count(visibility);
+return verify_case(casenum__, expected__, received__, clock()-start__);
+}
+case 1: {
+string visibility         = "OXOXXOX";
+int expected__            = 72;
+
+std::clock_t start__      = std::clock();
+int received__            = SkyscraperCounting().count(visibility);
+return verify_case(casenum__, expected__, received__, clock()-start__);
+}
+case 2: {
+string visibility         = "XOXOXO";
+int expected__            = 0;
+
+std::clock_t start__      = std::clock();
+int received__            = SkyscraperCounting().count(visibility);
+return verify_case(casenum__, expected__, received__, clock()-start__);
+}
+case 3: {
+string visibility         = "OXXXXXXXXXXXXXO";
+int expected__            = 227020758;
+
+std::clock_t start__      = std::clock();
+int received__            = SkyscraperCounting().count(visibility);
+return verify_case(casenum__, expected__, received__, clock()-start__);
+}
+
+// custom cases
+
+/*      case 4: {
+string visibility         = ;
+int expected__            = ;
+
+std::clock_t start__      = std::clock();
+int received__            = SkyscraperCounting().count(visibility);
+return verify_case(casenum__, expected__, received__, clock()-start__);
+}*/
+/*      case 5: {
+string visibility         = ;
+int expected__            = ;
+
+std::clock_t start__      = std::clock();
+int received__            = SkyscraperCounting().count(visibility);
+return verify_case(casenum__, expected__, received__, clock()-start__);
+}*/
+/*      case 6: {
+string visibility         = ;
+int expected__            = ;
+
+std::clock_t start__      = std::clock();
+int received__            = SkyscraperCounting().count(visibility);
+return verify_case(casenum__, expected__, received__, clock()-start__);
+}*/
+default:
+return -1;
+}
+}
+}
+
+#include <cstdlib>
+int main(int argc, char *argv[]) {
+if (argc == 1) {
+moj_harness::run_test();
+} else {
+for (int i=1; i<argc; ++i)
+moj_harness::run_test(std::atoi(argv[i]));
+}
+}
+// END CUT HERE

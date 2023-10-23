@@ -1,0 +1,59 @@
+[
+	{
+		"correct_answers":
+		[
+			"Case #1: JAMMICCODEEELZZZZZ\nCase #2: IMPOSSIBLE\nCase #3: IMPOSSIBLE\nCase #4: IMPOSSIBLE\nCase #5: BBBBBAAAAA\nCase #6: IMPOSSIBLE",
+			"Case #1: ZZZZZJAMMICCODEEEL\nCase #2: IMPOSSIBLE\nCase #3: IMPOSSIBLE\nCase #4: IMPOSSIBLE\nCase #5: BBBBBAAAAA\nCase #6: IMPOSSIBLE"
+		],
+		"test": "6\n5\nCODE JAM MIC EEL ZZZZZ\n6\nCODE JAM MIC EEL ZZZZZ EEK\n2\nOY YO\n2\nHASH CODE\n6\nA AA BB A BA BB\n2\nCAT TAX\n"
+	},
+	{
+		"correct_answers":
+		[
+			"Case #1: IMPOSSIBLE"
+		],
+		"test": "1\n3\nAC CB BA\n"
+	},
+	{
+		"correct_answers":
+		[
+			"Case #1: ACCBBD"
+		],
+		"test": "1\n3\nAC CB BD\n"
+	},
+	{
+		"correct_answers":
+		[
+			"Case #1: ACCBBD"
+		],
+		"test": "1\n3\nBD CB AC\n"
+	},
+	{
+		"correct_answers":
+		[
+			"Case #1: ACCBBD"
+		],
+		"test": "1\n3\nCB BD AC\n"
+	},
+	{
+		"correct_answers":
+		[
+			"Case #1: IMPOSSIBLE"
+		],
+		"test": "1\n2\nAZC ZZ\n\n"
+	},
+	{
+		"correct_answers":
+		[
+			"Case #1: IMPOSSIBLE"
+		],
+		"test": "1\n3\nUSHV IZVJ DU "
+	},
+	{
+		"correct_answers":
+		[
+			"Case #1: IMPOSSIBLE"
+		],
+		"test": "1\n1\naba\n"
+	}
+]

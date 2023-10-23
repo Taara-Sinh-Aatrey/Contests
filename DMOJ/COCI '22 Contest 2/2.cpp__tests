@@ -1,0 +1,19 @@
+[
+	{
+		"correct_answers":
+		[
+			"1\nA A A\nA"
+		],
+		"test": "1 2\n"
+	},
+	{
+		"correct_answers":
+		[
+			"6\nD C C\nD C C\nD C C\nD C C\nD C C\nD C C\nC"
+		],
+		"test": "3 2\n"
+	},
+	{
+		"test": "1000 31\n"
+	}
+]

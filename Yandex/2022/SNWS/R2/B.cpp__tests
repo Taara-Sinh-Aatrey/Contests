@@ -1,0 +1,1 @@
+[{"test": "6 5 1\nn a\na m\nm e\nm ee\nx n\nthe names\nname\n1 9 1\nnames name\nname\n2 6 2\nxa aaxa\naxa abx\naa\nab\n0 0 0\n", "correct_answers": ["3\n0\n0"]}]

@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"Case #1: abba\nCase #2: c\nCase #3: cdc"
+		],
+		"test": "3\n4\nabba\n4\ncccc\n6\ncdccdc\n"
+	}
+]

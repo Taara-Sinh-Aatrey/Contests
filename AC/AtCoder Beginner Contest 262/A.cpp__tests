@@ -1,0 +1,23 @@
+[
+	{
+		"correct_answers":
+		[
+			"2022"
+		],
+		"test": "2022\n"
+	},
+	{
+		"correct_answers":
+		[
+			"2026"
+		],
+		"test": "2023\n"
+	},
+	{
+		"correct_answers":
+		[
+			"3002"
+		],
+		"test": "3000\n"
+	}
+]

@@ -1,0 +1,1 @@
+[{"test": "3\n3\n1 0 1\n4\n1 1 0 0\n8\n1 0 1 0 0 0 1 1\n", "correct_answers": ["Bob\nAlice\nBob"]}]

@@ -1,0 +1,270 @@
+[
+	{
+		"correct_answers":
+		[
+			"NO\nYES\nYES"
+		],
+		"test": "3\n2\n00\n10\n3\n010\n000\n4\n0011\n0100\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO",
+			"YES"
+		],
+		"test": "1\n17\n01100010111001100\n00000000000000001\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO",
+			"YES"
+		],
+		"test": "1\n3\n100\n001\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n3\n001\n100\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n3\n001\n101\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n3\n010\n000\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n3\n011\n000\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n3\n011\n001\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n1\n1\n0\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n1\n1\n1\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n1\n0\n1\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n2\n00\n01\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n2\n00\n11\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n2\n11\n10\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n2\n11\n00\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n2\n11\n01\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n2\n11\n11\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n3\n000\n001\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n3\n000\n010\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n3\n000\n100\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n3\n100\n001\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n4\n1000\n0001\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n3\n110\n010\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n3\n110\n111\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n3\n110\n011\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n4\n1100\n0111\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n4\n1101\n0110\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n4\n1000\n1001\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n4\n0001\n1001\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n4\n1111\n0000\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "1\n4\n1111\n1010\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n5\n11111\n11010\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n5\n10011\n01110\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n3\n100\n110\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n3\n100\n000\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n6\n100011\n101011\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n87\n000110110001010110011000000100001010110001110100011111010000000011011101101110100010001\n000000000000000000000000000000000000000000000000000000000000000000000000000000000000010\n"
+	},
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "1\n4\n1001\n0010\n"
+	}
+]

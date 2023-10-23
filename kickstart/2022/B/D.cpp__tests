@@ -1,0 +1,31 @@
+[
+	{
+		"correct_answers":
+		[
+			"Case #1: SENW\nCase #2: SSSENNEENWWW\nCase #3: ESSSSEEENNNWWNEEEEESWWSSSEESWWWWWWWNNNNN"
+		],
+		"test": "3\n1 1\n*\n2 2\n**\n*#\n3 4\n****\n*#*#\n****\n"
+	},
+	{
+		"correct_answers":
+		[
+			"Case #1: SSSENNNW\nCase #2: IMPOSSIBLE\nCase #3: ESSSSENNNNESSSSEEENNNNESSSSSWWWWWWWNNNNN"
+		],
+		"test": "3\n3 1\n*\n*\n#\n1 3\n*#*\n3 4\n**#*\n**#*\n****\n"
+	},
+	{
+		"test": "1\n3 3\n***\n*#*\n***"
+	},
+	{
+		"test": "1\n1\n1\n*\n"
+	},
+	{
+		"test": "1\n1 2\n**\n"
+	},
+	{
+		"test": "1\n1 3\n***\n"
+	},
+	{
+		"test": "1\n2 1\n*\n*"
+	}
+]

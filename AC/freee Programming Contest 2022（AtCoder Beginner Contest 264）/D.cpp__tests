@@ -1,0 +1,23 @@
+[
+	{
+		"correct_answers":
+		[
+			"8"
+		],
+		"test": "catredo\n"
+	},
+	{
+		"correct_answers":
+		[
+			"0"
+		],
+		"test": "atcoder\n"
+	},
+	{
+		"correct_answers":
+		[
+			"21"
+		],
+		"test": "redocta\n"
+	}
+]
